@@ -6,13 +6,16 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BlogViewComponent } from './blog-view/blog-view.component';
+import { HomePageComponent } from './home-page/home-page.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    BlogViewComponent
+    BlogViewComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
@@ -21,4 +24,4 @@ import { BlogViewComponent } from './blog-view/blog-view.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

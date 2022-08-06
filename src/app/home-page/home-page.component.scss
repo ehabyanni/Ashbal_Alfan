@@ -1,0 +1,108 @@
+*{
+    font-family: Tajawal;
+}
+
+/*count*/
+.cover{
+    background: url(/assets/images/billboard.jpg );
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.counter{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom:60px;
+}
+
+.item{
+    margin: auto;
+    height: 200px;
+    background-color: white;
+    box-shadow: 0px 0px 10px gray;
+    margin-bottom: 15px;
+}
+.up{
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.down{
+    height: 50%;
+}
+.item-num{
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 35px;
+    color: #1c1c11;
+}
+.item-h3{
+    font-size: 26px;
+    font-weight: 400;
+    text-align: center;
+    color: gray;
+}
+
+/*contact us*/
+.contain-info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom:60px;
+}
+.contact-info{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+/*information*/
+.info-slice{
+    margin: auto;
+    height: 250px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.top{
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.bottom{
+    height: 55%;
+    width: 90%;
+    margin: auto;
+}
+.top-h4{
+    color: #1c1c11;
+}
+.bottom-h5{
+    color: #10d479;
+    word-wrap: wrap; 
+
+}
+/*map*/
+.map-info{
+    margin: auto;
+    height: 520px;
+    background-color: white;
+    text-align: center;
+}
+.mapouter {
+    position: relative;
+    text-align: left;
+    height: 100%;
+    width: 100%;
+}
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 100%;
+    width:100%;
+}

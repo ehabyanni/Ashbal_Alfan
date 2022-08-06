@@ -1,21 +1,50 @@
 * {
     font-family: Tajawal;
 }
-
-p {
-    font-weight: 600;
+.fastlink{
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+.info-piece{
+    font-size: 17px;
     color: #1C1C1C;
 }
 .footer-parg{
     color: #ffffff;
     font-weight: 500;
 }
-a {
+a{
     color: #1C1C1C;
     text-decoration-line: none;
 }
 
 a:hover {
     color: #10d479;
-    text-decoration-line: underline;
+}
+.dropdown-toggle{
+    width: 250px;
+    color: gray;
+    background-color: #ffffff;
+    border:none;
+    border-radius: 0px;
+    direction: rtl;
+    text-align: right;
+}
+.dropdown-toggle:after{
+    margin-right: 120px; 
+}
+.dropdown-menu{
+    width: 250px;
+    direction: rtl;
+    text-align: right;
+}
+.dropdown-item{
+    color: gray;
+}
+
+
+h5{
+    font-size: 16px;
+    font-weight: 600;
+    color: #0E7E4A;
 }
