@@ -84,8 +84,7 @@
 }
 .bottom-h5{
     color: #10d479;
-    word-wrap: wrap; 
-
+    word-wrap: wrap;
 }
 /*map*/
 .map-info{
@@ -105,4 +104,17 @@
     background: none !important;
     height: 100%;
     width:100%;
+}
+
+
+/*responsive design*/
+@media (max-width:1000px) and (min-width:767px){
+    .bottom-h5{
+        font-size: 16px;
+    }
+}
+@media screen and(max-width:575px){
+    .map-info{
+        height: 350px;
+    }
 }
