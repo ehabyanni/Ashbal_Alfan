@@ -1,0 +1,52 @@
+*{
+    font-family: Tajawal;
+}
+.blogbock{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom:60px ;
+}
+.card{
+    margin: auto;
+    border: none;
+    border-radius: 0px;
+    padding-bottom: 35px;
+    overflow: hidden;
+    transform: scale(1) ;
+    transition: 25s all ease-in-out;
+
+}
+.card:hover .card-img-top{
+    transform: rotate(20deg) scale(1.4);
+}
+.card-img-top{
+    border-radius: 0px;
+}
+.card-body{
+    background-color: rgba(238, 238, 238);
+    z-index: 2;
+}
+.card-history{
+    text-align: right;
+}
+.card-title{
+    text-align: right;
+    font-weight: 600;
+}
+.card-text{
+    text-align: right;
+    height: 100px;
+    word-wrap: wrap; 
+    width: fit-content; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.btn{
+    float: right !important;
+    background-color: #0E7E4A !important;
+    border-color: #0E7E4A !important;
+}
