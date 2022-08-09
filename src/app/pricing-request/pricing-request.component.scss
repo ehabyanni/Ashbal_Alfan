@@ -1,0 +1,56 @@
+*{
+    font-family: Tajawal;
+}
+.headTitle{
+    background: url(/assets/images/unsplash1.jpg );
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.titleName{
+    background-color: #ffffff9c;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.titleName h3{
+    font-size: 30px;
+    font-weight: 900;
+    color: #0E7E4A;
+}
+label{
+    font-size: 16px;
+    font-weight: 600;
+    color: #1c1c1c;
+}
+
+
+input,textarea{
+    border-radius: 2px;
+}
+
+
+//hide buttons in number input field
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+button{
+    background-color: #0E7E4A;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: #10d479;
+}
+button:focus{
+    background-color: #0E7E4A;
+}
+button:disabled{
+    background-color: red;
+}
