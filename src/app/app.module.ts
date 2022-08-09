@@ -9,6 +9,7 @@ import { BlogViewComponent } from './blog-view/blog-view.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { PricingRequestComponent } from './pricing-request/pricing-request.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
