@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BlogViewComponent } from './blog-view/blog-view.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { PricingRequestComponent } from './pricing-request/pricing-request.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,11 +17,13 @@ import { HomePageComponent } from './home-page/home-page.component';
     HeaderComponent,
     FooterComponent,
     BlogViewComponent,
-    HomePageComponent
+    HomePageComponent,
+    PricingRequestComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
