@@ -14,8 +14,6 @@ export class BlogitemsService {
 
   blog:any = [];
 
-  blogItem:any = {}; 
-
   //all blog items
   GetAllItems():Observable<IBlog[]>{
     this.blog =  this.http.get<IBlog[]>(this._url);

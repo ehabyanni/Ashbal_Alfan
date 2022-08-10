@@ -12,6 +12,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PaperPrintingsComponent } from './paper-printings/paper-printings.component';
 import { BlogDetailsComponent } from './blog-details/blog-details.component';
+import { StickersComponent } from './stickers/stickers.component';
+import { AdvertisingProductsComponent } from './advertising-products/advertising-products.component';
+import { BrochureComponent } from './brochure/brochure.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 
 @NgModule({
@@ -23,7 +27,11 @@ import { BlogDetailsComponent } from './blog-details/blog-details.component';
     HomePageComponent,
     PricingRequestComponent,
     PaperPrintingsComponent,
-    BlogDetailsComponent
+    BlogDetailsComponent,
+    StickersComponent,
+    AdvertisingProductsComponent,
+    BrochureComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

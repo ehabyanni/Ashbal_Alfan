@@ -8,8 +8,8 @@
       "image5":"/assets/images/letterheads.jpg",
       "categoryName":"مطبوعات ورقية",
       "productName":"أوراق المراسلات - الأوراق الرسمية",
-      "priceFrom":"350",
-      "priceTo":"750",
+      "priceFrom":350,
+      "priceTo":750,
       "hint":"الاسعار تشمل الضريبة"
     },
     {
@@ -21,8 +21,8 @@
       "image5":"/assets/images/letterheads.jpg",
       "categoryName":"مطبوعات ورقية",
       "productName":"كارت شخصي",
-      "priceFrom":"100",
-      "priceTo":"260",
+      "priceFrom":100,
+      "priceTo":260,
       "hint":"أحصل علي عرض مميز"
     },
     {
@@ -32,10 +32,10 @@
       "image3":"/assets/images/letterheads.jpg",
       "image4":"/assets/images/letterheads.jpg",
       "image5":"/assets/images/letterheads.jpg",
-      "categoryName":"مطبوعات ورقية",
+      "categoryName":"حمادة",
       "productName":"أظرف طباعة ألوان متعددة",
-      "priceFrom":"400",
-      "priceTo":"1200",
+      "priceFrom":400,
+      "priceTo":1200,
       "hint":"احصل علي تسعيرة مخصصة"
     },
     {
@@ -47,8 +47,8 @@
       "image5":"/assets/images/letterheads.jpg",
       "categoryName":"مطبوعات ورقية",
       "productName":"شهادات بأنواعها",
-      "priceFrom":"50",
-      "priceTo":"170",
+      "priceFrom":50,
+      "priceTo":170,
       "hint":"الاسعار تشمل الضريبة"
     },
     {
@@ -60,8 +60,8 @@
       "image5":"/assets/images/letterheads.jpg",
       "categoryName":"مطبوعات ورقية",
       "productName":"ستيكرات ورقية",
-      "priceFrom":"500",
-      "priceTo":"1600",
+      "priceFrom":500,
+      "priceTo":1600,
       "hint":"الاسعار تشمل الضريبة"
     }
   ]
