@@ -1,0 +1,79 @@
+*{
+    font-family: Tajawal;
+}
+
+.productblock{
+    direction: rtl;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom:60px ;
+}
+.card{
+    margin: auto;
+    border: none;
+    border-radius: 0px;
+    margin-bottom: 35px;
+    overflow: hidden;
+}
+.card:hover{
+    box-shadow: 0px 0px 10px silver;
+}
+
+.card-img-top1{
+    display:none;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 100%;
+    border-radius: 0px;
+    transition: 2s ease-in-out;
+}
+.card-img-top2{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 100%;
+    border-radius: 0px;
+}
+
+.card:hover .card-img-top1{
+    transform: scale(1.1) rotate(5deg);
+    display: block;
+}
+.card-body{
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+}
+.card-category{
+    text-align: center;
+    color: silver;
+    padding: 0px;
+    margin: 0px;
+}
+.card-title{
+    text-align: center;
+    font-weight: 600;
+
+}
+.card-price{
+    font-weight: 600;
+    color: #10d479;
+    font-size: 18px;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    // word-wrap: wrap; 
+    // width: fit-content; 
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+}
+.card-hint{
+    text-align: center;
+    color: silver;
+    word-wrap: wrap; 
+    //width: fit-content; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

@@ -10,6 +10,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { PricingRequestComponent } from './pricing-request/pricing-request.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PaperPrintingsComponent } from './paper-printings/paper-printings.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     BlogViewComponent,
     HomePageComponent,
-    PricingRequestComponent
+    PricingRequestComponent,
+    PaperPrintingsComponent
   ],
   imports: [
     BrowserModule,

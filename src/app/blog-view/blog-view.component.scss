@@ -15,12 +15,12 @@
     border-radius: 0px;
     padding-bottom: 35px;
     overflow: hidden;
-    transform: scale(1) ;
-    transition: 25s all ease-in-out;
-
+}
+.card-img-top{
+    transition: 1s  all ease-in-out;
 }
 .card:hover .card-img-top{
-    transform: rotate(20deg) scale(1.4);
+    transform: rotate(10deg) scale(1.3);
 }
 .card-img-top{
     border-radius: 0px;

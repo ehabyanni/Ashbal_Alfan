@@ -13,7 +13,7 @@ export class PricingRequestComponent implements OnInit {
   constructor(private fornmbuilder: FormBuilder) { }
 
   messagForm = this.fornmbuilder.group({
-    name: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(10)]],
+    name: ['', [Validators.required, Validators.minLength(5)]],
     phone: ['', [Validators.required, Validators.minLength(11)]],
     email: ['', Validators.pattern("^[^\s]([a-zA-Z0-9_\.-]+)@([a-zA-Z\.]+)\.(com|net|edu|org)$")],
     subject: ['', Validators.minLength(10)],
@@ -50,5 +50,25 @@ export class PricingRequestComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  WhatsAPI: string = "https://wa.me/";
+  PhoneNumber: string = "201097309648"
+  textMessage: any = "";
+
+  onSubmit() {
+    console.log("Hi");
+    this.textMessage = `الاسم : ${this.messagForm.controls.name.value}%0A`;
+    this.textMessage += `رقم الهاتف : ${this.messagForm.controls.phone.value}%0A`;
+
+    if (this.messagForm.controls.email.value != "")
+      this.textMessage += `البريد الإلكتروني : ${this.messagForm.controls.email.value}%0A`;
+
+    if (this.messagForm.controls.subject.value != "")
+      this.textMessage += `الموضوع : ${this.messagForm.controls.subject.value}%0A`;
+
+    this.textMessage += `الرسالة : ${this.messagForm.controls.messageBody.value}`;
+
+    var url = this.WhatsAPI + this.PhoneNumber + "?text=" + this.textMessage;
+    window.open(url);
+  }
 
 }
