@@ -16,6 +16,7 @@ import { StickersComponent } from './stickers/stickers.component';
 import { AdvertisingProductsComponent } from './advertising-products/advertising-products.component';
 import { BrochureComponent } from './brochure/brochure.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ErrorPageNotFoundComponent } from './error-page-not-found/error-page-not-found.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     StickersComponent,
     AdvertisingProductsComponent,
     BrochureComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    ErrorPageNotFoundComponent
   ],
   imports: [
     BrowserModule,

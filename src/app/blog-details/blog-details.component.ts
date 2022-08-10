@@ -1,6 +1,6 @@
 import { HttpBackend, HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { BlogitemsService } from '../services/blogitems.service';
 
 @Component({
@@ -10,7 +10,11 @@ import { BlogitemsService } from '../services/blogitems.service';
 })
 export class BlogDetailsComponent implements OnInit {
 
-  constructor(private activeroute: ActivatedRoute, private blogitem: BlogitemsService , private http:HttpClient) { }
+  constructor(private activeroute: ActivatedRoute, 
+              private blogitem: BlogitemsService , 
+              private http:HttpClient,
+              private router:Router
+              ) { }
 
   blogId: any;
   blog:any = {};
@@ -21,7 +25,10 @@ export class BlogDetailsComponent implements OnInit {
     this.blogitem.GetAllItems().subscribe(
       (blogOne: any) => {
         this.blog = blogOne.find((x: { id: any; })=> x.id == this.blogId);
-        console.log(this.blog);
+        if(this.blog === (null || undefined)){
+          console.log("hellllllo");
+          this.router.navigate(['/page-not-found/page']);
+        }
       }
     )
   }

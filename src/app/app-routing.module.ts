@@ -4,9 +4,11 @@ import { AdvertisingProductsComponent } from './advertising-products/advertising
 import { BlogDetailsComponent } from './blog-details/blog-details.component';
 import { BlogViewComponent } from './blog-view/blog-view.component';
 import { BrochureComponent } from './brochure/brochure.component';
+import { ErrorPageNotFoundComponent } from './error-page-not-found/error-page-not-found.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { PaperPrintingsComponent } from './paper-printings/paper-printings.component';
 import { PricingRequestComponent } from './pricing-request/pricing-request.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 import { StickersComponent } from './stickers/stickers.component';
 
 const routes: Routes = [
@@ -19,7 +21,9 @@ const routes: Routes = [
   {path:'stickers'            , component:StickersComponent           },
   {path:'advertising'         , component:AdvertisingProductsComponent},
   {path:'brochure'            , component:BrochureComponent           },
-  {path:'**'                  , component:HomePageComponent           }
+  {path:':id'                 , component:ProductDetailsComponent     },
+  {path:'page-not-found'      , component:ErrorPageNotFoundComponent  },
+  {path:'**'                  , component:ErrorPageNotFoundComponent  }
 ];
 
 @NgModule({

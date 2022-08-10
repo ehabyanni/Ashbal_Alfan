@@ -1,4 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { NotFoundError } from 'rxjs';
+import { ProductsService } from '../services/products.service';
 
 @Component({
   selector: 'app-product-details',
@@ -7,9 +11,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductDetailsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http:HttpClient , 
+              private activeroute:ActivatedRoute , 
+              private productService:ProductsService,
+              private router:Router
+              ) { }
+
+  product_id:any;
+  product:any = {};
 
   ngOnInit(): void {
+    this.product_id = this.activeroute.snapshot.paramMap.get('id');
+
+    this.productService.GetAllProducts().subscribe(
+      data => {
+        this.product = data.find(x=> x.id == this.product_id);
+        if(this.product === (null || undefined)){
+          console.log("hellllllo");
+          this.router.navigate(['/page-not-found/page']);
+        }
+      }
+    )
   }
 
 }
