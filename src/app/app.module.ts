@@ -11,6 +11,7 @@ import { PricingRequestComponent } from './pricing-request/pricing-request.compo
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PaperPrintingsComponent } from './paper-printings/paper-printings.component';
+import { BlogDetailsComponent } from './blog-details/blog-details.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { PaperPrintingsComponent } from './paper-printings/paper-printings.compo
     BlogViewComponent,
     HomePageComponent,
     PricingRequestComponent,
-    PaperPrintingsComponent
+    PaperPrintingsComponent,
+    BlogDetailsComponent
   ],
   imports: [
     BrowserModule,

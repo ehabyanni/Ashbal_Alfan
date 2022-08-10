@@ -14,46 +14,48 @@ export class PaperPrintingsComponent implements OnInit {
   products:any = [
     {
       id:1,
-      image1:"/assets/images/stickers-300x300.jpg",
-      image2:"/assets/images/26-300x300.jpg",
+      image1:"/assets/images/letterheads.jpg",
+      image2:"/assets/images/letterheads.jpg",
       categoryName:this.category,
-      productName:"ستيكرات ورقية",
-      priceFrom:"500",
-      priceTo:"1600",
+      productName:"أوراق المراسلات - الأوراق الرسمية",
+      priceFrom:"350",
+      priceTo:"750",
       hint:"الاسعار تشمل الضريبة"
     },
     {
-      id:1,
-      image1:"/assets/images/stickers-300x300.jpg",
-      image2:"/assets/images/26-300x300.jpg",
+      id:2,
+      image1:"/assets/images/كارت1.png",
+      image2:"/assets/images/كارت2.png",
       categoryName:this.category,
-      productName:"ستيكرات ورقية",
-      priceFrom:"500",
-      priceTo:"1600",
-      hint:"الاسعار تشمل الضريبة"
+      productName:"كارت شخصي",
+      priceFrom:"100",
+      priceTo:"260",
+      hint:"أحصل علي عرض مميز"
     },
     {
-      id:1,
-      image1:"/assets/images/stickers-300x300.jpg",
-      image2:"/assets/images/26-300x300.jpg",
-      categoryName:this.category,
-      productName:"ستيكرات ورقية",
-      priceFrom:"500",
-      priceTo:"1600",
-      hint:"الاسعار تشمل الضريبة"
-    },
-    {
-      id:1,
-      image1:"/assets/images/الطباعة-801x600.jpg",
+      id:3,
+      image1:"/assets/images/envelope1.jpg",
+      image2:"/assets/images/envelope2.jpg",
       categoryName:this.category,
       productName:"أظرف طباعة ألوان متعددة",
-      priceFrom:"50",
-      priceTo:"170"
+      priceFrom:"400",
+      priceTo:"1200",
+      hint:"احصل علي تسعيرة مخصصة"
     },
     {
-      id:1,
-      image1:"/assets/images/stickers-300x300.jpg",
-      image2:"/assets/images/26-300x300.jpg",
+      id:4,
+      image1:"/assets/images/certificate2.jpg",
+      image2:"/assets/images/certificate1.jpg",
+      categoryName:this.category,
+      productName:"شهادات بأنواعها",
+      priceFrom:"50",
+      priceTo:"170",
+      hint:"الاسعار تشمل الضريبة"
+    },
+    {
+      id:5,
+      image1:"/assets/images/food.jpeg",
+      image2:"/assets/images/food.jpeg",
       categoryName:this.category,
       productName:"ستيكرات ورقية",
       priceFrom:"500",
