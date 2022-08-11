@@ -48,3 +48,27 @@ h5{
     font-weight: 600;
     color: #0E7E4A;
 }
+
+
+
+@media screen and(max-width:767px){
+    .company{
+        text-align: center;
+    }
+    .footer-parg{
+        text-align: center !important;
+    }
+}
+
+@media screen and (min-width:767px) and (max-width:1140px){
+    .dropdown-toggle{
+        width: 150px;
+    }
+    .dropdown-toggle:after{
+        margin-right: 30px; 
+    }
+    .dropdown-menu{
+        width: 140px;
+        overflow: hidden;
+    }
+}

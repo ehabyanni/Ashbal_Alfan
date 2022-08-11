@@ -36,7 +36,7 @@ export class ProductDetailsComponent implements OnInit {
 
 
   changeImage() {
-    var main_prodcut_image = document.getElementById('main_product_image');
+    var main_prodcut_image = document.getElementById('main_product_image') as HTMLElement;
     console.log(main_prodcut_image)
     //main_prodcut_image.src = element.src;
   }
