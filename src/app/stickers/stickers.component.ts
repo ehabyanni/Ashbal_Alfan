@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductsService } from '../services/products.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { ProductsService } from '../services/products.service';
 })
 export class StickersComponent implements OnInit {
 
-  constructor(private productService:ProductsService) { }
+  constructor(private productService:ProductsService , private router:Router) { }
 
   products:any = [];
 
@@ -18,6 +19,10 @@ export class StickersComponent implements OnInit {
         this.products = data.filter(x => x.categoryName == "اللوحات والإستيكرات");
       }
     )
+  }
+
+  goToProductDetails(id:any){
+    this.router.navigate(['', id]);
   }
 
 }

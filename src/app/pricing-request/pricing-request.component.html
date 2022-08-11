@@ -16,7 +16,6 @@
                 <div class="row"
                     style=" background-color: rgb(255, 255, 255); padding-top: 30px; padding-bottom: 30px;">
                     <div style="direction: ltr !important;">
-                        {{messagForm.value | json}}
                     </div>
                     <form [formGroup]="messagForm" method="post" (ngSubmit)="onSubmit()" style="background-color: rgb(255, 255, 255);" id="formID">
                         <div class="row" style=" padding-bottom: 20px;">
@@ -40,13 +39,13 @@
                             <div class="col-12 col-sm-6 col-md-6">
                                 <div class="col-11">
                                     <label for="phone" class="form-label">رقم الهاتف<span class="text-danger" style="font-size:20px; padding-right:5px">*</span></label>
-                                    <input type="number" class="form-control" id="phonetext"
+                                    <input type="tel" class="form-control" id="phonetext"
                                         placeholder="أترك رقم هاتفك هنا" formControlName="phone"
                                         [class.is-invalid]="PHONE?.invalid && PHONE?.touched">
                                     <div *ngIf="PHONE?.errors && PHONE?.touched">
                                         <small class="text-danger" *ngIf="PHONE?.errors?.['required']">يجب إدخال رقم
                                             الهاتف</small>
-                                        <small class="text-danger" *ngIf="PHONE?.errors?.['minlength']">يجب ان يكون
+                                        <small class="text-danger" *ngIf="PHONE?.errors?.['pattern']">يجب ان يكون
                                             الرقم مكون من 11 رقم</small>
                                     </div>
                                 </div>

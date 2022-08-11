@@ -14,7 +14,7 @@ export class PricingRequestComponent implements OnInit {
 
   messagForm = this.fornmbuilder.group({
     name: ['', [Validators.required, Validators.minLength(5)]],
-    phone: ['', [Validators.required, Validators.minLength(11)]],
+    phone: ['', [Validators.required, Validators.pattern("[0-9]{11}")]],
     email: ['', Validators.pattern("^[^\s]([a-zA-Z0-9_\.-]+)@([a-zA-Z\.]+)\.(com|net|edu|org)$")],
     subject: ['', Validators.minLength(10)],
     messageBody: ['', [Validators.required, Validators.minLength(20)]]

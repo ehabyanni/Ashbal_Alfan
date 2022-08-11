@@ -1,0 +1,92 @@
+*{
+    font-family: Tajawal;
+}
+
+.card {
+    border: none;
+    overflow: hidden;
+    border-radius: 0px;
+    box-shadow: 0px 0px 10px #eee;
+}
+#thumbnail{
+    padding: 0px;
+    width: 100%;
+}
+
+.thumbnail_images ul {
+    list-style: none;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.thumbnail_images ul li {
+    margin: 5px;
+    padding: 2px;
+    border: 1px solid #eee;
+    cursor: pointer;
+    transition: all 0.5s
+}
+
+.thumbnail_images ul li:hover {
+    border: 1px solid #0E7E4A;
+}
+
+.main_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //border-bottom: 1px solid #eee;
+    height: 400px;
+    width: 100%;
+    overflow: hidden
+}
+
+
+
+
+/*product name*/
+.name{
+    padding-top: 10px;
+    padding-bottom: 10px ;
+}
+.name h3{
+    font-weight: 600;
+}
+
+/*price*/
+.price{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #10d479;
+}
+
+/*buy button*/
+.buttons .btn{
+    border-radius: 0px;
+    border: 0px;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #0E7E4A;
+    color: white;
+    display: block;
+    margin: auto;
+
+}
+
+.buttons .btn:hover{
+
+    background-color:#10d479;
+}
+
+
+
+
+
+
+@media screen and (max-width:470px){
+    .thumbnail_images ul {
+        overflow:scroll;
+    }
+}
