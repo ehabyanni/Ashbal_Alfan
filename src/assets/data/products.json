@@ -32,7 +32,7 @@
       "image3":"/assets/images/letterheads.jpg",
       "image4":"/assets/images/letterheads.jpg",
       "image5":"/assets/images/letterheads.jpg",
-      "categoryName":"حمادة",
+      "categoryName":"مطبوعات ورقية",
       "productName":"أظرف طباعة ألوان متعددة",
       "priceFrom":400,
       "priceTo":1200,
@@ -63,5 +63,112 @@
       "priceFrom":500,
       "priceTo":1600,
       "hint":"الاسعار تشمل الضريبة"
+    },
+    {
+      "id":6,
+      "image1":"/assets/images/infoBoard.jpg",
+      "image2":"/assets/images/infoBoard.jpg",
+      "image3":"/assets/images/infoBoard.jpg",
+      "image4":"/assets/images/infoBorad.jpg",
+      "image5":"/assets/images/infoBorad.jpg",
+      "categoryName":"المنتجات الإعلانية",
+      "productName":"info Board",
+      "priceFrom":350,
+      "priceTo":750,
+      "hint":"الاسعار تشمل الضريبة"
+    },
+    {
+      "id":7,
+      "image1":"/assets/images/ختم1.jpg",
+      "image2":"/assets/images/ختم2.jpg",
+      "image3":"/assets/images/ختم3.jpg",
+      "image4":"/assets/images/letterheads.jpg",
+      "image5":"/assets/images/letterheads.jpg",
+      "categoryName":"المنتجات الإعلانية",
+      "productName":"أختام",
+      "priceFrom":100,
+      "priceTo":260,
+      "hint":"أحصل علي عرض مميز"
+    },
+    {
+      "id":8,
+      "image1":"/assets/images/popUp.jpg",
+      "image2":"/assets/images/popUp.jpg",
+      "image3":"/assets/images/popUp.jpg",
+      "image4":"/assets/images/popUp.jpg",
+      "image5":"/assets/images/popUp.jpg",
+      "categoryName":"المنتجات الإعلانية",
+      "productName":"popUp",
+      "priceFrom":400,
+      "priceTo":1200,
+      "hint":"احصل علي تسعيرة مخصصة"
+    },
+    {
+      "id":9,
+      "image1":"/assets/images/بوسترات.jpg",
+      "image2":"/assets/images/بوسترات.jpg",
+      "image3":"/assets/images/بوسترات.jpg",
+      "image4":"/assets/images/بوسترات.jpg",
+      "image5":"/assets/images/بوسترات.jpg",
+      "categoryName":"المنتجات الإعلانية",
+      "productName":"بوسترات",
+      "priceFrom":500,
+      "priceTo":1600,
+      "hint":"الاسعار تشمل الضريبة"
+    },
+    {
+      "id":10,
+      "image1":"/assets/images/ستيكرات.jpg",
+      "image2":"/assets/images/ستيكرات.jpg",
+      "image3":"/assets/images/ستيكرات.jpg",
+      "image4":"/assets/images/ستيكرات.jpg",
+      "image5":"/assets/images/ستيكرات.jpg",
+      "categoryName":"اللوحات والإستيكرات",
+      "productName":"ستيكرات",
+      "priceFrom":500,
+      "priceTo":1600,
+      "hint":"الاسعار تشمل الضريبة"
+    },
+    {
+      "id":11,
+      "image1":"/assets/images/لوحات الفلكس1.jpg",
+      "image2":"/assets/images/لوحات الفلكس2.jpg",
+      "image3":"/assets/images/لوحات الفلكس1.jpg",
+      "image4":"/assets/images/لوحات الفلكس2.jpg",
+      "image5":"/assets/images/لوحات الفلكس1.jpg",
+      "categoryName":"اللوحات والإستيكرات",
+      "productName":"لوحات الفلكس",
+      "priceFrom":500,
+      "priceTo":1600,
+      "hint":"الاسعار تشمل الضريبة"
+    },
+    {
+      "id":12,
+      "image1":"/assets/images/استيل-فضي-بدون-اضاءة.jpg",
+      "image2":"/assets/images/ستانلس-استيل-بدون-اضاءة.jpg",
+      "image3":"/assets/images/لوحات الفلكس1.jpg",
+      "image4":"/assets/images/لوحات الفلكس2.jpg",
+      "image5":"/assets/images/لوحات الفلكس1.jpg",
+      "categoryName":"اللوحات والإستيكرات",
+      "productName":"لوحات الحروف البارزة",
+      "priceFrom":500,
+      "priceTo":1600,
+      "hint":"الاسعار تشمل الضريبة"
+    },
+    {
+      "id":13,
+      "image1":"/assets/images/بانر1.jpg",
+      "image2":"/assets/images/بانر2.jpg",
+      "image3":"/assets/images/لوحات الفلكس1.jpg",
+      "image4":"/assets/images/لوحات الفلكس2.jpg",
+      "image5":"/assets/images/لوحات الفلكس1.jpg",
+      "categoryName":"اللوحات والإستيكرات",
+      "productName":"لوحات البانر",
+      "priceFrom":500,
+      "priceTo":1600,
+      "hint":"الاسعار تشمل الضريبة"
     }
   ]
+
+
+  
