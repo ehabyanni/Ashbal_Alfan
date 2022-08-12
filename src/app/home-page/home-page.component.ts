@@ -29,26 +29,6 @@ export class HomePageComponent implements OnInit {
     }
   ]
 
-  information: any = [
-    {
-      title: "المقر الرئيسي",
-      desc: "خميس مشيط - الخالدية - شارع البريد"
-    },
-    {
-      title: "البريد الإلكتروني",
-      desc: "info@AshbalAlfan.com"
-    },
-    {
-      title: "الهاتف",
-      desc: "+966 50 660 4507",
-      desc2: "+966 53 478 1615"
-    },
-    {
-      title: "ساعات العمل",
-      desc: "من السبت الي الخميس  الساعة 9 ص : 12 ص",
-      desc2:"الجمعة من الساعة 12:00 م إلي 12:00 ص"
-    }
-  ]
 
   products:any = [];
 

@@ -1,0 +1,33 @@
+
+/*carsoul*/
+// .container-fluid{
+//     padding-top: 130px;
+// }
+.cont1{
+    margin-bottom: 30px;
+}
+.carousel-item img{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 100%;
+    width: 100%;
+    border-radius: 0px;
+}
+.nextBtn,.prevBtn{
+    opacity: 1;
+    width: 50px;
+    background-color: #10d47800 !important;
+    
+}
+.nextIcon{
+    background-image: url("/assets/images/arrow-right-circle2.svg");
+    width: 30px;
+    height: 30px;
+}
+.prevIcon{
+    background-image: url("/assets/images/arrow-left-circle2.svg");
+    width: 30px;
+    height: 30px;
+}

@@ -1,188 +1,131 @@
-<!--Header2 Carousel -->
-<div class="container-fluid">
-    <div class="container cont1">
-        <div id="demo" class="carousel slide" data-bs-ride="carousel">
-            <!-- Indicators/dots -->
-            <!-- <div class="carousel-indicators crindicators">
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-            </div> -->
-            <!-- The slideshow/carousel -->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="assets/images/ramadan.jpeg" alt="ramadan" class="d-block">
-                </div>
-                <div class="carousel-item">
-                    <img src="assets/images/cardoffer.jpg" alt="cardoffer" class="d-block">
-                </div>
-            </div>
-            <!-- Left and right controls/icons -->
-            <button class="carousel-control-prev prevBtn" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon prevIcon"></span>
-            </button>
-            <button class="carousel-control-next nextBtn" type="button" data-bs-target="#demo" data-bs-slide="next">
-                <span class="carousel-control-next-icon nextIcon"></span>
-            </button>
-        </div>
-    </div>
-</div>
+<div class="mainDiv" style="padding-top: 130px;">
+    <!--Header2 Carousel -->
+    <app-first-slider></app-first-slider>
 
-<!--slider categories and produtcs-->
-<app-category-product-carosuel></app-category-product-carosuel>
+    <!--slider categories and produtcs-->
+    <app-category-product-carosuel></app-category-product-carosuel>
 
-<!--counter-->
-<div class="container-fluid cover">
-    <div class="container">
-        <div class="counter">
-            <div class="col-12 col-md-3 col-sm-6 count-item" *ngFor="let count of counting">
-                <div class="col-11 item">
-                    <div class="row up">
-                        <h3 class="item-num">{{count.number}}</h3>
-                    </div>
-                    <div class="row down">
-                        <h3 class="item-h3">{{count.title}}</h3>
+    <!--counter-->
+    <div class="container-fluid cover">
+        <div class="container">
+            <div class="counter">
+                <div class="col-12 col-md-3 col-sm-6 count-item" *ngFor="let count of counting">
+                    <div class="col-11 item">
+                        <div class="row up">
+                            <h3 class="item-num">{{count.number}}</h3>
+                        </div>
+                        <div class="row down">
+                            <h3 class="item-h3">{{count.title}}</h3>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!--contact us-->
-<div class="container-fluid">
-    <div class="container contain-info">
-        <div class="col-12 col-sm-12 col-md-12 section-title">
-            <h2 style="font-weight: 500; padding-bottom:80px; text-align: center;">إبقي علي تواصل</h2>
-        </div>
-        <div class="col-12 col-sm-12 col-md-6 contact-info">
-            <div class="col-12 col-sm-6 col-md-6  basic-info" *ngFor="let inform of information">
-                <div class="col-11 info-slice" style="background-color: #f1f3f4">
-                    <div class="row top">
-                        <h4 class="top-h4">{{inform.title}}</h4>
-                    </div>
-                    <div class="row bottom">
-                        <h5 class="bottom-h5">
-                            {{inform.desc}}
-                            <br>
-                            {{inform.desc2}}
-                        </h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-sm-12 col-md-6 ">
-            <div class="col-12 map-info" style="background-color: #f1f3f4;">
-                <div class="mapouter">
-                    <div class="gmap_canvas"><iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3787.968665475274!2d42.726538899999994!3d18.3030411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15fb5b4b63cabb35%3A0x80973eda1d80e421!2z2KfYtNio2KfZhCDYp9mE2YHZhiDZhNmE2K_Yudin2YrYqSDZiNin2YTYp9i52YTYp9mG!5e0!3m2!1sen!2seg!4v1660258766995!5m2!1sen!2seg"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    <!--contact us-->
+    <app-contact-us></app-contact-us>
 
-<!--partners-->
-<div class="container-fluid" style="background-color: #0E2344 ;">
-    <div class="container partners">
-        <!--Title-->
-        <div class="col-12 col-sm-12 col-md-12 section-title">
-            <h2 class="sectionName">شُركـاءنـا</h2>
-        </div>
-        <!-- Carousel -->
-        <div id="demo" class="carousel slide" data-bs-ride="carousel">
-            <!-- Indicators/dots -->
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    <!--partners-->
+    <div class="container-fluid" style="background-color: #0E7E4A ;">
+        <div class="container partners">
+            <!--Title-->
+            <div class="col-12 col-sm-12 col-md-12 section-title">
+                <h2 class="sectionName">شُركـاءنـا</h2>
             </div>
-            <!-- The slideshow/carousel -->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="img-container">
-                        <div class="col-12 col-md-3 col-sm-6 count-item">
-                            <div class="col-11 item-img">
-                                <img src="/assets/images/atqn.jpg" alt="atqn">
+            <!-- Carousel -->
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                </div>
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="img-container">
+                            <div class="col-12 col-md-3 col-sm-6 count-item">
+                                <div class="col-11 item-img">
+                                    <img src="/assets/images/atqn.jpg" alt="atqn">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 col-sm-6 count-item">
+                                <div class="col-11 item-img">
+                                    <img src="/assets/images/aramco.jpg" alt="aramco">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 col-sm-6 count-item">
+                                <div class="col-11 item-img">
+                                    <img src="/assets/images/coca.jpg" alt="coca">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 col-sm-6 count-item">
+                                <div class="col-11 item-img">
+                                    <img src="/assets/images/ezone.jpg" alt="ezone">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-3 col-sm-6 count-item">
-                            <div class="col-11 item-img">
-                                <img src="/assets/images/aramco.jpg" alt="aramco">
+                    </div>
+                    <div class="carousel-item">
+                        <div class="img-container">
+                            <div class="col-12 col-md-3 col-sm-6 count-item">
+                                <div class="col-11 item-img">
+                                    <img src="/assets/images/dmam.jpg" alt="dmam">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 col-sm-6 count-item">
+                                <div class="col-11 item-img">
+                                    <img src="/assets/images/discounrclub.jpg" alt="club">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 col-sm-6 count-item">
+                                <div class="col-11 item-img">
+                                    <img src="/assets/images/muhaidib.jpg" alt="muhaidib">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 col-sm-6 count-item">
+                                <div class="col-11 item-img">
+                                    <img src="/assets/images/ram.jpg" alt="ram">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-3 col-sm-6 count-item">
-                            <div class="col-11 item-img">
-                                <img src="/assets/images/coca.jpg" alt="coca">
+                    </div>
+                    <div class="carousel-item">
+                        <div class="img-container">
+                            <div class="col-12 col-md-3 col-sm-6 count-item">
+                                <div class="col-11 item-img">
+                                    <img src="/assets/images/wzara.jpg" alt="wzara">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-12 col-md-3 col-sm-6 count-item">
-                            <div class="col-11 item-img">
-                                <img src="/assets/images/ezone.jpg" alt="ezone">
+                            <div class="col-12 col-md-3 col-sm-6 count-item">
+                                <div class="col-11 item-img">
+                                    <img src="/assets/images/rames.jpg" alt="rames">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 col-sm-6 count-item">
+                                <div class="col-11 item-img">
+                                    <img src="/assets/images/uabl.jpg" alt="ubal">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 col-sm-6 count-item">
+                                <div class="col-11 item-img">
+                                    <img src="/assets/images/ram.jpg" alt="run">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="img-container">
-                        <div class="col-12 col-md-3 col-sm-6 count-item">
-                            <div class="col-11 item-img">
-                                <img src="/assets/images/dmam.jpg" alt="dmam">
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-3 col-sm-6 count-item">
-                            <div class="col-11 item-img">
-                                <img src="/assets/images/discounrclub.jpg" alt="club">
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-3 col-sm-6 count-item">
-                            <div class="col-11 item-img">
-                                <img src="/assets/images/muhaidib.jpg" alt="muhaidib">
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-3 col-sm-6 count-item">
-                            <div class="col-11 item-img">
-                                <img src="/assets/images/ram.jpg" alt="ram">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="img-container">
-                        <div class="col-12 col-md-3 col-sm-6 count-item">
-                            <div class="col-11 item-img">
-                                <img src="/assets/images/wzara.jpg" alt="wzara">
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-3 col-sm-6 count-item">
-                            <div class="col-11 item-img">
-                                <img src="/assets/images/rames.jpg" alt="rames">
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-3 col-sm-6 count-item">
-                            <div class="col-11 item-img">
-                                <img src="/assets/images/uabl.jpg" alt="ubal">
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-3 col-sm-6 count-item">
-                            <div class="col-11 item-img">
-                                <img src="/assets/images/ram.jpg" alt="run">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!--Left and right controls/icons -->
-            <!-- <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <!--Left and right controls/icons -->
+                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" ></span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
                 <span class="carousel-control-next-icon"></span>
             </button> -->
-        </div>
+            </div>
 
+        </div>
     </div>
 </div>

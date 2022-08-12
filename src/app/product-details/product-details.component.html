@@ -1,48 +1,54 @@
-<div class="container-fluid" style="direction: rtl;">
-    <div class="container" style=" padding-top: 30px; padding-bottom: 50px;">
-        <div class="container mt-5 mb-5">
-            <div class="card">
-                <div class="row g-0">
-                    <div class="col-12 col-sm-12 col-md-6">
-                        <div class=" flex-column justify-content-center">
-                            <div class="main_image"> 
-                                <img [src]="product.image1" id="main_product_image" width="370">
-                            </div>
-                            <div class="thumbnail_images">
-                                <ul id="thumbnail">
-                                    <li><img id="img1" (click)="changeImage1()" [src]="product.image1" width="70"></li>
-                                    <li><img id="img2" (click)="changeImage2()" [src]="product.image2" width="70"></li>
-                                    <li><img id="img3" (click)="changeImage3()" [src]="product.image3" width="70"></li>
-                                    <li><img id="img4" (click)="changeImage4()" [src]="product.image4" width="70"></li>
-                                </ul>
+<div class="mainDiv" style="padding-top: 100px;">
+    <div class="container-fluid" style="direction: rtl;">
+        <div class="container" style=" padding-top: 30px; padding-bottom: 50px;">
+            <div class="container mt-5 mb-5">
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-12 col-sm-12 col-md-6">
+                            <div class=" flex-column justify-content-center">
+                                <div class="main_image">
+                                    <img [src]="product.image1" id="main_product_image" width="370">
+                                </div>
+                                <div class="thumbnail_images">
+                                    <ul id="thumbnail">
+                                        <li><img id="img1" (click)="changeImage1()" [src]="product.image1" width="70">
+                                        </li>
+                                        <li><img id="img2" (click)="changeImage2()" [src]="product.image2" width="70">
+                                        </li>
+                                        <li><img id="img3" (click)="changeImage3()" [src]="product.image3" width="70">
+                                        </li>
+                                        <li><img id="img4" (click)="changeImage4()" [src]="product.image4" width="70">
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-6 details">
-                        <div class="p-3 right-side">
-                            <div class="upSection" style="height: fit-content; direction: rtl; ">
-                                <div class="d-flex name">
-                                    <h3>{{product.title}}</h3>
+                        <div class="col-12 col-sm-12 col-md-6 details">
+                            <div class="p-3 right-side">
+                                <div class="upSection" style="height: fit-content; direction: rtl; ">
+                                    <div class="d-flex name">
+                                        <h3>{{product.title}}</h3>
+                                    </div>
+                                    <div class="mt-2 pr-3 price">
+                                        <h3>من {{product.minPrice}} ر.س إلي {{product.maxPrice}} ر.س </h3>
+                                        <h6>{{product.hint}}</h6>
+                                    </div>
+                                    <div class="mt-2 pr-3 description">
+                                        <h6>{{product.description}}</h6>
+                                    </div>
+                                    <div class="mt-4 pr-3 sku">
+                                        <h6 style="float: right; font-weight: 600; color: #1c1c1c;">SKU : </h6>
+                                        <h6 style="font-weight: 600; color: #1c1c1c;">{{product.sku}}</h6>
+                                    </div>
+                                    <div class="mt-2 pr-3 sku">
+                                        <h6 style="float: right; font-weight: 600; color: #1c1c1c;">الفئة : </h6>
+                                        <h6 style="font-weight: 600; color: #1c1c1c;">{{product.categoryName}}</h6>
+                                    </div>
                                 </div>
-                                <div class="mt-2 pr-3 price">
-                                    <h3>من {{product.minPrice}} ر.س إلي {{product.maxPrice}} ر.س </h3>
-                                    <h6>{{product.hint}}</h6>
+                                <div class="buttons d-flex flex-row  gap-3">
+                                    <!-- <button class="btn1">Buy Now</button>  -->
+                                    <button class="btn">إضافة إلي السلة</button>
                                 </div>
-                                <div class="mt-2 pr-3 description">
-                                    <h6>{{product.description}}</h6>
-                                </div>
-                                <div class="mt-4 pr-3 sku">
-                                    <h6 style="float: right; font-weight: 600; color: #1c1c1c;">SKU : </h6>
-                                    <h6 style="font-weight: 600; color: #1c1c1c;">{{product.sku}}</h6>
-                                </div>
-                                <div class="mt-2 pr-3 sku">
-                                    <h6 style="float: right; font-weight: 600; color: #1c1c1c;">الفئة : </h6>
-                                    <h6 style="font-weight: 600; color: #1c1c1c;">{{product.categoryName}}</h6>
-                                </div>
-                            </div>
-                            <div class="buttons d-flex flex-row  gap-3">
-                                <!-- <button class="btn1">Buy Now</button>  -->
-                                <button class="btn">إضافة إلي السلة</button>
                             </div>
                         </div>
                     </div>
@@ -50,7 +56,6 @@
             </div>
         </div>
     </div>
+
+
 </div>
-
-
-    

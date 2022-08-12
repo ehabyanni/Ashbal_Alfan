@@ -43,9 +43,8 @@
 
 .img-container{
     display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
     padding-bottom:60px;
+    overflow: hidden;
 }
 
 .card{
@@ -82,7 +81,8 @@
     display: none;
 }
 .card-body{
-    background-color: #f1f3f4;
+    //background-color: #f1f3f4;
+    background-color: white;
     z-index: 2;
 }
 .card-title{
@@ -107,7 +107,7 @@
     text-overflow: ellipsis;
 }
 
-.pprev,.nnext{
+#pprev,#nnext{
     height: 85%;
     width: 5%;
 }

@@ -18,6 +18,10 @@ import { BrochureComponent } from './brochure/brochure.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ErrorPageNotFoundComponent } from './error-page-not-found/error-page-not-found.component';
 import { CategoryProductCarosuelComponent } from './category-product-carosuel/category-product-carosuel.component';
+import { CartPageComponent } from './cart-page/cart-page.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { FirstSliderComponent } from './first-slider/first-slider.component';
+import { AdminHomeComponent } from './dashBoard - AdminPanel/admin-home/admin-home.component';
 
 
 @NgModule({
@@ -35,7 +39,11 @@ import { CategoryProductCarosuelComponent } from './category-product-carosuel/ca
     BrochureComponent,
     ProductDetailsComponent,
     ErrorPageNotFoundComponent,
-    CategoryProductCarosuelComponent
+    CategoryProductCarosuelComponent,
+    CartPageComponent,
+    ContactUsComponent,
+    FirstSliderComponent,
+    AdminHomeComponent
   ],
   imports: [
     BrowserModule,

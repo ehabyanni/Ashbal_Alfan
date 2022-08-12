@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v6.1.2/css/all.css">
+
+<div class="container-fluid">
+    <div class="container contain-info">
+        <div class="col-12 col-sm-12 col-md-12 section-title">
+            <h2 style="font-weight: 500; padding-bottom:80px; text-align: center;">إبقي علي تواصل</h2>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 contact-info">
+            <div class="col-12 col-sm-6 col-md-6  basic-info" *ngFor="let inform of information">
+                <div class="col-11 info-slice" style="background-color: #f1f3f4">
+                    <div class="row top" style=" padding-top: 20px;">
+                        <h2 style="color: #0E7E4A;"><i [class]=inform.icon></i></h2>
+                        <br>
+                        <h4 class="top-h4">{{inform.title}}</h4>
+                    </div>
+                    <div class="row bottom">
+                        <h5 class="bottom-h5">
+                            {{inform.desc}}
+                            <br>
+                            {{inform.desc2}}
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 ">
+            <div class="col-12 map-info" style="background-color: #f1f3f4;">
+                <div class="mapouter">
+                    <div class="gmap_canvas"><iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3787.968665475274!2d42.726538899999994!3d18.3030411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15fb5b4b63cabb35%3A0x80973eda1d80e421!2z2KfYtNio2KfZhCDYp9mE2YHZhiDZhNmE2K_Yudin2YrYqSDZiNin2YTYp9i52YTYp9mG!5e0!3m2!1sen!2seg!4v1660258766995!5m2!1sen!2seg"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

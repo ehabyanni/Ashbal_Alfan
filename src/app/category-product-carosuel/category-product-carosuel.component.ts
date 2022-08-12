@@ -16,7 +16,8 @@ export class CategoryProductCarosuelComponent implements OnInit {
   ngOnInit(): void {
     this.productService.GetAllProducts().subscribe(
       data=>{
-        this.products = data.filter(x => x.categoryName == "المنتجات الورقية");
+        this.products = data.filter(x => x.categoryName == "مطبوعات ورقية");
+        console.log(this.products);
       }
     )
   }

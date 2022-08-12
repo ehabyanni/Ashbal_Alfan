@@ -1,35 +1,6 @@
 *{
     font-family: Tajawal;
 }
-/*carsoul*/
-.cont1{
-    margin-bottom: 30px;
-}
-.carousel-item img{
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-    height: 100%;
-    width: 100%;
-    border-radius: 0px;
-}
-.nextBtn,.prevBtn{
-    opacity: 1;
-    width: 50px;
-    background-color: #10d47800 !important;
-    
-}
-.nextIcon{
-    background-image: url("/assets/images/arrow-right-circle2.svg");
-    width: 30px;
-    height: 30px;
-}
-.prevIcon{
-    background-image: url("/assets/images/arrow-left-circle2.svg");
-    width: 30px;
-    height: 30px;
-}
 
 /*count*/
 .cover{
@@ -77,67 +48,6 @@
     color: gray;
 }
 
-/*contact us*/
-.contain-info{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-top: 60px;
-    padding-bottom:60px;
-}
-.contact-info{
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-}
-/*information*/
-.info-slice{
-    margin: auto;
-    height: 250px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.top{
-    height: 45%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-.bottom{
-    height: 55%;
-    width: 90%;
-    margin: auto;
-    overflow: hidden;
-}
-.top-h4{
-    color: #1c1c11;
-}
-.bottom-h5{
-    color: #10d479;
-    word-wrap: wrap;
-}
-/*map*/
-.map-info{
-    margin: auto;
-    height: 520px;
-    background-color: white;
-    text-align: center;
-}
-.mapouter {
-    position: relative;
-    text-align: left;
-    height: 100%;
-    width: 100%;
-}
-.gmap_canvas {
-    overflow: hidden;
-    background: none !important;
-    height: 100%;
-    width:100%;
-}
-
-
 /*responsive design*/
 @media (max-width:1000px) and (min-width:767px){
     .bottom-h5{
@@ -173,8 +83,9 @@
 .item-img{
     margin: auto;
     height: 200px;
-    border-bottom-left-radius: 20px;
-    border-top-right-radius: 20px;
+    // border-bottom-left-radius: 20px;
+    // border-top-right-radius: 20px;
+    border-radius: 20px;
     background-color: rgb(255, 255, 255);
     margin-bottom: 20px;
     display: flex;
