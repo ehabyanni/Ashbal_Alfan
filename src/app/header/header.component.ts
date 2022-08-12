@@ -9,10 +9,10 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
-  phoneNumber:number= 966581906689;
-  email:string="contact@raya-adv.com";
+  phoneNumber:string= "+966 50 660 4507";
+  email:string="info@AshbalAlfan.com";
 
-  mainLinks:any = ["الرئيسية" , "المطبوعات الورقية" , "اللوحات والإستيكرات"  , "المنتجات الإعلانية" , "بروشور "  , "المدونة"];
+  mainLinks:any = ["الرئيسية" , "المطبوعات الورقية" , "اللوحات والإستيكرات"  , "المنتجات الإعلانية"  , "المدونة"];
 
   ngOnInit(): void {
   }

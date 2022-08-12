@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,7 +21,6 @@ import { CategoryProductCarosuelComponent } from './category-product-carosuel/ca
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FirstSliderComponent } from './first-slider/first-slider.component';
-import { AdminHomeComponent } from './dashBoard - AdminPanel/admin-home/admin-home.component';
 
 
 @NgModule({
@@ -43,7 +42,6 @@ import { AdminHomeComponent } from './dashBoard - AdminPanel/admin-home/admin-ho
     CartPageComponent,
     ContactUsComponent,
     FirstSliderComponent,
-    AdminHomeComponent
   ],
   imports: [
     BrowserModule,
