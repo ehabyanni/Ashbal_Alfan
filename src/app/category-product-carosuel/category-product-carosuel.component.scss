@@ -1,0 +1,113 @@
+*{
+    font-family: Tajawal;
+}
+/*categories*/
+.right{
+    background-color: #f1f3f4; 
+    height: 350px; 
+    padding: 20px; 
+    text-align: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.right h3{
+    font-weight: 600;
+    height: 30%;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.right h5{
+    height: 40%;
+    font-size: 24px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.right h6 a{
+    font-size: 18px;
+    font-weight: 600;
+    height: 25%;
+    color: #10d479;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.right h6 a:hover{
+    font-size: 18px;
+    font-weight: 600;
+    height: 25%;
+    color: #0E7E4A ;
+}
+
+.iii{
+    color: #0E7E4A !important;
+}
+
+.img-container{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    padding-bottom:60px;
+}
+
+.card{
+    margin: auto;
+    border: none;
+    border-radius: 0px;
+    overflow: hidden;
+}
+.card:hover{
+    cursor: pointer;
+}
+
+.card-img-top2{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 100%;
+    border-radius: 0px;
+    transition: 1s ease-in-out;
+
+}
+.card-img-top1{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 100%;
+    border-radius: 0px;
+}
+
+.card:hover .card-img-top2{
+    transform: scale(1.1) rotate(5deg);
+    display: none;
+}
+.card-body{
+    background-color: #f1f3f4;
+    z-index: 2;
+}
+.card-title{
+    text-align: center;
+    font-weight: 600;
+
+}
+.card-price{
+    font-weight: 600;
+    color: #10d479;
+    font-size: 16px;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+
+}
+.card-hint{
+    text-align: center;
+    color: silver;
+    word-wrap: wrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pprev,.nnext{
+    height: 85%;
+    width: 5%;
+}

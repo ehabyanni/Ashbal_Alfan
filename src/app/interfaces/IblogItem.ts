@@ -1,7 +1,7 @@
 export interface IBlog{
-    id:number,
+    id:string,
     image:string,
-    history:string,
+    creationDate:Date,
     title:string,
-    text:string
+    content:string
 } 

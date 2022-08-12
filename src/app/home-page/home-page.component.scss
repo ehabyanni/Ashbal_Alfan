@@ -14,6 +14,22 @@
     width: 100%;
     border-radius: 0px;
 }
+.nextBtn,.prevBtn{
+    opacity: 1;
+    width: 50px;
+    background-color: #10d47800 !important;
+    
+}
+.nextIcon{
+    background-image: url("/assets/images/arrow-right-circle2.svg");
+    width: 30px;
+    height: 30px;
+}
+.prevIcon{
+    background-image: url("/assets/images/arrow-left-circle2.svg");
+    width: 30px;
+    height: 30px;
+}
 
 /*count*/
 .cover{
@@ -92,6 +108,7 @@
     height: 55%;
     width: 90%;
     margin: auto;
+    overflow: hidden;
 }
 .top-h4{
     color: #1c1c11;
@@ -134,8 +151,6 @@
 }
 
 /*partners*/
-
-/*count*/
 .partners{
     padding-top: 60px;
     padding-bottom:60px;
@@ -165,6 +180,10 @@
     display: flex;
     justify-content: center;
     align-content: center;
+}
+.item-img img{
+    width: fit-content;
+    height: fit-content;
 }
 
 /*carousel customize*/

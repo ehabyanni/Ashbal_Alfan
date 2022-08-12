@@ -1,13 +1,15 @@
 export interface IProduct{
-    id:number;
+    id:string;
     image1:string;
     image2:string;
     image3:string;
     image4:string;
     image5:string;
     categoryName:string;
-    productName:string;
-    priceFrom:number;
-    priceTo:number;
+    title:string;
+    minPrice:number;
+    maxPrice:number;
+    description:string;
+    sku:string;
     hint:string;
 }

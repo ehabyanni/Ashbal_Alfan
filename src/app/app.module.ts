@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +17,7 @@ import { AdvertisingProductsComponent } from './advertising-products/advertising
 import { BrochureComponent } from './brochure/brochure.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ErrorPageNotFoundComponent } from './error-page-not-found/error-page-not-found.component';
+import { CategoryProductCarosuelComponent } from './category-product-carosuel/category-product-carosuel.component';
 
 
 @NgModule({
@@ -33,13 +34,14 @@ import { ErrorPageNotFoundComponent } from './error-page-not-found/error-page-no
     AdvertisingProductsComponent,
     BrochureComponent,
     ProductDetailsComponent,
-    ErrorPageNotFoundComponent
+    ErrorPageNotFoundComponent,
+    CategoryProductCarosuelComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

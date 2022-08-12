@@ -44,12 +44,13 @@
 }
 
 
-
+.details{
+    border-right: 1px solid #eee;
+}
 
 /*product name*/
 .name{
     padding-top: 10px;
-    padding-bottom: 10px ;
 }
 .name h3{
     font-weight: 600;
@@ -57,16 +58,19 @@
 
 /*price*/
 .price{
-    padding-top: 10px;
     padding-bottom: 10px;
     color: #10d479;
 }
-/*hint*/
-.hint h6{
+
+.description h6{
     color: #a8a8a8;
+    font-weight: 500;
 }
 
 /*buy button*/
+.buttons {
+    padding-top: 60px;
+}
 .buttons .btn{
     border-radius: 0px;
     border: 0px;
@@ -92,5 +96,18 @@
 @media screen and (max-width:470px){
     .thumbnail_images ul {
         overflow:scroll;
+    }
+}
+ @media screen and (max-width:767px){
+    .details{
+        border-top: 1px solid #eee;
+        border-right: 0px;
+    }
+ }
+    
+@media screen and (min-width:767px)and (max-width:992px){
+
+    .details{
+        border: 0px;
     }
 }
