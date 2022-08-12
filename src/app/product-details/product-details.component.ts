@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { NotFoundError } from 'rxjs';
 import { ProductsService } from '../services/products.service';
 
 @Component({
@@ -14,7 +13,7 @@ export class ProductDetailsComponent implements OnInit {
   constructor(private http: HttpClient,
     private activeroute: ActivatedRoute,
     private productService: ProductsService,
-    private router: Router
+    private router: Router,
   ) { }
 
   product_id: any;
