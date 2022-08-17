@@ -4,7 +4,8 @@
             <div class="col-12 blogbock">
                 <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let blog of blogs">
                     <div class="card col-11">
-                        <img class="card-img-top" src="assets/images/{{blog.image}}" alt="Card image" style="width:100%;">
+                        <!-- <img class="card-img-top" src="assets/images/{{blog.image}}" alt="Card image" style="width:100%;"> -->
+                        <img class="card-img-top" src={{blog.image}} alt="Card image" style="width:100%;">
                         <div class="card-body">
                             <p class="card-history">{{blog.creationDate}}</p>
                             <h5 class="card-title">{{blog.title}}</h5>

@@ -23,7 +23,6 @@ import { FirstSliderComponent } from './first-slider/first-slider.component';
 import { CartComponent } from './cart/cart.component';
 import { CartRequestComponent } from './cart-request/cart-request.component';
 import { RouterModule } from '@angular/router';
-import { CarouselModule } from 'ngx-owl-carousel-o';
 
 
 
@@ -53,8 +52,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule,
-    CarouselModule 
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

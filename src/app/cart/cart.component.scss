@@ -1,69 +1,85 @@
+* {
+  font-family: Tajawal;
+}
 
-.cart-title{
-    color: rgb(20, 20, 20);
-    font-size: xx-large;
-    font-weight: bolder;
-    padding: 5px;
-  }
-  
-  .row-title{
-    background-color: rgba(213, 218, 213, 0.644) !important;
-  }
-  
-  td {
-        vertical-align:middle !important;
-    }
-  .fa-cart-arrow-down{
-    color:  rgb(43, 102, 43) !important;
-  }
-  .fa-trash:hover{
-        transition: all 0.3s ease;
-        transform: scale(1.8);
-        color: red;
-    }
-    .fa-trash{
-        cursor: pointer;
-        transition: all 0.3s ease;
-        color: rgb(71, 79, 61);
-        padding-right: 2px;
-        transform: scale(1.4);
-    }
-  
-  .form-control[type="number"]::-webkit-inner-spin-button,
-  .form-control[type="number"]::-webkit-outer-spin-button {
+.cart-title {
+  color: rgb(20, 20, 20);
+  font-size: x-large;
+  font-weight: bolder;
+  padding: 5px;
+}
+
+.row-title {
+  background-color: #ffffff !important;
+}
+.fa-cart-arrow-down {
+  color: #10d479 !important;
+  margin-left: 3px;
+}
+
+
+td {
+  vertical-align: middle !important;
+}
+
+
+
+
+
+/*Delete icon*/
+.fa-trash {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: rgb(71, 79, 61);
+  padding-right: 2px;
+  transform: scale(1);
+}
+.fa-trash:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.6);
+  color: red;
+}
+
+/*quantity input*/
+.form-control[type="number"] {
+  text-align: center; 
+  font-size: larger;
+  border: 0;
+}
+
+.form-control[type="number"]::-webkit-inner-spin-button,
+.form-control[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
-  }
-  
-  
-  .calculate{
-    font-weight: bolder;
-  }
-  
-  .fa-cart-arrow-down
-  {
-    color: rgb(24, 24, 23);
-    margin: 2px;
-  
-  }
-  
-  .footer-btn{
-    color:rgb(213, 218, 213) !important;
-    font-size: larger;
-    font-weight: bold;
-    background-color: rgb(43, 102, 43) !important;
-  }
-  
-  .footer-btn:hover{
-    color: rgb(0, 96, 0) !important;
-    background-color:rgb(213, 218, 213) !important;
-  }
-  .empty{
-    padding: 150px 150px;
-    text-align: right;
-    font-family: 'Tajawal';
+}
 
+
+
+/*الفاتورة*/
+
+.footer-btn {
+  color: rgb(255, 255, 255) !important;
+  font-size: medium;
+  background-color: #0E7E4A !important;
+  border-radius: 0px;
+}
+
+.footer-btn:hover {
+  color: #0E7E4A !important;
+  font-weight: 600;
+  background-color: rgb(255, 255, 255) !important;
+}
+
+.empty {
+  padding-top:100px;
+  text-align: right;
+}
+
+
+
+
+@media screen and(max-width:767px){
+  .buys{
+    margin-top: 25px;
   }
-  .empty-text{
-    padding: 100px 0px 40px;
-  }
+}

@@ -10,7 +10,8 @@ export class BlogitemsService {
 
   constructor(private http:HttpClient) { }
 
-  public _url = "http://localhost:5216/api/Blog";
+  //public _url = "http://localhost:5216/api/Blog";
+  public _url = "assets/data/blogitems.json"
 
   blog:any = [];
 

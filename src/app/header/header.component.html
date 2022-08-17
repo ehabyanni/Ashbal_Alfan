@@ -10,7 +10,7 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <div class="info col-12">
                         <div class="info-media col-12">
-                            <div class="col-10" style=" float: left; display: flex; justify-content: center; align-content: center;">
+                            <div class="col-9" style=" float: left; display: flex; justify-content: center; align-content: center;">
                                 <div class="socialMedia" style="float:left;">
                                     <a href="#"> <i class="fa-brands fa-facebook"></i></a>&nbsp; &nbsp;
                                     <a href="#"> <i class="fa-brands fa-twitter"></i></a>&nbsp; &nbsp;
@@ -33,8 +33,19 @@
                                     </a>
                                   </div>
                             </div>
-                            <div class="col-2" style="float: left;">
-                                <a routerLink="/pricing_request" style="float:right;">طلب التسعير</a>
+                            <div class="col-3" style="float: left; direction: rtl;">
+                                <div class="col-12">
+                                    <div class="col-3" style="float: left;">
+                                        <a class="nav-link" routerLink="cart">
+                                            <i class="fa" style="font-size:18px">&#xf07a;</i>
+                                            <span class='badge badge-primary' id="lblCartCount"></span>
+                                          </a>
+                                    </div>
+                                    <div class="col-9">
+                                        <a routerLink="/pricing_request">طلب التسعير </a>
+                                        
+                                    </div>
+                                </div>
                             </div>
                         </div> 
                         <ul class="navbar-nav col-12 " style="direction: rtl;">
@@ -65,12 +76,12 @@
                             <li class="nav-item" >
                                 <a class="nav-link" routerLink="/blog">المدونة</a>
                             </li>
-                            <li class="nav-item"> 
+                            <!-- <li class="nav-item"> 
                                 <a class="nav-link" routerLink="cart">
                                     <i class="fa" style="font-size:24px">&#xf07a;</i>
                                     <span class='badge badge-primary' id="lblCartCount"></span>
                                   </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
 

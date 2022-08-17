@@ -13,7 +13,8 @@ export class ProductsService {
 
   products:any = [];
 
-  public _url = "http://localhost:5216/api/Product";
+  //public _url = "http://localhost:5216/api/Product";
+  public _url = "assets/data/products.json"
 
   //all products
   GetAllProducts():Observable<IProduct[]>{

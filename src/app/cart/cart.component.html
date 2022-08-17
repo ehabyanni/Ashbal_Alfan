@@ -1,36 +1,37 @@
+<div class="container-fluid" style="direction: rtl;margin-top: 130px;">
+  <div class="container">
+    <div class="row row-title bg-light shadow-sm p-3 ">
+      <h4 class="cart-title text-end"><i class="fa fa-cart-arrow-down" style="font-size: 20px;"></i> سلة التسوق</h4>
+    </div>
+    <div *ngIf="isEmpty ; then empty; else Items "></div>
 
-
-<div class="container-fluid" style="direction: rtl;margin-top: 100px;">
-    <div class="container">
-      <div class="row row-title bg-light shadow-lg p-3 ">
-        
-        <h1 class="cart-title text-end "><i class="fa fa-cart-arrow-down"></i> سلة التسوق</h1>
-      </div>
-      <div *ngIf="isEmpty ; then empty; else Items "></div>
-
-      <ng-template #empty>
-        <div class="row">
-            <div class="col-6 empty w-55">
-                <h1 class="cart-empty woocommerce-info empty-text">سلة مشترياتك فارغة حاليًا.</h1>
-                <br>
-                <a class="btn btn-success" routerLink="">
-                    العودة إلى الرئيسية		
-                </a>
-            </div>
-            <div class="col-6">
-                <img class="w-100" src="../../assets/images/Cart.png"  alt="" srcset="">
-            </div>
-       
+    <ng-template #empty>
+      <div class="row">
+        <div class="col-6 empty w-55"
+          style="display: flex; justify-content: center; align-content: center; text-align: center;">
+          <div>
+            <h1 class="cart-empty woocommerce-info empty-text">سلة مشترياتك فارغة حاليًا.</h1>
+            <br>
+            <a class="btn btn-success" routerLink="/home">
+              العودة إلى الرئيسية
+            </a>
+          </div>
         </div>
+        <div class="col-6">
+          <img class="w-50" style="display: block; margin: auto; padding-top: 20px; padding-bottom:20px;"
+            src="../../assets/images/Cart.png" alt="" srcset="">
+        </div>
+      </div>
+
     </ng-template>
-      <ng-template #Items>
+    <ng-template #Items>
       <div class="row mt-5 mb-2 p-3">
-        <div class="col-9 border">
+        <div class="col-12 col-sm-12 col-md-9 border">
           <table class="table bordered">
             <thead class="p-2">
               <tr>
                 <th style="width: 50px;"></th>
-                <th>الصوره</th>
+                <th>الصورة</th>
                 <th class="w-25">المنتج</th>
                 <th class="w-25">السعر</th>
                 <th class="w-25">الكمية</th>
@@ -39,55 +40,71 @@
             </thead>
             <tbody>
               <tr *ngFor="let item of CartItems;">
-                <td><a (click)="deleteItem(item.product)"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
-                <td >
-                  <div><img class="product-image w-100" src="assets/images/{{item.product.image1}}" alt="" srcset=""></div>
+                <td>
+                  <a (click)="deleteItem(item.product)"><i class="fa fa-trash" aria-hidden="true"></i></a>
                 </td>
-                <td><a href={{item.product.id}}>{{item.product.title}}</a></td>
-                <td>{{item.product.maxPrice}} ر.س الأسعار تشمل الضريبة</td>
+                <td>
+                  <div>
+                    <img class="product-image w-100" src="assets/images/{{item.product.image1}}" alt="" srcset="">
+                    <!-- <img class="product-image w-100" src="{{item.product.image1}}" alt="" srcset=""> -->
+                  </div>
+                </td>
+                <td>
+                  <a href={{item.product.id}} style="text-decoration: none; " data-bs-toggle="tooltip"
+                    title="إضغط لرؤية المنتج">{{item.product.title}}</a>
+                </td>
+                <!-- <td>{{item.product.maxPrice}} ر.س الأسعار تشمل الضريبة</td> -->
+                <td>
+                  <h5 style="color:#0E7E4A; float: right;">{{item.product.maxPrice}} </h5>&nbsp; ر.س
+                </td>
                 <td class="plus-minus">
                   <div class="input-group inline-group">
                     <div class="input-group-prepend">
-                      <button (click)="changeQuantity(item.product,-1)" class="btn btn-outline-success btn-minus">
+                      <button (click)="changeQuantity(item.product,-1)" class="btn btn-outline-success btn-minus"
+                        style="border-radius:0 ;">
                         <i class="fa fa-minus"></i>
                       </button>
                     </div>
-                    <input  class="form-control quantity" min="1" name="quantity" value={{item.quantity}} type="number">
+                    <input class="form-control quantity" min="1" name="quantity" value={{item.quantity}} type="number">
                     <div class="input-group-append">
-                      <button (click)="changeQuantity(item.product,1)" class="btn btn-outline-success btn-plus">
+                      <button (click)="changeQuantity(item.product,1)" class="btn btn-outline-success btn-plus"
+                        style="border-radius:0 ;">
                         <i class="fa fa-plus"></i>
                       </button>
                     </div>
                   </div>
                 </td>
-                <td class="calculate">{{item.product.maxPrice*item.quantity}} ر.س الأسعار تشمل الضريبة</td>
+                <td class="calculate">
+                  <h5 style="color: #10d479; float: right; font-weight: 600;">{{item.product.maxPrice*item.quantity}}
+                  </h5> &nbsp;
+                  ر.س ، الأسعار تشمل الضريبة
+                </td>
 
               </tr>
-  
-            </tbody>  
-        </table>
-          
+
+            </tbody>
+          </table>
+
         </div>
-  
-        <div class="col-3">
+
+        <div class="col-12 col-sm-12 col-md-3 buys">
           <div class="card">
             <div class="card-header">
-                <h5>
-              إجمالي سلة المشتريات</h5>
+              <h5 style="text-align: center;">
+                إجمالي سلة المشتريات</h5>
             </div>
-            <div class="card-body">
-              <h5 class="card-title  fw-bold pb-3">الإجمالي
-                <span class="span-card" style="color: #0E7E4A;margin:2%">{{getTotalPrice()}} ر.س</span>
+            <div class="card-body" style="text-align: center;">
+              <h5 class="card-title  fw-bold pb-3">الإجمالي :
+                <span class="span-card" style="color: #10d479; margin-right:2%; font-size: larger;">{{getTotalPrice()}}
+                  ر.س</span>
               </h5>
-              <p class="card-text">سيتم تحديد مصاريف الشحن أثناء السداد.
-                .</p>
-  
-              <button class="btn border m-2 footer-btn" routerLink="../cart_request"> التقدم لإتمام الطلب</button>
+              <p class="card-text" style="font-weight: 500;">تحديد مصاريف الشحن أثناء السداد.</p>
+              <button class="btn m-2 footer-btn" routerLink="../cart_request"> التقدم لإتمام الطلب</button>
             </div>
           </div>
         </div>
       </div>
     </ng-template>
-    </div>
-  
   </div>
+
+</div>
