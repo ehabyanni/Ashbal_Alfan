@@ -35,7 +35,7 @@ export class HomePageComponent implements OnInit {
   ngOnInit(): void {
     this.productService.GetAllProducts().subscribe(
       data=>{
-        this.products = data.filter(x => x.categoryName == "المنتجات الورقية");
+        this.products = data.filter(x => x.category_Id == "d31edd00-bcea-403d-a91f-08da7f5660f3");
       }
     )
   }

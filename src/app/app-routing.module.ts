@@ -4,6 +4,8 @@ import { AdvertisingProductsComponent } from './advertising-products/advertising
 import { BlogDetailsComponent } from './blog-details/blog-details.component';
 import { BlogViewComponent } from './blog-view/blog-view.component';
 import { BrochureComponent } from './brochure/brochure.component';
+import { CartRequestComponent } from './cart-request/cart-request.component';
+import { CartComponent } from './cart/cart.component';
 import { ErrorPageNotFoundComponent } from './error-page-not-found/error-page-not-found.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { PaperPrintingsComponent } from './paper-printings/paper-printings.component';
@@ -13,6 +15,8 @@ import { StickersComponent } from './stickers/stickers.component';
 
 const routes: Routes = [
   {path:''                    , component:HomePageComponent           },
+  {path:'cart'                , component:CartComponent               },
+  {path:'cart_request'        , component:CartRequestComponent        },
   {path:'blog'                , component:BlogViewComponent           },
   {path:'blog/:id'            , component:BlogDetailsComponent        },
   {path:'home'                , component:HomePageComponent           },

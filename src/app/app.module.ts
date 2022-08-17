@@ -18,9 +18,13 @@ import { BrochureComponent } from './brochure/brochure.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ErrorPageNotFoundComponent } from './error-page-not-found/error-page-not-found.component';
 import { CategoryProductCarosuelComponent } from './category-product-carosuel/category-product-carosuel.component';
-import { CartPageComponent } from './cart-page/cart-page.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FirstSliderComponent } from './first-slider/first-slider.component';
+import { CartComponent } from './cart/cart.component';
+import { CartRequestComponent } from './cart-request/cart-request.component';
+import { RouterModule } from '@angular/router';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
 
 
 @NgModule({
@@ -39,15 +43,18 @@ import { FirstSliderComponent } from './first-slider/first-slider.component';
     ProductDetailsComponent,
     ErrorPageNotFoundComponent,
     CategoryProductCarosuelComponent,
-    CartPageComponent,
     ContactUsComponent,
     FirstSliderComponent,
+    CartComponent,
+    CartRequestComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    RouterModule,
+    CarouselModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

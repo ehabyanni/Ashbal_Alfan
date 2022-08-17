@@ -1,3 +1,7 @@
+<div class="popup">
+    <span class="popuptext" id="myPopup"><span>&#10003;</span> تمت الاضافة للسلة</span>
+  </div>
+
 <div class="mainDiv" style="padding-top: 100px;">
     <div class="container-fluid" style="direction: rtl;">
         <div class="container" style=" padding-top: 30px; padding-bottom: 50px;">
@@ -7,17 +11,17 @@
                         <div class="col-12 col-sm-12 col-md-6">
                             <div class=" flex-column justify-content-center">
                                 <div class="main_image">
-                                    <img [src]="product.image1" id="main_product_image" width="370">
+                                    <img src="assets/images/{{product.image1}}" id="main_product_image" width="370">
                                 </div>
                                 <div class="thumbnail_images">
                                     <ul id="thumbnail">
-                                        <li><img id="img1" (click)="changeImage1()" [src]="product.image1" width="70">
+                                        <li><img id="img1" (click)="changeImage1()" src="assets/images/{{product.image1}}" width="70">
                                         </li>
-                                        <li><img id="img2" (click)="changeImage2()" [src]="product.image2" width="70">
+                                        <li><img id="img2" (click)="changeImage2()" src="assets/images/{{product.image2}}" width="70">
                                         </li>
-                                        <li><img id="img3" (click)="changeImage3()" [src]="product.image3" width="70">
+                                        <li><img id="img3" (click)="changeImage3()" src="assets/images/{{product.image3}}" width="70">
                                         </li>
-                                        <li><img id="img4" (click)="changeImage4()" [src]="product.image4" width="70">
+                                        <li><img id="img4" (click)="changeImage4()" src="assets/images/{{product.image4}}" width="70">
                                         </li>
                                     </ul>
                                 </div>
@@ -37,17 +41,17 @@
                                         <h6>{{product.description}}</h6>
                                     </div>
                                     <div class="mt-4 pr-3 sku">
-                                        <h6 style="float: right; font-weight: 600; color: #1c1c1c;">SKU : </h6>
-                                        <h6 style="font-weight: 600; color: #1c1c1c;">{{product.sku}}</h6>
+                                        <h6 style="float: right; font-weight: 600; color: #1c1c1c; margin-left: 1%;">SKU : </h6>
+                                        <h6 style="font-weight: 600; color: #7c7575;"> {{product.sku}}</h6>
                                     </div>
                                     <div class="mt-2 pr-3 sku">
-                                        <h6 style="float: right; font-weight: 600; color: #1c1c1c;">الفئة : </h6>
-                                        <h6 style="font-weight: 600; color: #1c1c1c;">{{product.categoryName}}</h6>
+                                        <h6 style="float: right; font-weight: 600; color: #1c1c1c; margin-left: 1%;">الفئة :  </h6>
+                                        <h6 class="h6" style="font-weight: 600; color: #10d479;cursor: pointer;" routerLink="../{{getCategoryRoute(product.category_Name)}}"> {{product.category_Name}}</h6>
                                     </div>
                                 </div>
                                 <div class="buttons d-flex flex-row  gap-3">
                                     <!-- <button class="btn1">Buy Now</button>  -->
-                                    <button class="btn">إضافة إلي السلة</button>
+                                    <button class="btn" (click)="addToCart()">إضافة إلي السلة</button>
                                 </div>
                             </div>
                         </div>

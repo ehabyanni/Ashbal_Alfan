@@ -16,7 +16,7 @@ export class StickersComponent implements OnInit {
   ngOnInit(): void {
     this.productService.GetAllProducts().subscribe(
       data =>{
-        this.products = data.filter(x => x.categoryName == "اللوحات والإستيكرات");
+        this.products = data.filter(x=> x.category_Id == "af855c6e-aafc-40b2-a920-08da7f5660f3");
       }
     )
   }

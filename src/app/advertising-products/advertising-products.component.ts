@@ -16,7 +16,7 @@ export class AdvertisingProductsComponent implements OnInit {
   ngOnInit(): void {
     this.productService.GetAllProducts().subscribe(
       data =>{
-        this.products = data.filter(x=> x.categoryName == "المنتجات الإعلانية");
+        this.products = data.filter(x=> x.category_Id == "344e00a1-7744-4388-a921-08da7f5660f3");
       }
     )
   }

@@ -43,47 +43,33 @@
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" routerLink="paper_printings" role="button"
-                                    data-bs-toggle="dropdown">المطبوعات الورقية</a>
+                                    >المطبوعات الورقية</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">كروت شخصية</a></li>
-                                    <li><a class="dropdown-item" href="#">أوراق المراسلات - الأوراق الرسمية</a></li>
-                                    <li><a class="dropdown-item" href="#">ستيكرات ورقية</a></li>
-                                    <li><a class="dropdown-item" href="#">شهادات بأنواعها</a></li>
-                                    <li><a class="dropdown-item" href="#">أظرف طباعة ألوان متعددة</a></li>
-                                    <li><a class="dropdown-item" href="#">فولدر</a></li>
-                                    <li><a class="dropdown-item" href="#">مذكرات مطبوعة</a></li>
-                                    <li><a class="dropdown-item" href="#">المجلات والكتب</a></li>
-                                    <li><a class="dropdown-item" href="#">ملفات مستندات</a></li>
-                                    <li><a class="dropdown-item" href="#">ملفات فواتير</a></li>
-                                    <li><a class="dropdown-item" href="#">لباد الطعام</a></li>
+                                    <li   *ngFor="let product of paperPrintingsProducts;"><a class="dropdown-item" href={{product.id}} >{{product.title}}</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" routerLink="/stickers" role="button"
-                                    data-bs-toggle="dropdown">اللوحات والإستيكرات</a>
+                                    >اللوحات والإستيكرات</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">لوحات الحروف البارزة</a></li>
-                                    <li><a class="dropdown-item" href="#">لوحات الفلكس</a></li>
-                                    <li><a class="dropdown-item" href="#">لوحات البانر</a></li>
-                                    <li><a class="dropdown-item" href="#">اللوحات الإرشادية</a></li>
-                                    <li><a class="dropdown-item" href="#">لوحات الكانفاس</a></li>
-                                    <li><a class="dropdown-item" href="#">طباعة وتركيب الإستيكرات</a></li>
+                                    <li   *ngFor="let product of stickerProducts;"><a class="dropdown-item" href={{product.id}} >{{product.title}}</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" routerLink="/advertising" role="button"
-                                    data-bs-toggle="dropdown">المنتجات الإعلانية</a>
+                                    >المنتجات الإعلانية</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">رول أب</a></li>
-                                    <li><a class="dropdown-item" href="#">بوب أب</a></li>
-                                    <li><a class="dropdown-item" href="#">أختام</a></li>
-                                    <li><a class="dropdown-item" href="#">بوسترات</a></li>
-                                    <li><a class="dropdown-item" href="#">X Banner Stand</a></li>
-                                    <li><a class="dropdown-item" href="#">Info. Board</a></li>
+                                    <li   *ngFor="let product of advertisingProducts;"><a class="dropdown-item" href={{product.id}} >{{product.title}}</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item" >
                                 <a class="nav-link" routerLink="/blog">المدونة</a>
+                            </li>
+                            <li class="nav-item"> 
+                                <a class="nav-link" routerLink="cart">
+                                    <i class="fa" style="font-size:24px">&#xf07a;</i>
+                                    <span class='badge badge-primary' id="lblCartCount"></span>
+                                  </a>
                             </li>
                         </ul>
                     </div>

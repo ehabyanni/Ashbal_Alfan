@@ -13,8 +13,8 @@
                 <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let prod of products" >
                     <div class="card col-11" (click)="goToProductDetails(prod.id)">
                         <div style="width:100%; height:350px">
-                            <img class="card-img-top2" [src]="prod.image2" alt="Card image second">
-                            <img class="card-img-top1" [src]="prod.image1" alt="Card image firts">
+                            <img class="card-img-top2" src="assets/images/{{prod.image2}}" alt="Card image second">
+                            <img class="card-img-top1" src="assets/images/{{prod.image1}}" alt="Card image firts">
                         </div>
                         <div class="card-body">
                             <p class="card-category">{{prod.categoryName}}</p>

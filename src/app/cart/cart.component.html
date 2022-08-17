@@ -1,0 +1,93 @@
+
+
+<div class="container-fluid" style="direction: rtl;margin-top: 100px;">
+    <div class="container">
+      <div class="row row-title bg-light shadow-lg p-3 ">
+        
+        <h1 class="cart-title text-end "><i class="fa fa-cart-arrow-down"></i> سلة التسوق</h1>
+      </div>
+      <div *ngIf="isEmpty ; then empty; else Items "></div>
+
+      <ng-template #empty>
+        <div class="row">
+            <div class="col-6 empty w-55">
+                <h1 class="cart-empty woocommerce-info empty-text">سلة مشترياتك فارغة حاليًا.</h1>
+                <br>
+                <a class="btn btn-success" routerLink="">
+                    العودة إلى الرئيسية		
+                </a>
+            </div>
+            <div class="col-6">
+                <img class="w-100" src="../../assets/images/Cart.png"  alt="" srcset="">
+            </div>
+       
+        </div>
+    </ng-template>
+      <ng-template #Items>
+      <div class="row mt-5 mb-2 p-3">
+        <div class="col-9 border">
+          <table class="table bordered">
+            <thead class="p-2">
+              <tr>
+                <th style="width: 50px;"></th>
+                <th>الصوره</th>
+                <th class="w-25">المنتج</th>
+                <th class="w-25">السعر</th>
+                <th class="w-25">الكمية</th>
+                <th class="w-25">المجموع</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of CartItems;">
+                <td><a (click)="deleteItem(item.product)"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                <td >
+                  <div><img class="product-image w-100" src="assets/images/{{item.product.image1}}" alt="" srcset=""></div>
+                </td>
+                <td><a href={{item.product.id}}>{{item.product.title}}</a></td>
+                <td>{{item.product.maxPrice}} ر.س الأسعار تشمل الضريبة</td>
+                <td class="plus-minus">
+                  <div class="input-group inline-group">
+                    <div class="input-group-prepend">
+                      <button (click)="changeQuantity(item.product,-1)" class="btn btn-outline-success btn-minus">
+                        <i class="fa fa-minus"></i>
+                      </button>
+                    </div>
+                    <input  class="form-control quantity" min="1" name="quantity" value={{item.quantity}} type="number">
+                    <div class="input-group-append">
+                      <button (click)="changeQuantity(item.product,1)" class="btn btn-outline-success btn-plus">
+                        <i class="fa fa-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                </td>
+                <td class="calculate">{{item.product.maxPrice*item.quantity}} ر.س الأسعار تشمل الضريبة</td>
+
+              </tr>
+  
+            </tbody>  
+        </table>
+          
+        </div>
+  
+        <div class="col-3">
+          <div class="card">
+            <div class="card-header">
+                <h5>
+              إجمالي سلة المشتريات</h5>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title  fw-bold pb-3">الإجمالي
+                <span class="span-card" style="color: #0E7E4A;margin:2%">{{getTotalPrice()}} ر.س</span>
+              </h5>
+              <p class="card-text">سيتم تحديد مصاريف الشحن أثناء السداد.
+                .</p>
+  
+              <button class="btn border m-2 footer-btn" routerLink="../cart_request"> التقدم لإتمام الطلب</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+    </div>
+  
+  </div>

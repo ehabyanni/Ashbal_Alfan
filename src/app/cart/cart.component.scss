@@ -1,0 +1,69 @@
+
+.cart-title{
+    color: rgb(20, 20, 20);
+    font-size: xx-large;
+    font-weight: bolder;
+    padding: 5px;
+  }
+  
+  .row-title{
+    background-color: rgba(213, 218, 213, 0.644) !important;
+  }
+  
+  td {
+        vertical-align:middle !important;
+    }
+  .fa-cart-arrow-down{
+    color:  rgb(43, 102, 43) !important;
+  }
+  .fa-trash:hover{
+        transition: all 0.3s ease;
+        transform: scale(1.8);
+        color: red;
+    }
+    .fa-trash{
+        cursor: pointer;
+        transition: all 0.3s ease;
+        color: rgb(71, 79, 61);
+        padding-right: 2px;
+        transform: scale(1.4);
+    }
+  
+  .form-control[type="number"]::-webkit-inner-spin-button,
+  .form-control[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  }
+  
+  
+  .calculate{
+    font-weight: bolder;
+  }
+  
+  .fa-cart-arrow-down
+  {
+    color: rgb(24, 24, 23);
+    margin: 2px;
+  
+  }
+  
+  .footer-btn{
+    color:rgb(213, 218, 213) !important;
+    font-size: larger;
+    font-weight: bold;
+    background-color: rgb(43, 102, 43) !important;
+  }
+  
+  .footer-btn:hover{
+    color: rgb(0, 96, 0) !important;
+    background-color:rgb(213, 218, 213) !important;
+  }
+  .empty{
+    padding: 150px 150px;
+    text-align: right;
+    font-family: 'Tajawal';
+
+  }
+  .empty-text{
+    padding: 100px 0px 40px;
+  }

@@ -15,15 +15,15 @@
                         <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
                     </div> -->
                     <!-- The slideshow/carousel -->
-                    <div class="carousel-inner" style="height:250;">
+                    <div class="carousel-inner"  style="height:250;">
                         <div class="carousel-item active">
                             <div class="img-container">
-                                <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let prod of products">
-                                    <div class="card col-11">
+                                <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let prod of paperPrintingsProducts">
+                                    <div class="card col-11" routerLink="../{{prod.id}}">
                                         <div style="width:100%; height:255px;">
-                                            <img class="card-img-top2" src="{{prod.image1}}"
+                                            <img class="card-img-top2" src="../../assets/images/{{prod.image1}}"
                                                 alt="Card image second">
-                                            <img class="card-img-top1" src="{{prod.image2}}"
+                                            <img class="card-img-top1"  src="../../assets/images/{{prod.image2}}"
                                                 alt="Card image firts">
                                         </div>
                                         <div class="card-body">
@@ -162,12 +162,12 @@
                     <div class="carousel-inner" style="height:250;">
                         <div class="carousel-item active">
                             <div class="img-container">
-                                <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let prod of products">
+                                <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let prod of stickerProducts">
                                     <div class="card col-11">
                                         <div style="width:100%; height:255px;">
-                                            <img class="card-img-top2" src="{{prod.image1}}"
+                                            <img class="card-img-top2" src="../../assets/images/{{prod.image1}}"
                                                 alt="Card image second">
-                                            <img class="card-img-top1" src="{{prod.image2}}"
+                                            <img class="card-img-top1" src="../../assets/images/{{prod.image2}}"
                                                 alt="Card image firts">
                                         </div>
                                         <div class="card-body">
@@ -306,12 +306,12 @@
                     <div class="carousel-inner" style="height:250;">
                         <div class="carousel-item active">
                             <div class="img-container">
-                                <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let prod of products">
+                                <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let prod of advertisingProducts">
                                     <div class="card col-11">
                                         <div style="width:100%; height:255px;">
-                                            <img class="card-img-top2" src="{{prod.image1}}"
+                                            <img class="card-img-top2" src="../../assets/images/{{prod.image1}}"
                                                 alt="Card image second">
-                                            <img class="card-img-top1" src="{{prod.image2}}"
+                                            <img class="card-img-top1" src="../../assets/images/{{prod.image2}}"
                                                 alt="Card image firts">
                                         </div>
                                         <div class="card-body">
@@ -431,11 +431,10 @@
     </div>
 </div>
 
-
-
 <script>
     // Handle Bootstrap carousel slide event
     $('.carousel').carousel({
         interval: 15
     });
+
 </script>

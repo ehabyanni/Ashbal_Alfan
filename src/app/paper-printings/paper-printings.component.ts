@@ -18,7 +18,7 @@ export class PaperPrintingsComponent implements OnInit {
   ngOnInit(): void {
     this.productService.GetAllProducts().subscribe(
       data => {
-        this.products = data.filter(x=> x.categoryName == "مطبوعات ورقية");
+        this.products = data.filter(x=> x.category_Id == "d31edd00-bcea-403d-a91f-08da7f5660f3");
         console.log(this.products);
       }
     )
