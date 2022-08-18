@@ -26,8 +26,8 @@ export class ProductDetailsComponent implements OnInit {
   product_id: any;
   product: any = {};
 
-  product_kind: any = ["كوشيه 350 جم سولفان مطفي/لامع", "ايس جولد", "مغمش"];
-  product_quantity: any = ["100", "500", "1000"];
+  product_kind: any;
+  product_quantity: any;
 
   Kind: any = false;
   Quantity: any = false;
@@ -38,8 +38,8 @@ export class ProductDetailsComponent implements OnInit {
     this.productService.GetAllProducts().subscribe(
       data => {
         this.product = data.find(x => x.id == this.product_id);
-        this.Kind = this.product.KindISExist;
-        this.Quantity = this.product.QuantityIsExist;
+        this.Kind = this.product.isTypeExist;
+        this.Quantity = this.product.isAmountExist;
         console.log(this.product);
         console.log(this.Kind);
         console.log(this.Quantity);
@@ -51,6 +51,16 @@ export class ProductDetailsComponent implements OnInit {
     )
     console.log(this.Kind);
     console.log(this.Quantity);
+    this.productService.GetAllTypes(this.product_id).subscribe(
+      data => {
+        this.product_kind = data;
+      }
+    );
+    this.productService.GetAllAmounts(this.product_id).subscribe(
+      data => {
+        this.product_quantity = data;
+      }
+    );
   }
 
 
@@ -144,11 +154,18 @@ export class ProductDetailsComponent implements OnInit {
       console.log(product_price.prod_kind);
       console.log(product_price.prod_qnt);
 
-      var ppp = document.getElementById('price-value') as HTMLElement;
-      var vvv:string = "500";
+      // var vvv:string = "500";
 
-      ppp.innerText = vvv + "  ر.س  ";
+      this.productService.GetPrice(this.product_id, product_price.prod_kind, product_price.prod_qnt as number | null).subscribe(
+        data => {
 
+          var price = data;
+          var ppp = document.getElementById('price-value') as HTMLElement;
+          ppp.innerText = price + "  ر.س  ";
+
+          console.log(data);
+        }
+      )
     }
   }
 
@@ -161,14 +178,22 @@ export class ProductDetailsComponent implements OnInit {
 
       console.log(product_price.prod_kind);
 
-      var ppp = document.getElementById('price-value') as HTMLElement;
-      var vvv:string = "350";
+      // var ppp = document.getElementById('price-value') as HTMLElement;
+      // var vvv:string = "350";
 
-      ppp.innerText = vvv + "  ر.س  ";
+      // ppp.innerText = vvv + "  ر.س  ";
+      this.productService.GetPrice(this.product_id, product_price.prod_kind).subscribe(
+        data => {
 
+          var price = data;
+          var ppp = document.getElementById('price-value') as HTMLElement;
+          ppp.innerText = price + "  ر.س  ";
+
+          console.log(data);
+        }
+      );
     }
+
   }
-
-
-
 }
+

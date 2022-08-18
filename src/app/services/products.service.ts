@@ -21,4 +21,17 @@ export class ProductsService {
     this.products =  this.http.get<IProduct[]>(this._url);
     return this.products;
   }
+
+  GetAllTypes(id:string):Observable<string[]>{
+    return    this.http.get<string[]>(this._url+"/types/"+id);
+  }
+
+  GetAllAmounts(id:string):Observable<number[]>{
+    return  this.http.get<number[]>(this._url+"/amounts/"+id);
+  }
+  GetPrice(id:string,type:string|null,amount:number|null=-1){
+    console.log({id,type,amount})
+    return  this.http.post<number>(this._url+"/price",{id,type,amount});
+
+  }
 }
