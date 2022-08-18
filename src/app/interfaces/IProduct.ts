@@ -13,4 +13,6 @@ export interface IProduct{
     description:string;
     sku:string;
     hint:string;
+    KindISExist:boolean;
+    QuantityIsExist:boolean;
 }

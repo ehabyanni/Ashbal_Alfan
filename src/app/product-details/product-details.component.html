@@ -1,6 +1,6 @@
 <div class="popup">
     <span class="popuptext" id="myPopup"><span>&#10003;</span> تمت الاضافة للسلة</span>
-  </div>
+</div>
 
 <div class="mainDiv" style="padding-top: 100px;">
     <div class="container-fluid" style="direction: rtl;">
@@ -16,9 +16,11 @@
                                 </div>
                                 <div class="thumbnail_images">
                                     <ul id="thumbnail">
-                                        <li><img id="img1" (click)="changeImage1()" src="assets/images/{{product.image1}}" width="70">
+                                        <li>
+                                            
+                                            <img id="img1" (click)="changeImage1()" src="assets/images/{{product.image1}}" width="70">
                                         </li>
-                                        <li><img id="img2" (click)="changeImage2()" src="assets/images/{{product.image2}}" width="70">
+                                        <li><img id="img1" (click)="changeImage2()" src="assets/images/{{product.image2}}" width="70">
                                         </li>
                                         <li><img id="img3" (click)="changeImage3()" src="assets/images/{{product.image3}}" width="70">
                                         </li>
@@ -42,17 +44,153 @@
                                         <h6>{{product.description}}</h6>
                                     </div>
                                     <div class="mt-4 pr-3 sku">
-                                        <h6 style="float: right; font-weight: 600; color: #1c1c1c; margin-left: 1%;">SKU : </h6>
+                                        <h6 style="float: right; font-weight: 600; color: #1c1c1c; margin-left: 1%;">SKU
+                                            : </h6>
                                         <h6 style="font-weight: 600; color: #7c7575;"> {{product.sku}}</h6>
                                     </div>
                                     <div class="mt-2 pr-3 sku">
-                                        <h6 style="float: right; font-weight: 600; color: #1c1c1c; margin-left: 1%;">الفئة :  </h6>
-                                        <h6 class="h6" style="font-weight: 600; color: #10d479;cursor: pointer;" routerLink="../{{getCategoryRoute(product.category_Name)}}"> {{product.category_Name}}</h6>
+                                        <h6 style="float: right; font-weight: 600; color: #1c1c1c; margin-left: 1%;">
+                                            الفئة : </h6>
+                                        <h6 class="h6" style="font-weight: 600; color: #10d479;cursor: pointer;"
+                                            routerLink="../{{getCategoryRoute(product.category_Name)}}">
+                                            {{product.category_Name}}</h6>
                                     </div>
-                                </div>
-                                <div class="buttons d-flex flex-row  gap-3">
-                                    <!-- <button class="btn1">Buy Now</button>  -->
-                                    <button class="btn" (click)="addToCart()">إضافة إلي السلة</button>
+                                    <br>
+
+                                    <!--2 select option -->
+                                    <div class="main_component_for_product_details mt-4 pr-3 sku">
+
+                                        <div>
+                                            <div *ngIf="Quantity; then firstblock; else empty1block"></div>
+                                            <ng-template #firstblock>
+                                                <!--في حالة وجود الكمية والخامه-->
+                                                <form [formGroup]="selectForm" method="post">
+                                                    <div class="mt-2 pr-3">
+                                                        <div class="col-10">
+                                                            <label for="kind-select" class="form-label" style="font-weight: 600; color: #1c1c1c;">الخامة</label>
+                                                            <select class="form-select" id="kind-select"
+                                                                style="border-radius: 0px;" formControlName="kindselect"
+                                                                [class.is-invalid]="KINDSELECT?.invalid && KINDSELECT?.touched">
+                                                                <option value="" selected>إختر الخامة</option>
+                                                                <option *ngFor="let kind of product_kind"
+                                                                    value={{kind}}>
+                                                                    {{kind}}
+                                                                </option>
+                                                            </select>
+                                                            <div *ngIf="KINDSELECT?.errors && KINDSELECT?.touched">
+                                                                <small class="text-danger"
+                                                                    *ngIf="KINDSELECT?.errors?.['required']">اختر
+                                                                    الخامة</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mt-2 pr-3">
+                                                        <div class="col-10">
+                                                            <label for="qnt-value" class="form-label" style="font-weight: 600; color: #1c1c1c;">الكمية</label>
+                                                            <select class="form-select" id="qnt-value" required
+                                                                style="border-radius: 0px;" formControlName="qntselect"
+                                                                [class.is-invalid]="QNTSELECT?.invalid && QNTSELECT?.touched">
+                                                                <option value="" selected>إختر الكمية</option>
+                                                                <option *ngFor="let qnt of product_quantity"
+                                                                    value={{qnt}}>
+                                                                    {{qnt}}
+                                                                </option>
+                                                            </select>
+                                                            <div *ngIf="QNTSELECT?.errors && QNTSELECT?.touched">
+                                                                <small class="text-danger"
+                                                                    *ngIf="QNTSELECT?.errors?.['required']">اختر
+                                                                    الكمية</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <br>
+                                                    <div class="row">
+                                                        <div class="col-12" style="direction: rtl;">
+
+                                                            <div class="col-3" style=" float: right;">
+                                                                <button class="btn btn-secondry" (click)="getPrice1()"
+                                                                [disabled]="QNTSELECT?.invalid || KINDSELECT?.invalid"
+                                                                    style="float: right; font-weight: 600; color:#0b5ed7; border-radius: 0;">معرفة
+                                                                    السعر</button>
+                                                            </div>
+                                                            <div class="col-6" style="float: right;">
+                                                                <h4 id="price-value" style="color:#10d479;"></h4>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                                <br>
+                                                <div class="buttons d-flex flex-row  gap-3">
+                                                    <!-- <button class="btn1">Buy Now</button>  -->
+                                                    <button class="btn" (click)="addToCart()">إضافة إلي السلة</button>
+                                                </div>
+                                            </ng-template>
+                                            <ng-template #empty1block>
+                                                <div>
+                                                    <!--في حالة وجود الخامه فقط-->
+                                                    <div *ngIf="Kind; then secondblock; else empty2block"></div>
+                                                    <ng-template #secondblock>
+                                                        <form [formGroup]="selectForm" method="post">
+                                                            <div class="mt-2 pr-3">
+                                                                <div class="col-10">
+                                                                    <label for="kind-select"
+                                                                        class="form-label">الخامة</label>
+                                                                    <select class="form-select" id="kind-select"
+                                                                        style="border-radius: 0px;"
+                                                                        formControlName="kindselect"
+                                                                        [class.is-invalid]="KINDSELECT?.invalid && KINDSELECT?.touched">
+                                                                        <option value="" selected>إختر النوع</option>
+                                                                        <option *ngFor="let kind of product_kind"
+                                                                            value={{kind}}>
+                                                                            {{kind}}
+                                                                        </option>
+                                                                    </select>
+                                                                    <div
+                                                                        *ngIf="KINDSELECT?.errors && KINDSELECT?.touched">
+                                                                        <small class="text-danger"
+                                                                            *ngIf="KINDSELECT?.errors?.['required']">اختر
+                                                                            النوع</small>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <br>
+                                                            <div class="row">
+                                                                <div class="col-12" style="direction: rtl;">
+
+                                                                    <div class="col-3" style=" float: right;">
+                                                                        <button class="btn btn-secondry"
+                                                                            (click)="getPrice2()"
+                                                                            [disabled]="KINDSELECT?.invalid"
+                                                                            style="float: right; font-weight: 600; color:#0b5ed7; border-radius: 0;">معرفة السعر</button>
+                                                                    </div>
+                                                                    <div class="col-6" style="float: right;">
+                                                                        <h4 id="price-value" style="color:#10d479;">
+                                                                        </h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                        <br>
+                                                        <div class="buttons d-flex flex-row  gap-3">
+                                                            <!-- <button class="btn1">Buy Now</button>  -->
+                                                            <button class="btn" (click)="addToCart()">إضافة إلي
+                                                                السلة</button>
+                                                        </div>
+                                                    </ng-template>
+                                                    <ng-template #empty2block>
+                                                        <!-- في حالة  عدم وجود الكمية والخامه معا-->
+                                                        <div class="buttons d-flex flex-row  gap-3">
+                                                            <!-- <button class="btn1">Buy Now</button>  -->
+                                                            <button class="btn" routerLink="/pricing_request">أطلب
+                                                                تسعيره</button>
+                                                        </div>
+                                                    </ng-template>
+                                                </div>
+                                            </ng-template>
+                                        </div>
+
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -61,6 +199,114 @@
             </div>
         </div>
     </div>
-
-
 </div>
+
+<!-- 
+<div>
+    <div *ngIf="Quantity; then firstblock; else empty1block"></div>
+    <ng-template #firstblock>
+
+
+
+        <form [formGroup]="selectForm" method="post">
+            <div class="mt-2 pr-3">
+                <div class="col-10">
+                    <label for="kind-select" class="form-label">الخامة</label>
+                    <select class="form-select" id="kind-select" style="border-radius: 0px;"
+                        formControlName="kindselect" [class.is-invalid]="KINDSELECT?.invalid && KINDSELECT?.touched">
+                        <option value="" selected>إختر النوع</option>
+                        <option *ngFor="let kind of product_kind" value={{kind}}>
+                            {{kind}}
+                        </option>
+                    </select>
+                    <div *ngIf="KINDSELECT?.errors && KINDSELECT?.touched">
+                        <small class="text-danger" *ngIf="KINDSELECT?.errors?.['required']">اختر
+                            النوع</small>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-2 pr-3">
+                <div class="col-10">
+                    <label for="qnt-value" class="form-label">الكمية</label>
+                    <select class="form-select" id="qnt-value" required style="border-radius: 0px;"
+                        formControlName="qntselect" [class.is-invalid]="QNTSELECT?.invalid && QNTSELECT?.touched">
+                        <option value="" selected>إختر الكمية</option>
+                        <option *ngFor="let qnt of product_quantity" value={{qnt}}>
+                            {{qnt}}
+                        </option>
+                    </select>
+                    <div *ngIf="QNTSELECT?.errors && QNTSELECT?.touched">
+                        <small class="text-danger" *ngIf="QNTSELECT?.errors?.['required']">اختر
+                            الكمية</small>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <button (click)="getPrice()">Price</button>
+            <h3 id="price-value" style="color:#10d479;"></h3>
+        </form>
+    </ng-template>
+    <ng-template #empty1block>
+        <div>
+            <div *ngIf="Kind; then secondblock; else empty2block"></div>
+            <ng-template #secondblock>
+                kind
+            </ng-template>
+            <ng-template #empty2block>
+                pricing request
+            </ng-template>
+        </div>
+    </ng-template>
+</div>
+
+
+
+
+<form [formGroup]="selectForm" method="post">
+    <div *ngIf="Kind; else emptyblock">
+        <div class="mt-2 pr-3">
+            <div class="col-10">
+                <label for="kind-select" class="form-label">الخامة</label>
+                <select class="form-select" id="kind-select" style="border-radius: 0px;" formControlName="kindselect"
+                    [class.is-invalid]="KINDSELECT?.invalid && KINDSELECT?.touched">
+                    <option value="" selected>إختر النوع</option>
+                    <option *ngFor="let kind of product_kind" value={{kind}}>
+                        {{kind}}
+                    </option>
+                </select>
+                <div *ngIf="KINDSELECT?.errors && KINDSELECT?.touched">
+                    <small class="text-danger" *ngIf="KINDSELECT?.errors?.['required']">اختر
+                        النوع</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-template #emptyblock>
+        false
+    </ng-template>
+    <br>
+    <div *ngIf="Quantity; else empblock">
+        <div class="mt-2 pr-3">
+            <div class="col-10">
+                <label for="qnt-value" class="form-label">الكمية</label>
+                <select class="form-select" id="qnt-value" required style="border-radius: 0px;"
+                    formControlName="qntselect" [class.is-invalid]="QNTSELECT?.invalid && QNTSELECT?.touched">
+                    <option value="" selected>إختر الكمية</option>
+                    <option *ngFor="let qnt of product_quantity" value={{qnt}}>
+                        {{qnt}}
+                    </option>
+                </select>
+                <div *ngIf="QNTSELECT?.errors && QNTSELECT?.touched">
+                    <small class="text-danger" *ngIf="QNTSELECT?.errors?.['required']">اختر
+                        الكمية</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-template #empblock>
+        false
+    </ng-template>
+    <br>
+    <button (click)="getPrice()">Price</button>
+    <h3 id="price-value" style="color:#10d479;"></h3>
+</form> -->
