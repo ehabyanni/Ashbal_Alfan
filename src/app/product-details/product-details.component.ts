@@ -25,16 +25,18 @@ export class ProductDetailsComponent implements OnInit {
 
   product_id: any;
   product: any = {};
-
+  isPriceExist:Boolean=false;
   product_kind: any;
   product_quantity: any;
-
+  product_price:any;
+ productDetails:any;
   Kind: any = false;
   Quantity: any = false;
-
-
+  ProductCartQuantity=1;
+    
   ngOnInit(): void {
     this.product_id = this.activeroute.snapshot.paramMap.get('id');
+
     this.productService.GetAllProducts().subscribe(
       data => {
         this.product = data.find(x => x.id == this.product_id);
@@ -89,14 +91,19 @@ export class ProductDetailsComponent implements OnInit {
     element.src = imageSource.src;
   }
   addToCart() {
-    this.cart.addItemToCart("76C71B31F761FAD83527A619857E6", this.product, 1);
+    this.productDetails={...this.product}
+    this.productDetails.title=`${this.product.title}  -  ${this.KINDSELECT?.value}   -   ${this.QNTSELECT?.value}`
+    this.cart.addItemToCart(this.productDetails,this.product_price ,this.ProductCartQuantity);
     this.popUpSuccess();
-    var CartItems = this.cart.getCartItems("76C71B31F761FAD83527A619857E6");
+    var CartItems = this.cart.getCartItems();
     var counter = document.getElementById("lblCartCount");
     if (counter != null)
       counter.innerText = "" + CartItems.length;
   }
-
+  changeQuantity(quantity:number){
+    if(this.ProductCartQuantity==1&&quantity==-1)return;
+    this.ProductCartQuantity+=quantity;
+  }
   popUpSuccess() {
     var popup = document.getElementById("myPopup");
     if (popup != null) {
@@ -158,11 +165,8 @@ export class ProductDetailsComponent implements OnInit {
 
       this.productService.GetPrice(this.product_id, product_price.prod_kind, product_price.prod_qnt as number | null).subscribe(
         data => {
-
-          var price = data;
-          var ppp = document.getElementById('price-value') as HTMLElement;
-          ppp.innerText = price + "  ر.س  ";
-
+          this.isPriceExist=true;
+          this.product_price = data;
           console.log(data);
         }
       )
@@ -184,16 +188,16 @@ export class ProductDetailsComponent implements OnInit {
       // ppp.innerText = vvv + "  ر.س  ";
       this.productService.GetPrice(this.product_id, product_price.prod_kind).subscribe(
         data => {
-
-          var price = data;
-          var ppp = document.getElementById('price-value') as HTMLElement;
-          ppp.innerText = price + "  ر.س  ";
-
+          this.isPriceExist=true;
+          this.product_price = data;         
           console.log(data);
         }
       );
     }
 
+  }
+  hidePrice(){
+    this.isPriceExist=false;
   }
 }
 

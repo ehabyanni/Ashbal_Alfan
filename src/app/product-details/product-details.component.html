@@ -68,7 +68,7 @@
                                                     <div class="mt-2 pr-3">
                                                         <div class="col-10">
                                                             <label for="kind-select" class="form-label" style="font-weight: 600; color: #1c1c1c;">الخامة</label>
-                                                            <select class="form-select" id="kind-select"
+                                                            <select class="form-select" id="kind-select" (change)="hidePrice()"
                                                                 style="border-radius: 0px;" formControlName="kindselect"
                                                                 [class.is-invalid]="KINDSELECT?.invalid && KINDSELECT?.touched">
                                                                 <option value="" selected>إختر الخامة</option>
@@ -87,7 +87,7 @@
                                                     <div class="mt-2 pr-3">
                                                         <div class="col-10">
                                                             <label for="qnt-value" class="form-label" style="font-weight: 600; color: #1c1c1c;">الكمية</label>
-                                                            <select class="form-select" id="qnt-value" required
+                                                            <select class="form-select" id="qnt-value"(change)="hidePrice()" required
                                                                 style="border-radius: 0px;" formControlName="qntselect"
                                                                 [class.is-invalid]="QNTSELECT?.invalid && QNTSELECT?.touched">
                                                                 <option value="" selected>إختر الكمية</option>
@@ -113,16 +113,35 @@
                                                                     style="float: right; font-weight: 600; color:#0b5ed7; border-radius: 0;">معرفة
                                                                     السعر</button>
                                                             </div>
-                                                            <div class="col-6" style="float: right;">
-                                                                <h4 id="price-value" style="color:#10d479;"></h4>
+                                                            <div *ngIf="isPriceExist" class="col-6" style="float: right;">
+                                                                <h4 id="price-value" style="color:#10d479;">
+                                                                    {{this.product_price}}  ر.س  
+
+                                                                </h4>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </form>
                                                 <br>
-                                                <div class="buttons d-flex flex-row  gap-3">
+                                                <div *ngIf="isPriceExist" class="buttons d-flex flex-row  gap-3">
                                                     <!-- <button class="btn1">Buy Now</button>  -->
                                                     <button class="btn" (click)="addToCart()">إضافة إلي السلة</button>
+
+                                                    <div class="input-group inline-group">
+                                                        <div class="input-group-prepend">
+                                                          <button (click)="changeQuantity(-1)" class="btn btn-outline-success btn-minus"
+                                                            style="border-radius:0 ;">
+                                                            <i class="fa fa-minus"></i>
+                                                          </button>
+                                                        </div>
+                                                        <input class="form-control quantity" min="1" name="quantity" [value]="ProductCartQuantity" type="number">
+                                                        <div class="input-group-append">
+                                                          <button (click)="changeQuantity(1)" class="btn btn-outline-success btn-plus"
+                                                            style="border-radius:0 ;">
+                                                            <i class="fa fa-plus"></i>
+                                                          </button>
+                                                        </div>
+                                                      </div>
                                                 </div>
                                             </ng-template>
                                             <ng-template #empty1block>
@@ -135,7 +154,7 @@
                                                                 <div class="col-10">
                                                                     <label for="kind-select"
                                                                         class="form-label">الخامة</label>
-                                                                    <select class="form-select" id="kind-select"
+                                                                    <select class="form-select" id="kind-select" (change)="hidePrice()"
                                                                         style="border-radius: 0px;"
                                                                         formControlName="kindselect"
                                                                         [class.is-invalid]="KINDSELECT?.invalid && KINDSELECT?.touched">
@@ -163,17 +182,18 @@
                                                                             [disabled]="KINDSELECT?.invalid"
                                                                             style="float: right; font-weight: 600; color:#0b5ed7; border-radius: 0;">معرفة السعر</button>
                                                                     </div>
-                                                                    <div class="col-6" style="float: right;">
+                                                                    <div *ngIf="isPriceExist" class="col-6" style="float: right;">
                                                                         <h4 id="price-value" style="color:#10d479;">
+                                                                            {{this.product_price}}  ر.س  
                                                                         </h4>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </form>
                                                         <br>
-                                                        <div class="buttons d-flex flex-row  gap-3">
+                                                        <div *ngIf="isPriceExist" class="buttons d-flex flex-row  gap-3">
                                                             <!-- <button class="btn1">Buy Now</button>  -->
-                                                            <button class="btn" (click)="addToCart()">إضافة إلي
+                                                            <button class="btn"  (click)="addToCart()">إضافة إلي
                                                                 السلة</button>
                                                         </div>
                                                     </ng-template>

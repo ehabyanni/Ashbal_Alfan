@@ -36,7 +36,7 @@ export class HeaderComponent implements OnInit {
      //Fill Categories With Products
 
    // Cart
-    var CartItems=this.cart.getCartItems("76C71B31F761FAD83527A619857E6");
+    var CartItems=this.cart.getCartItems();
     var counter=document.getElementById("lblCartCount");
     if(counter!=null)
     counter.innerText = ""+CartItems.length;
