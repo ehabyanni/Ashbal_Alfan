@@ -14,7 +14,7 @@ export class ProductsService {
   products:any = [];
 
   public _url = "http://localhost:5216/api/Product";
-  // public _url = "assets/data/products.json"
+  //public _url = "assets/data/products.json"
 
   //all products
   GetAllProducts():Observable<IProduct[]>{
@@ -29,6 +29,7 @@ export class ProductsService {
   GetAllAmounts(id:string):Observable<number[]>{
     return  this.http.get<number[]>(this._url+"/amounts/"+id);
   }
+
   GetPrice(id:string,type:string|null,amount:number|null=-1){
     console.log({id,type,amount})
     return  this.http.post<number>(this._url+"/price",{id,type,amount});
