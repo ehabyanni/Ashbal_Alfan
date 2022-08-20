@@ -160,3 +160,19 @@
     animation: fadeIn 1s;
   }
   
+  
+/*quantity input*/
+input[type="number"] {
+    text-align: center; 
+    font-size: medium;
+    font-weight: 600;
+    border-top: 1px solid #0E7E4A;
+    border-bottom: 1px solid #0E7E4A;
+  }
+  
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  

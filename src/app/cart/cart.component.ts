@@ -12,26 +12,26 @@ export class CartComponent implements OnInit {
   CartItems:any[]=[];
   isEmpty:Boolean=true;
   ngOnInit(): void {
-    this.CartItems=this.cart.getCartItems("76C71B31F761FAD83527A619857E6");
+    this.CartItems=this.cart.getCartItems();
     this.isEmpty=(this.CartItems.length>0)?false:true;
   }
   deleteItem(item:any){
-    this.cart.deleteItemFromCart("76C71B31F761FAD83527A619857E6",item);
-    this.CartItems=this.cart.getCartItems("76C71B31F761FAD83527A619857E6");
+    this.cart.deleteItemFromCart(item);
+    this.CartItems=this.cart.getCartItems();
     this.isEmpty=(this.CartItems.length>0)?false:true;
     var counter=document.getElementById("lblCartCount");
     if(counter!=null)
     counter.innerText = ""+this.CartItems.length;
   }
   changeQuantity(item:any,quantity:number){
-    if(this.CartItems.find(c=>c.product==item).quantity==1 && quantity==-1)return;
-    this.cart.addItemToCart("76C71B31F761FAD83527A619857E6",item,quantity);
-    this.CartItems=this.cart.getCartItems("76C71B31F761FAD83527A619857E6");
+    if(this.CartItems.find(c=>c.product.title==item.title).quantity==1 && quantity==-1)return;
+    this.cart.addItemToCart(item,this.CartItems.find(c=>c.product.title==item.title).price,quantity);
+    this.CartItems=this.cart.getCartItems();
   }
   getTotalPrice():number{
     var totalPrice=0;
     for(var item of this.CartItems){
-      totalPrice+=(item.product.maxPrice*item.quantity)
+      totalPrice+=(item.price*item.quantity)
     }
     return totalPrice;
   }

@@ -36,7 +36,7 @@ export class CartRequestComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.CartItems=this.cart.getCartItems("76C71B31F761FAD83527A619857E6");
+    this.CartItems=this.cart.getCartItems();
   }
 
   WhatsAPI: string = "https://wa.me/";
@@ -64,7 +64,7 @@ export class CartRequestComponent implements OnInit {
 
 
     var url = this.WhatsAPI + this.PhoneNumber + "?text=" + this.textMessage;
-    this.cart.clearCart("76C71B31F761FAD83527A619857E6");
+    this.cart.clearCart();
     this.CartItems=[];
     var counter=document.getElementById("lblCartCount");
     if(counter!=null)
