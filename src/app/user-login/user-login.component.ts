@@ -22,6 +22,8 @@ export class UserLoginComponent implements OnInit {
       username: [''],
       password: ['']
     })
+
+    
   }
 
   //username preperty
@@ -31,7 +33,7 @@ export class UserLoginComponent implements OnInit {
 
   //password property
   get PASS() {
-    return this.loginForm.get('pass');
+    return this.loginForm.get('password');
   }
 
   // login() {
@@ -58,15 +60,26 @@ export class UserLoginComponent implements OnInit {
   errorMessage = '';
 
   login() {
+    console.log("Login here");
+    console.log(this.USERNAME?.value);
+    console.log(this.PASS?.value);
+
     if (this.USERNAME != null && this.PASS != null) {
       this.authService.login(this.USERNAME.value,this.PASS.value).subscribe(
         data => {
+          console.log("Login success");
+          console.log(data);
+
           this.tokenStorage.saveToken(data.token);
+          this.tokenStorage.saveUser(data.username);
+
           this.isLoggedIn = true;
-          this.router.navigate(['home/dashboard']);
+          window.open('home',"_self")
         },
         err => {
           this.errorMessage = "خطأ في اسم المستخدم او كلمة سر";
+          console.log(err);
+
         }
 
       );

@@ -1,104 +1,161 @@
 <div class="container-fluid parentContainer">
-    <div class="container">
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark" style=" margin: 0px !important; padding: 0px !important;">
-            <div class="container-fluid">
-                <a class="navbar-brand" routerLink="/home"><img src="../assets/images/logo.svg" style="width: 100px;" ></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapsibleNavbar" >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <div class="info col-12">
-                        <div class="info-media col-12">
-                            <div class="col-9" style=" float: left; display: flex; justify-content: center; align-content: center;">
-                                <div class="loginRegisterLogout">
-                                    <div style=" padding-right: 60px;">
-                                        <!-- <div *ngIf="isLogged; then userblock; else logblock"></div>
-                                        <ng-template #userblock>
-                                            <h4>hi,logout</h4>
-                                        </ng-template>
-                                        <ng-template #logblock>
-                                            <a routerLink="user-register">register</a>
-                                        </ng-template> -->
-                                        <p><a routerLink="user-login" style="color:#10d479 !important; font-size: 16px !important;">login</a></p>
-                                    </div>
-                                </div>
-                                <div class="socialMedia" style="float:left;">
-                                    <a href="#"> <i class="fa-brands fa-facebook"></i></a>&nbsp; &nbsp;
-                                    <a href="#"> <i class="fa-brands fa-twitter"></i></a>&nbsp; &nbsp;
-                                    <a href="#"> <i class="fa-brands fa-linkedin-in"></i></a>&nbsp; &nbsp;&nbsp;&nbsp;
-                                </div>
-                                <div class="email" style="float:left;">
-                                    <a href="#">
-                                      <div>
-                                        <p style="float:left">{{email}}</p>&nbsp;&nbsp;
-                                        <i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                      </div>
-                                    </a>
-                                  </div>
-                                  <div class="phone sm-12" style="float:left;">
-                                    <a href="#">
-                                      <div>
-                                        <p style="float:left">{{phoneNumber}}</p>&nbsp;&nbsp;
-                                        <i class="fa-solid fa-phone"></i>
-                                      </div>
-                                    </a>
-                                  </div>
-                            </div>
-                            <div class="col-3" style="float: left; direction: rtl;">
-                                <div class="col-12">
-                                    <div class="col-3" style="float: left;">
-                                        <a class="nav-link" routerLink="cart">
-                                            <i class="fa" style="font-size:18px">&#xf07a;</i>
-                                            <span class='badge badge-primary' id="lblCartCount"></span>
-                                          </a>
-                                    </div>
-                                    <div class="col-9">
-                                        <a routerLink="/pricing_request">طلب التسعير </a>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div> 
-                        <ul class="navbar-nav col-12 " style="direction: rtl;">
-                            <li class="nav-item" style="float: right;" >
-                                <a class="nav-link" routerLink="/home">الرئيسية</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" routerLink="paper_printings" role="button"
-                                    >المطبوعات الورقية</a>
-                                <ul class="dropdown-menu">
-                                    <li   *ngFor="let product of paperPrintingsProducts;"><a class="dropdown-item" href={{product.id}} >{{product.title}}</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" routerLink="/stickers" role="button"
-                                    >اللوحات والإستيكرات</a>
-                                <ul class="dropdown-menu">
-                                    <li   *ngFor="let product of stickerProducts;"><a class="dropdown-item" href={{product.id}} >{{product.title}}</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" routerLink="/advertising" role="button"
-                                    >المنتجات الإعلانية</a>
-                                <ul class="dropdown-menu">
-                                    <li   *ngFor="let product of advertisingProducts;"><a class="dropdown-item" href={{product.id}} >{{product.title}}</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item" >
-                                <a class="nav-link" routerLink="/blog">المدونة</a>
-                            </li>
-                            <!-- <li class="nav-item"> 
+  <div class="container">
+    <nav
+      class="navbar navbar-expand-sm bg-dark navbar-dark"
+      style="margin: 0px !important; padding: 0px !important"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/home"
+          ><img src="../assets/images/logo.svg" style="width: 100px"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <div class="info col-12">
+            <div class="info-media col-12">
+              <div
+                class="col-9"
+                style="
+                  float: left;
+                  display: flex;
+                  justify-content: center;
+                  align-content: center;
+                "
+              >
+                <div class="loginRegisterLogout">
+                  <div style="padding-right: 40px;">
+                    <div *ngIf="isUserLogin; else loginblock">
+                        <div class="dropdown">
+                            <button class="btn-sm btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                               {{UserName}} مرحباً
+                            </button>
+                            <ul class="dropdown-menu it">
+                              <li><a class="dropdown-item itit" (click)="logout()">تسجيل الخروج</a></li>
+                            </ul>
+                          </div>
+                        <!-- <p>{{UserName}} مرحباً</p>
+                        &nbsp;
+                        <a (click)="logout()">تسجيل الخروج</a> -->
+                    </div>
+                    <ng-template #loginblock>
+                               <a routerLink="user-login">تسجيل دخول</a>
+                    </ng-template>
+                  
+                  </div>
+                </div>
+                <div class="socialMedia" style="float: left">
+                  <a href="#"> <i class="fa-brands fa-facebook"></i></a>&nbsp;
+                  &nbsp;
+                  <a href="#"> <i class="fa-brands fa-twitter"></i></a>&nbsp;
+                  &nbsp;
+                  <a href="#"> <i class="fa-brands fa-linkedin-in"></i></a
+                  >&nbsp; &nbsp;&nbsp;&nbsp;
+                </div>
+                <div class="email" style="float: left">
+                  <a href="#">
+                    <div>
+                      <p style="float: left">{{ email }}</p>
+                      &nbsp;&nbsp;
+                      <i class="fa-solid fa-envelope"></i
+                      >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                  </a>
+                </div>
+                <div class="phone sm-12" style="float: left">
+                  <a href="#">
+                    <div>
+                      <p style="float: left">{{ phoneNumber }}</p>
+                      &nbsp;&nbsp;
+                      <i class="fa-solid fa-phone"></i>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-3" style="float: left; direction: rtl">
+                <div class="col-12">
+                  <div class="col-3" style="float: left">
+                    <a class="nav-link" routerLink="cart">
+                      <i class="fa" style="font-size: 18px">&#xf07a;</i>
+                      <span
+                        class="badge badge-primary"
+                        id="lblCartCount"
+                      ></span>
+                    </a>
+                  </div>
+                  <div class="col-9">
+                    <a routerLink="/pricing_request">طلب التسعير </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="navbar-nav col-12" style="direction: rtl">
+              <li class="nav-item" style="float: right">
+                <a class="nav-link" routerLink="/home">الرئيسية</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  routerLink="paper_printings"
+                  role="button"
+                  >المطبوعات الورقية</a
+                >
+                <ul class="dropdown-menu">
+                  <li *ngFor="let product of paperPrintingsProducts">
+                    <a class="dropdown-item" href="products/{{ product.id }}">{{
+                      product.title
+                    }}</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  routerLink="/stickers"
+                  role="button"
+                  >اللوحات والإستيكرات</a
+                >
+                <ul class="dropdown-menu">
+                  <li *ngFor="let product of stickerProducts">
+                    <a class="dropdown-item" href="products/{{ product.id }}">{{
+                      product.title
+                    }}</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  routerLink="/advertising"
+                  role="button"
+                  >المنتجات الإعلانية</a
+                >
+                <ul class="dropdown-menu">
+                  <li *ngFor="let product of advertisingProducts">
+                    <a class="dropdown-item" href="products/{{ product.id }}">{{
+                      product.title
+                    }}</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/blog">المدونة</a>
+              </li>
+              <!-- <li class="nav-item"> 
                                 <a class="nav-link" routerLink="cart">
                                     <i class="fa" style="font-size:24px">&#xf07a;</i>
                                     <span class='badge badge-primary' id="lblCartCount"></span>
                                   </a>
                             </li> -->
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-        </nav>
-    </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
 </div>

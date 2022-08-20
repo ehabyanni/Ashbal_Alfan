@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ConfirmPasswordValidators } from '../customValidators/ConfirmPasswordValidators';
+import { AuthService } from '../services/auth.service';
+import { TokenService } from '../services/token.service';
 
 @Component({
   selector: 'app-user-register',
@@ -12,7 +14,8 @@ import { ConfirmPasswordValidators } from '../customValidators/ConfirmPasswordVa
 export class UserRegisterComponent implements OnInit {
 
   public signupForm !: FormGroup;
-  constructor(private formbuilder: FormBuilder, private http: HttpClient, private router: Router) { }
+  constructor(private formbuilder: FormBuilder, private http: HttpClient, private router: Router,
+    private authService:AuthService , private tokenStorage: TokenService)  { }
 
   ngOnInit(): void {
 
@@ -41,15 +44,25 @@ export class UserRegisterComponent implements OnInit {
   get CONFIRMPASS() {
     return this.registerForm.get('confirmPassword');
   }
+  isLoggedIn = false;
+  errorMessage = '';
 
-  signUp(): void {
-    this.http.post<any>("http://localhost:3000/signupUsers", this.registerForm.value)
-      .subscribe(res => {
-        alert("signup Successfull");
-        this.registerForm.reset();
-        this.router.navigate(['user-login']);
-      }, err => {
-        alert("something went wrong!")
-      })
+ 
+  register() {
+    if (this.NAME != null && this.PASS != null) {
+      this.authService.register(this.NAME.value,this.PASS.value).subscribe(
+        data => {
+          this.tokenStorage.saveToken(data.token);
+          this.tokenStorage.saveUser(data.username);
+          console.log("Register Success")
+          this.isLoggedIn = true;
+          this.router.navigate(['home']);
+        },
+        err => {
+          this.errorMessage = "المستخدم موجود بالفعل";
+        }
+
+      );
+    }
   }
 }
