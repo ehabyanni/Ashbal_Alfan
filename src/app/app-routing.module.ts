@@ -12,6 +12,8 @@ import { PaperPrintingsComponent } from './paper-printings/paper-printings.compo
 import { PricingRequestComponent } from './pricing-request/pricing-request.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { StickersComponent } from './stickers/stickers.component';
+import { UserLoginComponent } from './user-login/user-login.component';
+import { UserRegisterComponent } from './user-register/user-register.component';
 
 const routes: Routes = [
   {path:''                    , component:HomePageComponent           },
@@ -25,8 +27,10 @@ const routes: Routes = [
   {path:'stickers'            , component:StickersComponent           },
   {path:'advertising'         , component:AdvertisingProductsComponent},
   {path:'brochure'            , component:BrochureComponent           },
-  {path:':id'                 , component:ProductDetailsComponent     },
+  {path:'products/:id'        , component:ProductDetailsComponent     },
   {path:'page-not-found'      , component:ErrorPageNotFoundComponent  },
+  {path:'user-login'          , component:UserLoginComponent          },
+  {path:'user-register'       , component:UserRegisterComponent       },
   {path:'**'                  , component:ErrorPageNotFoundComponent  }
 ];
 

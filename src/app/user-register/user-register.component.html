@@ -1,0 +1,81 @@
+<section class="container-fluid" style="background-color: #0E7E4A; padding-top: 100px;">
+    <div class="container py-5">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col col-xl-10">
+                <div class="card" style="border-radius: 1.5rem; border: none;">
+                    <div class="row">
+                        <div class="col-md-5 col-lg-5 d-none d-md-block">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
+                                alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem; width: 100%;" />
+                        </div>
+                        <div class="col-md-7 col-lg-7 d-flex align-items-center">
+                            <div class="card-body text-black">
+                                <div class="card-body shadow-5" style="direction: rtl;">
+                                    <h4 class="fw-bold text-center">سجل حسابك الأن</h4>
+                                    <form [formGroup]="registerForm" (ngSubmit)="signUp()">
+                                        <!-- 2 column grid layout with text inputs for the first and last names -->
+                                        <div class="row">
+                                            <div class="form-outline">
+                                                <label class="form-label" for="form3Example2"> اسم المستخدم<span
+                                                        class="text-danger"
+                                                        style="font-size:20px; padding-right:5px">*</span>
+                                                </label>
+                                                <input formControlName="username" type="text" id="form3Example2"
+                                                    class="form-control" placeholder="اسم المستخدم . . . "
+                                                    [class.is-invalid]="NAME?.invalid && NAME?.touched" />
+                                                <div *ngIf="NAME?.errors && NAME?.touched">
+                                                    <small class="text-danger" *ngIf="NAME?.errors?.['required']">الاسم
+                                                        مطلوب هنا</small>
+                                                    <small class="text-danger" *ngIf="NAME?.errors?.['minlength']">يجب
+                                                        ان يحتوي الاسم اكثر من 5 حروف</small>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Password input -->
+                                        <div class="form-outline mt-2 mb-2">
+                                            <label class="form-label" for="password">كلمه السر <span class="text-danger"
+                                                    style="font-size:20px; padding-right:5px">*</span> </label>
+                                            <input formControlName="password" type="password" id="password"
+                                                class="form-control" placeholder="كلمة السر . . . "
+                                                [class.is-invalid]="PASS?.invalid && PASS?.touched" />
+                                            <div *ngIf="PASS?.touched && PASS?.errors">
+                                                <small class="text-danger" *ngIf="PASS?.errors?.['required']"> لابد من
+                                                    ادخال كلمه السر </small>
+                                            </div>
+                                        </div>
+
+                                        <!--confirm Password input -->
+                                        <div class="form-outline">
+                                            <label class="form-label" for="confirmPass">تأكيد كلمه السر
+                                                <span class="text-danger"
+                                                    style="font-size:20px; padding-right:5px">*</span>
+                                            </label>
+                                            <input formControlName="confirmPassword" type="password" id="confirmPass"
+                                                class="form-control" placeholder="تأكيد كلمة السر . . . "
+                                                [class.is-invalid]="registerForm?.errors?.['misMatch'] && CONFIRMPASS?.invalid" />
+                                            <small class="text-danger" *ngIf="registerForm?.errors?.['misMatch']">كلمتي
+                                                السر غير متطابقتين</small>
+
+                                        </div>
+
+                                        <!-- Submit button -->
+                                        <button type="submit" class="btn btn-block mt-2 mb-2"
+                                            style="background-color: #0E7E4A; color:white"
+                                            [disabled]="registerForm.invalid || CONFIRMPASS?.invalid">
+                                            سجل حسابك
+                                        </button>
+                                    </form>
+                                    <p class="" style="color: #393f81;">هل لديك حساب بالفعل ؟
+                                        <a style="color:#10d479; margin-top: 10px;" routerLink="/user-login"> اضغط
+                                            للدخول لحسابك </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

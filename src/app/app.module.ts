@@ -9,7 +9,7 @@ import { BlogViewComponent } from './blog-view/blog-view.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { PricingRequestComponent } from './pricing-request/pricing-request.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { PaperPrintingsComponent } from './paper-printings/paper-printings.component';
 import { BlogDetailsComponent } from './blog-details/blog-details.component';
 import { StickersComponent } from './stickers/stickers.component';
@@ -23,6 +23,9 @@ import { FirstSliderComponent } from './first-slider/first-slider.component';
 import { CartComponent } from './cart/cart.component';
 import { CartRequestComponent } from './cart-request/cart-request.component';
 import { RouterModule } from '@angular/router';
+import { UserLoginComponent } from './user-login/user-login.component';
+import { UserRegisterComponent } from './user-register/user-register.component';
+import { AuthInterceptor } from './helpers/auth.interceptor';
 
 
 
@@ -46,6 +49,8 @@ import { RouterModule } from '@angular/router';
     FirstSliderComponent,
     CartComponent,
     CartRequestComponent,
+    UserLoginComponent,
+    UserRegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +59,9 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     RouterModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
