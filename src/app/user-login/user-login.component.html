@@ -28,6 +28,8 @@
                                             <input formControlName="password" type="password" id="form2Example27"
                                                 class="form-control" placeholder="كلمة السر . . . " />
                                         </div>
+                                        <!--error message-->
+                                        <small id="accountError" class="text-danger">{{errorMessage}}</small>
 
                                         <div class="pt-3">
                                             <button class="btn btn-block" type="button"
@@ -35,9 +37,6 @@
                                                 الدخول</button>
                                         </div>
 
-                                        <!--error message-->
-                                        <small id="accountError" class="text-danger"
-                                            style="display: none;">{{errorMessage}}</small>
 
                                         <p class="pt-1" style="color: #393f81;">ليس لديك حساب؟
                                             <a routerLink="/user-register" style="color:#10d479; margin-top: 10px;"> سجل

@@ -100,10 +100,10 @@ export class ProductDetailsComponent implements OnInit {
     if (counter != null)
       counter.innerText = "" + CartItems.length;
   }
-  changeQuantity(quantity:number){
-    if(this.ProductCartQuantity==1&&quantity==-1)return;
-    this.ProductCartQuantity+=quantity;
-  }
+  // changeQuantity(quantity:number){
+  //   if(this.ProductCartQuantity==1&&quantity==-1)return;
+  //   this.ProductCartQuantity+=quantity;
+  // }
   popUpSuccess() {
     var popup = document.getElementById("myPopup");
     if (popup != null) {

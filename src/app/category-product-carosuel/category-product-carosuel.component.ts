@@ -23,11 +23,11 @@ export class CategoryProductCarosuelComponent implements OnInit {
         console.log("Hi");
         this.products=data;
          //Fill Categories With Products
-        this.paperPrintingsProducts=this.products.filter(p=>p.category_Name==this.CategoriesNames['مطبوعات ورقية']);
-        // this.stickerProducts=this.products.filter(p=>p.category_Name==this.CategoriesNames[1]);
-        // this.advertisingProducts=this.products.filter(p=>p.category_Name==this.CategoriesNames[2]);
+        this.paperPrintingsProducts=this.products.filter(p=>p.category_Name==this.CategoriesNames[0]);
+        this.stickerProducts=this.products.filter(p=>p.category_Name==this.CategoriesNames[1]);
+        this.advertisingProducts=this.products.filter(p=>p.category_Name==this.CategoriesNames[2]);
       }
      );
   }
-
+ 
 }

@@ -22,7 +22,7 @@ export class StickersComponent implements OnInit {
   }
 
   goToProductDetails(id:any){
-    this.router.navigate(['', id]);
+    this.router.navigate(['products', id]);
   }
 
 }

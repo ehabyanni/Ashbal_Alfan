@@ -52,7 +52,7 @@
                                         <h6 style="float: right; font-weight: 600; color: #1c1c1c; margin-left: 1%;">
                                             الفئة : </h6>
                                         <h6 class="h6" style="font-weight: 600; color: #10d479;cursor: pointer;"
-                                            routerLink="../{{getCategoryRoute(product.category_Name)}}">
+                                            routerLink="../../{{getCategoryRoute(product.category_Name)}}">
                                             {{product.category_Name}}</h6>
                                     </div>
                                     <br>
@@ -127,21 +127,7 @@
                                                     <!-- <button class="btn1">Buy Now</button>  -->
                                                     <button class="btn" (click)="addToCart()">إضافة إلي السلة</button>
 
-                                                    <div class="input-group inline-group">
-                                                        <div class="input-group-prepend">
-                                                          <button (click)="changeQuantity(-1)" class="btn btn-outline-success btn-minus"
-                                                            style="border-radius:0 ;">
-                                                            <i class="fa fa-minus"></i>
-                                                          </button>
-                                                        </div>
-                                                        <input class="form-control quantity" min="1" name="quantity" [value]="ProductCartQuantity" type="number">
-                                                        <div class="input-group-append">
-                                                          <button (click)="changeQuantity(1)" class="btn btn-outline-success btn-plus"
-                                                            style="border-radius:0 ;">
-                                                            <i class="fa fa-plus"></i>
-                                                          </button>
-                                                        </div>
-                                                      </div>
+                                                    
                                                 </div>
                                             </ng-template>
                                             <ng-template #empty1block>
