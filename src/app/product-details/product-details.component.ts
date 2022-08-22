@@ -25,13 +25,16 @@ export class ProductDetailsComponent implements OnInit {
 
   product_id: any;
   product: any = {};
+  
   isPriceExist:Boolean=false;
   product_kind: any;
   product_quantity: any;
   product_price:any;
- productDetails:any;
+  productDetails:any;
+
   Kind: any = false;
   Quantity: any = false;
+
   ProductCartQuantity=1;
     
   ngOnInit(): void {

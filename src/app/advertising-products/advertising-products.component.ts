@@ -22,7 +22,7 @@ export class AdvertisingProductsComponent implements OnInit {
   }
 
   goToProductDetails(id:any){
-    this.router.navigate(['products', id]);
+    this.router.navigate(['/products', id]);
   }
 
 }
