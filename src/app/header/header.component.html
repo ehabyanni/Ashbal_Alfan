@@ -11,14 +11,13 @@
         <button
           class="navbar-toggler collapsed"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapsibleNavbar"
           aria-expanded="false"
          aria-controls="navbar"
+         (click)="toggle()"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <div class="collapse navbar-collapse" id="collapsibleNavbar" >
           <div class="info col-12">
             <div class="info-media col-12">
               <div
@@ -98,13 +97,13 @@
             </div>
             <ul class="navbar-nav col-12" style="direction: rtl">
               <li class="nav-item" style="float: right">
-                <a class="nav-link" routerLink="/home">الرئيسية</a>
+                <a class="nav-link" routerLink="/home" (click)="toggle()">الرئيسية</a>
               </li>
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
                   routerLink="paper_printings"
-                  role="button"
+                  role="button" 
                   >المطبوعات الورقية</a
                 >
                 <ul class="dropdown-menu">
@@ -146,7 +145,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLink="/blog">المدونة</a>
+                <a class="nav-link" routerLink="/blog" (click)="toggle()">المدونة</a>
               </li>
               <!-- <li class="nav-item"> 
                                 <a class="nav-link" routerLink="cart">
