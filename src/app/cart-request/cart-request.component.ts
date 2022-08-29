@@ -14,7 +14,7 @@ export class CartRequestComponent implements OnInit {
   CartItems:any[]=[];
   messagForm = this.fornmbuilder.group({
     name: ['', [Validators.required, Validators.minLength(5)]],
-    phone: ['', [Validators.required, Validators.pattern("[0-9]{11}")]],
+    phone: ['', [Validators.required, Validators.pattern("[0-9]{9}")]],
     subject: ['', Validators.minLength(10)]
   })
 

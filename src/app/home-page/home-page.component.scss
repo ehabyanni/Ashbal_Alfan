@@ -83,6 +83,7 @@
 .item-img{
     margin: auto;
     height: 200px;
+    
     // border-bottom-left-radius: 20px;
     // border-top-right-radius: 20px;
     border-radius: 20px;
@@ -93,8 +94,9 @@
     align-content: center;
 }
 .item-img img{
-    width: fit-content;
-    height: fit-content;
+    height: 180px;
+    width: 160px;
+
 }
 
 /*carousel customize*/

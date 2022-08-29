@@ -29,7 +29,7 @@
                   align-content: center;
                 "
               >
-                <div class="loginRegisterLogout">
+                <!-- <div class="loginRegisterLogout">
                   <div style="padding-right: 40px;">
                     <div *ngIf="isUserLogin; else loginblock">
                         <div class="dropdown">
@@ -40,26 +40,25 @@
                               <li><a class="dropdown-item itit" (click)="logout()">تسجيل الخروج</a></li>
                             </ul>
                           </div>
-                        <!-- <p>{{UserName}} مرحباً</p>
+                        <p>{{UserName}} مرحباً</p>
                         &nbsp;
-                        <a (click)="logout()">تسجيل الخروج</a> -->
+                        <a (click)="logout()">تسجيل الخروج</a>
                     </div>
                     <ng-template #loginblock>
                                <a routerLink="user-login">تسجيل دخول</a>
                     </ng-template>
-                  
+
                   </div>
-                </div>
+                </div> -->
                 <div class="socialMedia" style="float: left">
-                  <a href="#"> <i class="fa-brands fa-facebook"></i></a>&nbsp;
+                  <a href="https://www.instagram.com/ashbal.alfan/"> <i class="fa-brands fa-instagram"></i></a>&nbsp;
                   &nbsp;
-                  <a href="#"> <i class="fa-brands fa-twitter"></i></a>&nbsp;
-                  &nbsp;
-                  <a href="#"> <i class="fa-brands fa-linkedin-in"></i></a
-                  >&nbsp; &nbsp;&nbsp;&nbsp;
+                  <a href="mailto:info@ashbalalfan.com"> <i class="fa-regular fa-envelope"></i></a>&nbsp; &nbsp;
+                  <a href="https://api.whatsapp.com/send/?phone=966506604507"> <i class="fab fa-whatsapp"></i></a>&nbsp; &nbsp;
+
                 </div>
                 <div class="email" style="float: left">
-                  <a href="#">
+                  <a  href="mailto:info@ashbalalfan.com">
                     <div>
                       <p style="float: left">{{ email }}</p>
                       &nbsp;&nbsp;
@@ -69,7 +68,7 @@
                   </a>
                 </div>
                 <div class="phone sm-12" style="float: left">
-                  <a href="#">
+                  <a href="https://api.whatsapp.com/send/?phone=966506604507">
                     <div>
                       <p style="float: left">{{ phoneNumber }}</p>
                       &nbsp;&nbsp;
@@ -80,7 +79,7 @@
               </div>
               <div class="col-3" style="float: left; direction: rtl">
                 <div class="col-12">
-                  <div class="col-3" style="float: left">
+                  <div class="col-3" style="float: left" id="cart">
                     <a class="nav-link" routerLink="cart">
                       <i class="fa" style="font-size: 18px">&#xf07a;</i>
                       <span
@@ -103,7 +102,7 @@
                 <a
                   class="nav-link dropdown-toggle"
                   routerLink="paper_printings"
-                  role="button" 
+                  role="button"
                   >المطبوعات الورقية</a
                 >
                 <ul class="dropdown-menu">
@@ -147,7 +146,7 @@
               <li class="nav-item">
                 <a class="nav-link" routerLink="/blog" (click)="toggle()">المدونة</a>
               </li>
-              <!-- <li class="nav-item"> 
+              <!-- <li class="nav-item">
                                 <a class="nav-link" routerLink="cart">
                                     <i class="fa" style="font-size:24px">&#xf07a;</i>
                                     <span class='badge badge-primary' id="lblCartCount"></span>

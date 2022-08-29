@@ -25,9 +25,9 @@ export class HeaderComponent implements OnInit {
   
   ngOnInit(): void {
     //Cheak user Login
-    this.isUserLogin=(this.tokenStorage.getToken()==null)?false:true;
-    if(this.isUserLogin)
-      this.UserName= this.tokenStorage.getUser();
+    // this.isUserLogin=(this.tokenStorage.getToken()==null)?false:true;
+    // if(this.isUserLogin)
+    //   this.UserName= this.tokenStorage.getUser();
 
     
     

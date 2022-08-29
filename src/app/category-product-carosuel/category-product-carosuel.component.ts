@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IProduct } from '../interfaces/IProduct';
 import { ProductsService } from '../services/products.service';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-category-product-carosuel',
@@ -29,5 +30,37 @@ export class CategoryProductCarosuelComponent implements OnInit {
       }
      );
   }
- 
+
+
+  customOptions: OwlOptions = {
+    autoplay:true,
+    autoplayTimeout:5000,
+    margin:5,
+    rtl:true,
+    loop: true,
+    // mouseDrag: true,
+    // touchDrag: true,
+    // pullDrag: false,
+     dots: false,
+     navSpeed: 700,
+     navText: ['',''],
+    responsive: {
+      0: {
+        items: 1
+      },
+      676: {
+        items: 2
+      },
+      740: {
+        items: 3
+      },
+      900: {
+        items: 3
+      }
+    },
+    nav: true
+  }
+
+
+
 }

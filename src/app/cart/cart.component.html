@@ -31,7 +31,7 @@
             <thead class="p-2">
               <tr>
                 <th style="width: 50px;"></th>
-                <th>الصورة</th>
+                <th class="cart-image">الصورة</th>
                 <th class="w-25">المنتج</th>
                 <th class="w-25">السعر</th>
                 <th class="w-25">الكمية</th>
@@ -43,7 +43,7 @@
                 <td>
                   <a (click)="deleteItem(item.product)"><i class="fa fa-trash" aria-hidden="true"></i></a>
                 </td>
-                <td>
+                <td class="cart-image">
                   <div>
                     <img class="product-image w-100" src="assets/images/{{item.product.image1}}" alt="" srcset="">
                     <!-- <img class="product-image w-100" src="{{item.product.image1}}" alt="" srcset=""> -->

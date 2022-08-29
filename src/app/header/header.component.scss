@@ -63,7 +63,10 @@ p:hover{
 //media query
 @media screen and(max-width:575px){
     .info-media{
-        display: none;
+        visibility:hidden;
+    }
+     #cart{
+       visibility: visible !important;
     }
 }
 @media screen and(max-width:400px){

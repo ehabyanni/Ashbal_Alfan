@@ -1,224 +1,126 @@
-<!--slider categories and produtcs-->
-<div class="container-fluid">
-    <div class="container" style="direction: rtl; display: flex; padding-top: 20px; padding-bottom: 50px;">
-        <div class="col-3 right" style="float: right;">
-            <h3>المطبوعات الورقية</h3>
-            <h5>أفضل عروض المطبوعات الورقية</h5>
-            <h6><a routerLink="/paper_printings">إظهار كافة المنتجات</a></h6>
-        </div>
-        <div class="col-9 left" style=" height: 350px;">
-            <div class="sliderSmall">
-                <!-- Carousel -->
-                <div id="demo7" class="carousel slide" data-bs-ride="carousel">
-                    <!-- Indicators/dots -->
-                    <!-- <div class="carousel-indicators iii">
-                        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                    </div> -->
-                    <!-- The slideshow/carousel -->
-                    <div class="carousel-inner"  style="height:250;">
-                        <div class="carousel-item active">
-                            <div class="img-container">
-                                <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let prod of paperPrintingsProducts">
-                                    <div class="card col-11" routerLink="../products/{{prod.id}}">
-                                        <div style="width:100%; height:255px;">
-                                            <img class="card-img-top2" src="../../assets/images/{{prod.image1}}"
-                                                alt="Card image second">
-                                            <img class="card-img-top1"  src="../../assets/images/{{prod.image2}}"
-                                                alt="Card image firts">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">{{prod.title}}</h5>
-                                            <h5 class="card-price">من {{prod.minPrice}} ر.س إلي {{prod.maxPrice}} ر.س </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item ">
-                            <div class="img-container">
-                                <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let prod of paperPrintingsProducts.reverse()">
-                                    <div class="card col-11" routerLink="../products/{{prod.id}}">
-                                        <div style="width:100%; height:255px;">
-                                            <img class="card-img-top2" src="../../assets/images/{{prod.image1}}"
-                                                alt="Card image second">
-                                            <img class="card-img-top1"  src="../../assets/images/{{prod.image2}}"
-                                                alt="Card image firts">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">{{prod.title}}</h5>
-                                            <h5 class="card-price">من {{prod.minPrice}} ر.س إلي {{prod.maxPrice}} ر.س </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                
-    
-                    </div>
-
-                    <!--Left and right controls/icons -->
-                    <button class="carousel-control-prev" id="pprev" type="button" data-bs-target="#demo7" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </button>
-                    <button class="carousel-control-next" id="nnext" type="button" data-bs-target="#demo7" data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </button>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-<!--slider categories and produtcs-->
-<div class="container-fluid">
-    <div class="container" style="direction: rtl; display: flex; padding-top: 20px; padding-bottom: 50px;">
-        <div class="col-3 right" style="float: right;">
-            <h3>المنتجات الإعلانية</h3>
-            <h5>أفضل عروض المنتجات الإعلانية</h5>
-            <h6><a routerLink="/advertising">إظهار كافة المنتجات</a></h6>
-        </div>
-        <div class="col-9 left" style=" height: 350px;">
-            <div class="sliderSmall">
-                <!-- Carousel -->
-                <div id="demo2" class="carousel slide" data-bs-ride="carousel">
-                    <!-- Indicators/dots -->
-                    <!-- <div class="carousel-indicators iii">
-                        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                    </div> -->
-                    <!-- The slideshow/carousel -->
-                    <div class="carousel-inner" style="height:250;">
-                        <div class="carousel-item active">
-                            <div class="img-container">
-                                <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let prod of stickerProducts">
-                                    <div class="card col-11" routerLink="../products/{{prod.id}}">
-                                        <div style="width:100%; height:255px;">
-                                            <img class="card-img-top2" src="../../assets/images/{{prod.image1}}"
-                                                alt="Card image second">
-                                            <img class="card-img-top1" src="../../assets/images/{{prod.image2}}"
-                                                alt="Card image firts">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">{{prod.title}}</h5>
-                                            <h5 class="card-price">من {{prod.minPrice}} ر.س إلي {{prod.maxPrice}} ر.س </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
 
-                        <div class="carousel-item ">
-                            <div class="img-container">
-                                <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let prod of stickerProducts.reverse()">
-                                    <div class="card col-11" routerLink="../products/{{prod.id}}">
-                                        <div style="width:100%; height:255px;">
-                                            <img class="card-img-top2" src="../../assets/images/{{prod.image1}}"
-                                                alt="Card image second">
-                                            <img class="card-img-top1" src="../../assets/images/{{prod.image2}}"
-                                                alt="Card image firts">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">{{prod.title}}</h5>
-                                            <h5 class="card-price">من {{prod.minPrice}} ر.س إلي {{prod.maxPrice}} ر.س </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                    </div>
 
-                    <!--Left and right controls/icons -->
-                    <button class="carousel-control-prev" id="pprev" type="button" data-bs-target="#demo2" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </button>
-                    <button class="carousel-control-next" id="nnext" type="button" data-bs-target="#demo2" data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </button>
-                </div>
 
-            </div>
-        </div>
-    </div>
-</div>
-<!--slider categories and produtcs-->
-<div class="container-fluid">
-    <div class="container" style="direction: rtl; display: flex; padding-top: 20px; padding-bottom: 50px;">
-        <div class="col-3 right" style="float: right;">
-            <h3>اللوحات والإستيكرات</h3>
-            <h5>أفضل عروض اللوحات والإستيكرات</h5>
-            <h6><a routerLink="/stickers">إظهار كافة المنتجات</a></h6>
-        </div>
-        <div class="col-9 left" style=" height: 350px;">
-            <div class="sliderSmall">
-                <!-- Carousel -->
-                <div id="demo3" class="carousel slide" data-bs-ride="carousel">
-                    <!-- Indicators/dots -->
-                    <!-- <div class="carousel-indicators iii">
-                        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                    </div> -->
-                    <!-- The slideshow/carousel -->
-                    <div class="carousel-inner" style="height:250;">
-                        
-                        <div class="carousel-item active">
-                            <div class="img-container">
-                                <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let prod of advertisingProducts">
-                                    <div class="card col-11" routerLink="../products/{{prod.id}}">
-                                        <div style="width:100%; height:255px;">
-                                            <img class="card-img-top2" src="../../assets/images/{{prod.image1}}"
-                                                alt="Card image second">
-                                            <img class="card-img-top1" src="../../assets/images/{{prod.image2}}"
-                                                alt="Card image firts">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">{{prod.title}}</h5>
-                                            <h5 class="card-price">من {{prod.minPrice}} ر.س إلي {{prod.maxPrice}} ر.س </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item ">
-                            <div class="img-container">
-                                <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let prod of advertisingProducts.reverse()">
-                                    <div class="card col-11" routerLink="../products/{{prod.id}}">
-                                        <div style="width:100%; height:255px;">
-                                            <img class="card-img-top2" src="../../assets/images/{{prod.image1}}"
-                                                alt="Card image second">
-                                            <img class="card-img-top1" src="../../assets/images/{{prod.image2}}"
-                                                alt="Card image firts">
-                                        </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">{{prod.title}}</h5>
-                                            <h5 class="card-price">من {{prod.minPrice}} ر.س إلي {{prod.maxPrice}} ر.س </h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                    </div>
-
-                    <!--Left and right controls/icons -->
-                    <button class="carousel-control-prev" id="pprev" type="button" data-bs-target="#demo3" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </button>
-                    <button class="carousel-control-next" id="nnext" type="button" data-bs-target="#demo3" data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </button>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-
+<!-- 
 <script>
-    // Handle Bootstrap carousel slide event
-    $('.carousel').carousel({
-        interval: 15
-    });
+  //Handle Bootstrap carousel slide event
+
+  $('.carousel').carousel({
+    interval: 15,
+  });
 
 </script>
+ -->
+
+
+<!--------1------->
+
+<!--slider categories and produtcs-->
+
+<div class="container-fluid mb-3">
+  <div class="container">
+    <div class="row" style="display: flex; direction:rtl;">
+      <div class="col-lg-3 col-md-3 col-sm-12">
+        <div class="right ">
+          <h3>المطبوعات الورقية</h3>
+          <h5>أفضل عروض المطبوعات الورقية</h5>
+          <h6><a routerLink="/paper_printings">إظهار كافة المنتجات</a></h6>
+        </div>
+      </div>
+
+      <div class="col-lg-9 col-md-9 col-sm-12" >
+        <owl-carousel-o [options]="customOptions">
+          <ng-container *ngFor="let prod of paperPrintingsProducts">
+            <ng-template carouselSlide [id]="prod.id">
+              <div class="card col-11" routerLink="../products/{{prod.id}}">
+                <div style="width:100%; height:255px;">
+                  <img class="card-img-top2" src="../../assets/images/{{prod.image1}}" alt="Card image second">
+                  <img class="card-img-top1" src="../../assets/images/{{prod.image2}}" alt="Card image firts">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{prod.title}}</h5>
+                  <h5 class="card-price">من {{prod.minPrice}} ر.س إلي {{prod.maxPrice}} ر.س </h5>
+                </div>
+              </div>
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-------2-------->
+
+<!--slider categories and produtcs-->
+
+<div class="container-fluid mb-3">
+  <div class="container">
+    <div class="row" style="display: flex; direction:rtl;">
+      <div class="col-lg-3 col-md-3 col-sm-12">
+        <div class="right ">
+          <h3>المنتجات الإعلانية</h3>
+          <h5>أفضل عروض المنتجات الإعلانية</h5>
+          <h6><a routerLink="/advertising">إظهار كافة المنتجات</a></h6>
+        </div>
+      </div>
+
+      <div class="col-lg-9 col-md-9 col-sm-12" >
+        <owl-carousel-o [options]="customOptions">
+          <ng-container *ngFor="let prod of stickerProducts">
+            <ng-template carouselSlide [id]="prod.id">
+              <div class="card col-11" routerLink="../products/{{prod.id}}">
+                <div style="width:100%; height:255px;">
+                  <img class="card-img-top2" src="../../assets/images/{{prod.image1}}" alt="Card image second">
+                  <img class="card-img-top1" src="../../assets/images/{{prod.image2}}" alt="Card image firts">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{prod.title}}</h5>
+                  <h5 class="card-price">من {{prod.minPrice}} ر.س إلي {{prod.maxPrice}} ر.س </h5>
+                </div>
+              </div>
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-------3-------->
+
+<!--slider categories and produtcs-->
+
+<div class="container-fluid mb-3">
+  <div class="container">
+    <div class="row" style="display: flex; direction:rtl;">
+      <div class="col-lg-3 col-md-3 col-sm-12">
+        <div class="right ">
+          <h3>اللوحات والإستيكرات</h3>
+          <h5>أفضل عروض اللوحات والإستيكرات</h5>
+          <h6><a routerLink="/stickers">إظهار كافة المنتجات</a></h6>
+        </div>
+      </div>
+
+      <div class="col-lg-9 col-md-9 col-sm-12" >
+        <owl-carousel-o [options]="customOptions">
+          <ng-container *ngFor="let prod of advertisingProducts">
+            <ng-template carouselSlide [id]="prod.id">
+              <div class="card col-11" routerLink="../products/{{prod.id}}">
+                <div style="width:100%; height:255px;">
+                  <img class="card-img-top2" src="../../assets/images/{{prod.image1}}" alt="Card image second">
+                  <img class="card-img-top1" src="../../assets/images/{{prod.image2}}" alt="Card image firts">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{prod.title}}</h5>
+                  <h5 class="card-price">من {{prod.minPrice}} ر.س إلي {{prod.maxPrice}} ر.س </h5>
+                </div>
+              </div>
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+</div>

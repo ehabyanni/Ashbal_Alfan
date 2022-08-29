@@ -7,7 +7,7 @@
                         <!-- <img class="card-img-top" src="assets/images/{{blog.image}}" alt="Card image" style="width:100%;"> -->
                         <img class="card-img-top" src="assets/images/{{blog.image}}" alt="Card image" style="width:100%;">
                         <div class="card-body">
-                            <p class="card-history">{{blog.creationDate}}</p>
+                            <p class="card-history">{{blog.creationDate|date:'fullDate'}}</p>
                             <h5 class="card-title">{{blog.title}}</h5>
                             <p class="card-text">{{blog.content}}</p>
                             <a class="btn btn-danger" (click)="goToBlogDetails(blog.id)">إقرأ المزيد</a>
