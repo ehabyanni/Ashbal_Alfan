@@ -11,7 +11,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class CategoryProductCarosuelComponent implements OnInit {
 
   constructor(private productService:ProductsService) { }
-  CategoriesNames:any = ["المطبوعات الورقية" , "اللوحات والإستيكرات"  , "المنتجات الإعلانية"];
+  CategoriesNames:any = ["المطبوعات الورقية" ,  "اللوحات والإستيكرات","المنتجات الإعلانية"];
 
   stickerProducts:IProduct[]=[];
   paperPrintingsProducts:IProduct[]=[];

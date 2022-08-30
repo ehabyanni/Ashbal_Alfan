@@ -58,6 +58,19 @@ h5{
     color: #10d479;
 }
 
+.mediaIcons{
+    margin-top: 5px;
+    background-color: #0E7E4A;
+    padding: 10px !important;
+ padding-top: 15px !important;
+    width:60px !important;
+    height: 40px !important;
+    border-radius: 3px;
+}
+.mediaIcons:hover{
+    background-color: #10d479;
+}
+
 @media screen and(max-width:767px){
     .company{
         text-align: center;

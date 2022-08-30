@@ -26,8 +26,6 @@ import { FirstSliderComponent } from './first-slider/first-slider.component';
 import { CartComponent } from './cart/cart.component';
 import { CartRequestComponent } from './cart-request/cart-request.component';
 import { RouterModule } from '@angular/router';
-import { UserLoginComponent } from './user-login/user-login.component';
-import { UserRegisterComponent } from './user-register/user-register.component';
 import { AuthInterceptor } from './helpers/auth.interceptor';
 
 
@@ -52,8 +50,6 @@ import { AuthInterceptor } from './helpers/auth.interceptor';
     FirstSliderComponent,
     CartComponent,
     CartRequestComponent,
-    UserLoginComponent,
-    UserRegisterComponent,
   ],
   imports: [
     BrowserModule,
