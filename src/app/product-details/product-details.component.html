@@ -18,13 +18,13 @@
                                     <ul id="thumbnail">
                                         <li>
                                             
-                                            <img id="img1" (click)="changeImage1()" src="http://backend.ashbalalfan.com/Resources/Images/{{product.image1}}" width="70">
+                                            <img *ngIf="product.image1" id="img1" (click)="changeImage1()" src="http://backend.ashbalalfan.com/Resources/Images/{{product.image1}}" width="70">
                                         </li>
-                                        <li><img id="img2" (click)="changeImage2()" src="http://backend.ashbalalfan.com/Resources/Images/{{product.image2}}" width="70">
+                                        <li><img *ngIf="product.image2" id="img2" (click)="changeImage2()" src="http://backend.ashbalalfan.com/Resources/Images/{{product.image2}}" width="70">
                                         </li>
-                                        <li><img id="img3" (click)="changeImage3()" src="http://backend.ashbalalfan.com/Resources/Images/{{product.image3}}" width="70">
+                                        <li><img *ngIf="product.image3" id="img3" (click)="changeImage3()" src="http://backend.ashbalalfan.com/Resources/Images/{{product.image3}}" width="70">
                                         </li>
-                                        <li><img id="img4" (click)="changeImage4()" src="http://backend.ashbalalfan.com/Resources/Images/{{product.image4}}" width="70">
+                                        <li><img  *ngIf="product.image4" id="img4" (click)="changeImage4()" src="http://backend.ashbalalfan.com/Resources/Images/{{product.image4}}" width="70">
                                         </li>
                                     </ul>
                                 </div>

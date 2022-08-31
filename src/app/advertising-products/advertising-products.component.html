@@ -13,12 +13,14 @@
                 <div class="card col-11" (click)="goToProductDetails(prod.id)">
                     <div style="width:100%; height:350px">
                         <img class="card-img-top2" src="http://backend.ashbalalfan.com/Resources/Images/{{prod.image1}}" alt="Card image second">
-                        <img class="card-img-top1" src="http://backend.ashbalalfan.com/Resources/Images/{{prod.image2}}" alt="Card image firts">
+                        <img *ngIf="prod.image2" class="card-img-top1" src="http://backend.ashbalalfan.com/Resources/Images/{{prod.image2}}" alt="Card image firts">
+                        <img *ngIf="!prod.image2" class="card-img-top1" src="http://backend.ashbalalfan.com/Resources/Images/{{prod.image1}}" alt="Card image firts">
+
                     </div>
                     <div class="card-body">
                         <p class="card-category">{{prod.categoryName}}</p>
                         <h5 class="card-title">{{prod.title}}</h5>
-                        <p class="card-price">من {{prod.minPrice}} ر.س إلي {{prod.maxPrice}} ر.س </p>
+                        <p *ngIf="prod.maxPrice" class="card-price">من {{prod.minPrice}} ر.س إلي {{prod.maxPrice}} ر.س </p>
                         <p class="card-hint">{{prod.hint}}</p>
                     </div>
                 </div>
