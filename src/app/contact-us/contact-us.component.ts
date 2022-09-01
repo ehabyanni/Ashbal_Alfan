@@ -26,8 +26,8 @@ export class ContactUsComponent implements OnInit {
     },
     {
       title: "الهاتف",
-      desc: "+966 50 660 4507",
-      desc2: "+966 53 478 1615",
+      desc: "+966 050 660 4507",
+      desc2: "+966 053 478 1615",
       icon: "fa-solid fa-phone"
     },
     {
