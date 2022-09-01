@@ -61,6 +61,13 @@
 }
 
 /*partners*/
+.containPart{
+    background: url(/assets/images/cool-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
 .partners{
     padding-top: 60px;
     padding-bottom:60px;
@@ -83,7 +90,6 @@
 .item-img{
     margin: auto;
     height: 200px;
-    
     // border-bottom-left-radius: 20px;
     // border-top-right-radius: 20px;
     border-radius: 20px;

@@ -14,7 +14,7 @@ export class PricingRequestComponent implements OnInit {
 
   messagForm = this.fornmbuilder.group({
     name: ['', [Validators.required, Validators.minLength(5)]],
-    phone: ['', [Validators.required, Validators.pattern("[0-9]{9}")]],
+    phone: ['', [Validators.required, Validators.pattern("[0-9]{10}")]],
     email: ['', Validators.pattern("^[^\s]([a-zA-Z0-9_\.-]+)@([a-zA-Z\.]+)\.(com|net|edu|org)$")],
     subject: ['', Validators.minLength(10)],
     messageBody: ['', [Validators.required, Validators.minLength(20)]]
@@ -51,7 +51,7 @@ export class PricingRequestComponent implements OnInit {
   }
 
   WhatsAPI: string = "https://wa.me/";
-  PhoneNumber: string = "201097309648"
+  PhoneNumber: string = "9660534781615"
   textMessage: any = "";
 
   onSubmit() {

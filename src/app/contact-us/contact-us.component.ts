@@ -32,8 +32,8 @@ export class ContactUsComponent implements OnInit {
     },
     {
       title: "ساعات العمل",
-      desc: "من السبت الي الخميس  الساعة 9 ص : 12 ص",
-      desc2:"الجمعة من الساعة 12:00 م إلي 12:00 ص",
+      desc: "من السبت الي الخميس  الساعة 8 ص : 1 م ، الساعة 4 م : 10 م",
+      desc2:"الجمعة مغلق",
       icon: "fa-solid fa-clock-rotate-left"
     }
   ]

@@ -14,7 +14,7 @@ export class CartRequestComponent implements OnInit {
   CartItems:any[]=[];
   messagForm = this.fornmbuilder.group({
     name: ['', [Validators.required, Validators.minLength(5)]],
-    phone: ['', [Validators.required, Validators.pattern("[0-9]{9}")]],
+    phone: ['', [Validators.required, Validators.pattern("[0-9]{10}")]],
     subject: ['', Validators.minLength(10)]
   })
 
@@ -40,7 +40,7 @@ export class CartRequestComponent implements OnInit {
   }
 
   WhatsAPI: string = "https://wa.me/";
-  PhoneNumber: string = "201097309648"
+  PhoneNumber: string = "9660534781615"
   textMessage: any = "";
 
   onSubmit() {

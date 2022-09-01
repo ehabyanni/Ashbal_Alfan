@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   UserName!:string|null;
   constructor(private cart:CartService,private productService:ProductsService, private tokenStorage: TokenService) { }
 
-  phoneNumber:string= "+966 50 660 4507";
+  phoneNumber:string= "+966 053 478 1615";
   email:string="info@AshbalAlfan.com";
   stickerProducts:IProduct[]=[];
   paperPrintingsProducts:IProduct[]=[];

@@ -12,12 +12,8 @@ export class HomePageComponent implements OnInit {
 
   counting: any = [
     {
-      number: 5,
+      number: 8,
       title: "سنوات خبرة"
-    },
-    {
-      number: 225,
-      title: "عميل إستضافه"
     },
     {
       number: 2250,
