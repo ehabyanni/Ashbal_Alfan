@@ -13,7 +13,8 @@ export class BlogViewComponent implements OnInit {
 
   blogs:any = []
   
-  ngOnInit(): void {
+   ngOnInit(): void {
+    window.scrollTo(0, 0)
     this.blogItem.GetAllItems().subscribe(
       blogData => {
         this.blogs = blogData;

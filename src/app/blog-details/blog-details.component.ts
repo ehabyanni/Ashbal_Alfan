@@ -19,7 +19,8 @@ export class BlogDetailsComponent implements OnInit {
   blogId: any;
   blog:any = {};
 
-  ngOnInit(): void {
+   ngOnInit(): void {
+    window.scrollTo(0, 0)
     this.blogId = this.activeroute.snapshot.paramMap.get('id');
     
     this.blogitem.GetAllItems().subscribe(

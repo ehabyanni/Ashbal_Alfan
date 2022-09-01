@@ -10,7 +10,8 @@ export class ErrorPageNotFoundComponent implements OnInit {
 
   constructor(private router:Router) { }
 
-  ngOnInit(): void {
+   ngOnInit(): void {
+    window.scrollTo(0, 0)
   }
 
 }

@@ -35,7 +35,8 @@ export class CartRequestComponent implements OnInit {
   }
 
 
-  ngOnInit(): void {
+   ngOnInit(): void {
+    window.scrollTo(0, 0)
     this.CartItems=this.cart.getCartItems();
   }
 

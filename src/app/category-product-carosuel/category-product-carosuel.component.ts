@@ -18,7 +18,8 @@ export class CategoryProductCarosuelComponent implements OnInit {
   advertisingProducts:IProduct[]=[];
   products:IProduct[]=[];
 
-  ngOnInit(): void {
+   ngOnInit(): void {
+    window.scrollTo(0, 0)
     this.productService.GetAllProducts().subscribe(
       data=>{
         console.log("Hi");

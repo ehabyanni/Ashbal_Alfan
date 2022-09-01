@@ -13,7 +13,8 @@ export class StickersComponent implements OnInit {
 
   products:any = [];
 
-  ngOnInit(): void {
+   ngOnInit(): void {
+    window.scrollTo(0, 0)
     this.productService.GetAllProducts().subscribe(
       data =>{
         this.products = data.filter(x=> x.category_Id == "af855c6e-aafc-40b2-a920-08da7f5660f3");

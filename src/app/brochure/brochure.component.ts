@@ -12,7 +12,8 @@ export class BrochureComponent implements OnInit {
 
   products:any = [];
 
-  ngOnInit(): void {
+   ngOnInit(): void {
+    window.scrollTo(0, 0)
     this.productService.GetAllProducts().subscribe(
       data => {
         this.products = data;

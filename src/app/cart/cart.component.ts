@@ -13,7 +13,8 @@ export class CartComponent implements OnInit {
   CartItems:any[]=[];
   isEmpty:Boolean=true;
 
-  ngOnInit(): void {
+   ngOnInit(): void {
+    window.scrollTo(0, 0)
     this.CartItems=this.cart.getCartItems();
     this.isEmpty=(this.CartItems.length>0)?false:true;
   }

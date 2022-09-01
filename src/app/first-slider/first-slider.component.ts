@@ -9,7 +9,8 @@ export class FirstSliderComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+   ngOnInit(): void {
+    window.scrollTo(0, 0)
   }
 
 }

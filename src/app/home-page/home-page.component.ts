@@ -32,7 +32,8 @@ export class HomePageComponent implements OnInit {
 
   products:any = [];
 
-  ngOnInit(): void {
+   ngOnInit(): void {
+    window.scrollTo(0, 0)
     this.productService.GetAllProducts().subscribe(
       data=>{
         this.products = data.filter(x => x.category_Id == "d31edd00-bcea-403d-a91f-08da7f5660f3");

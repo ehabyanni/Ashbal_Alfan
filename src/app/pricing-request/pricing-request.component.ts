@@ -47,7 +47,8 @@ export class PricingRequestComponent implements OnInit {
 
 
 
-  ngOnInit(): void {
+   ngOnInit(): void {
+    window.scrollTo(0, 0)
   }
 
   WhatsAPI: string = "https://wa.me/";

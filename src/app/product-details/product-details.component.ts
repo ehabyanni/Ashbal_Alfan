@@ -37,7 +37,8 @@ export class ProductDetailsComponent implements OnInit {
 
   ProductCartQuantity=1;
     
-  ngOnInit(): void {
+   ngOnInit(): void {
+    window.scrollTo(0, 0)
     this.product_id = this.activeroute.snapshot.paramMap.get('id');
 
     this.productService.GetAllProducts().subscribe(
@@ -199,8 +200,13 @@ export class ProductDetailsComponent implements OnInit {
     }
 
   }
-  hidePrice(){
+  showPrice(){
     this.isPriceExist=false;
+    if(this.Kind&&this.Quantity){
+      this.getPrice1();
+    }else if(this.Kind){
+      this.getPrice2();
+    }
   }
 }
 

@@ -23,7 +23,8 @@ export class HeaderComponent implements OnInit {
   products:IProduct[]=[];
   mainLinks:any = ["الرئيسية" ,"المطبوعات الورقية" , "اللوحات والإستيكرات"  , "المنتجات الإعلانية"  , "المدونة"];
   
-  ngOnInit(): void {
+   ngOnInit(): void {
+    window.scrollTo(0, 0)
     //Cheak user Login
     // this.isUserLogin=(this.tokenStorage.getToken()==null)?false:true;
     // if(this.isUserLogin)

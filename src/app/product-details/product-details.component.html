@@ -16,15 +16,15 @@
                                 </div>
                                 <div class="thumbnail_images">
                                     <ul id="thumbnail">
-                                        <li>
+                                        <li *ngIf="product.image1">
                                             
-                                            <img *ngIf="product.image1" id="img1" (click)="changeImage1()" src="http://backend.ashbalalfan.com/Resources/Images/{{product.image1}}" width="70">
+                                            <img  id="img1" (click)="changeImage1()" src="http://backend.ashbalalfan.com/Resources/Images/{{product.image1}}" width="70">
                                         </li>
-                                        <li><img *ngIf="product.image2" id="img2" (click)="changeImage2()" src="http://backend.ashbalalfan.com/Resources/Images/{{product.image2}}" width="70">
+                                        <li *ngIf="product.image2"><img  id="img2" (click)="changeImage2()" src="http://backend.ashbalalfan.com/Resources/Images/{{product.image2}}" width="70">
                                         </li>
-                                        <li><img *ngIf="product.image3" id="img3" (click)="changeImage3()" src="http://backend.ashbalalfan.com/Resources/Images/{{product.image3}}" width="70">
+                                        <li *ngIf="product.image3"><img  id="img3" (click)="changeImage3()" src="http://backend.ashbalalfan.com/Resources/Images/{{product.image3}}" width="70">
                                         </li>
-                                        <li><img  *ngIf="product.image4" id="img4" (click)="changeImage4()" src="http://backend.ashbalalfan.com/Resources/Images/{{product.image4}}" width="70">
+                                        <li *ngIf="product.image4"><img   id="img4" (click)="changeImage4()" src="http://backend.ashbalalfan.com/Resources/Images/{{product.image4}}" width="70">
                                         </li>
                                     </ul>
                                 </div>
@@ -68,7 +68,7 @@
                                                     <div class="mt-2 pr-3">
                                                         <div class="col-10">
                                                             <label for="kind-select" class="form-label" style="font-weight: 600; color: #1c1c1c;">الخامة</label>
-                                                            <select class="form-select" id="kind-select" (change)="hidePrice()"
+                                                            <select class="form-select" id="kind-select" (change)="showPrice()"
                                                                 style="border-radius: 0px;" formControlName="kindselect"
                                                                 [class.is-invalid]="KINDSELECT?.invalid && KINDSELECT?.touched">
                                                                 <option value="" selected>إختر الخامة</option>
@@ -87,7 +87,7 @@
                                                     <div class="mt-2 pr-3">
                                                         <div class="col-10">
                                                             <label for="qnt-value" class="form-label" style="font-weight: 600; color: #1c1c1c;">الكمية</label>
-                                                            <select class="form-select" id="qnt-value"(change)="hidePrice()" required
+                                                            <select class="form-select" id="qnt-value"(change)="showPrice()" required
                                                                 style="border-radius: 0px;" formControlName="qntselect"
                                                                 [class.is-invalid]="QNTSELECT?.invalid && QNTSELECT?.touched">
                                                                 <option value="" selected>إختر الكمية</option>
@@ -107,16 +107,12 @@
                                                     <div class="row">
                                                         <div class="col-12" style="direction: rtl;">
 
-                                                            <div class="col-3" style=" float: right;">
-                                                                <button class="btn btn-secondry" (click)="getPrice1()"
-                                                                [disabled]="QNTSELECT?.invalid || KINDSELECT?.invalid"
-                                                                    style="float: right; font-weight: 600; color:#0b5ed7; border-radius: 0;">معرفة
-                                                                    السعر</button>
-                                                            </div>
-                                                            <div *ngIf="isPriceExist" class="col-6" style="float: right;">
+                                
+                                                            <div *ngIf="isPriceExist" class="col-12" style="float: right;">
+                                                                <p class="btn-secondry"
+                                                                style="float: right; font-weight: 600; border-radius: 0;">الســـعـــر   &nbsp;&nbsp; : &nbsp; &nbsp;   </p>
                                                                 <h4 id="price-value" style="color:#10d479;">
                                                                     {{this.product_price}}  ر.س  
-
                                                                 </h4>
                                                             </div>
                                                         </div>
@@ -140,7 +136,7 @@
                                                                 <div class="col-10">
                                                                     <label for="kind-select"
                                                                         class="form-label">الخامة</label>
-                                                                    <select class="form-select" id="kind-select" (change)="hidePrice()"
+                                                                    <select class="form-select" id="kind-select" (change)="showPrice()"
                                                                         style="border-radius: 0px;"
                                                                         formControlName="kindselect"
                                                                         [class.is-invalid]="KINDSELECT?.invalid && KINDSELECT?.touched">
@@ -162,13 +158,9 @@
                                                             <div class="row">
                                                                 <div class="col-12" style="direction: rtl;">
 
-                                                                    <div class="col-3" style=" float: right;">
-                                                                        <button class="btn btn-secondry"
-                                                                            (click)="getPrice2()"
-                                                                            [disabled]="KINDSELECT?.invalid"
-                                                                            style="float: right; font-weight: 600; color:#0b5ed7; border-radius: 0;">معرفة السعر</button>
-                                                                    </div>
-                                                                    <div *ngIf="isPriceExist" class="col-6" style="float: right;">
+                                                                    <div *ngIf="isPriceExist" class="col-12" style="float: right;">
+                                                                        <p class="btn-secondry"
+                                                                        style="float: right; font-weight: 600; border-radius: 0;">الســـعـــر   &nbsp;&nbsp; : &nbsp; &nbsp;   </p>
                                                                         <h4 id="price-value" style="color:#10d479;">
                                                                             {{this.product_price}}  ر.س  
                                                                         </h4>

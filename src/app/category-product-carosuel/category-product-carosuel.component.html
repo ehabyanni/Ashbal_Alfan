@@ -43,6 +43,8 @@
                 <div class="card-body">
                   <h5 class="card-title">{{prod.title}}</h5>
                   <h5 class="card-price" *ngIf="prod.maxPrice">من {{prod.minPrice}} ر.س إلي {{prod.maxPrice}} ر.س </h5>
+                  <h5 class="card-price" *ngIf="!prod.maxPrice">احصل علي تسعيرة حسب طلبك</h5>
+
                 </div>
               </div>
             </ng-template>
@@ -78,11 +80,13 @@
                   <img class="card-img-top2" src="http://backend.ashbalalfan.com/Resources/Images/{{prod.image1}}" alt="Card image second">
                   <img *ngIf="prod.image2" class="card-img-top1" src="http://backend.ashbalalfan.com/Resources/Images/{{prod.image2}}" alt="Card image firts">
                   <img *ngIf="!prod.image2" class="card-img-top1" src="http://backend.ashbalalfan.com/Resources/Images/{{prod.image1}}" alt="Card image firts">
-
+                  
                 </div>
                 <div class="card-body">
                   <h5 class="card-title">{{prod.title}}</h5>
                   <h5 class="card-price" *ngIf="prod.maxPrice">من {{prod.minPrice}} ر.س إلي {{prod.maxPrice}} ر.س </h5>
+                  <h5 class="card-price" *ngIf="!prod.maxPrice">احصل علي تسعيرة حسب طلبك</h5>
+
                 </div>
               </div>
             </ng-template>
@@ -120,6 +124,8 @@
                 <div class="card-body">
                   <h5 class="card-title">{{prod.title}}</h5>
                   <h5 class="card-price" *ngIf="prod.maxPrice">من {{prod.minPrice}} ر.س إلي {{prod.maxPrice}} ر.س </h5>
+                  <h5 class="card-price" *ngIf="!prod.maxPrice">احصل علي تسعيرة حسب طلبك</h5>
+
                 </div>
               </div>
             </ng-template>

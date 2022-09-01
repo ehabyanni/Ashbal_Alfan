@@ -38,7 +38,8 @@ export class ContactUsComponent implements OnInit {
     }
   ]
 
-  ngOnInit(): void {
+   ngOnInit(): void {
+    window.scrollTo(0, 0)
   }
 
 }
