@@ -2,21 +2,21 @@
     font-family: Tajawal;
 }
 .headTitle{
-    background: url(/assets/images/unsplash1.jpg );
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: url(/assets/images/PRequest.jpg );
+    background-repeat:no-repeat;
     background-position: center;
-    background-attachment: fixed;
+    background-size: 1150px 150px;
+    height: 150px;
 }
 .titleName{
-    background-color: #ffffff9c;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    background-color: #12182662;
+    padding-top: 50px;
+    // padding-bottom: 40px;
 }
 .titleName h3{
     font-size: 30px;
     font-weight: 900;
-    color: #0E7E4A;
+    color: #10d479;
 }
 label{
     font-size: 16px;
