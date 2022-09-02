@@ -96,7 +96,10 @@ export class ProductDetailsComponent implements OnInit {
   }
   addToCart() {
     this.productDetails={...this.product}
+    if(this.QNTSELECT?.value)
     this.productDetails.title=`${this.product.title}  -  ${this.KINDSELECT?.value}   -   ${this.QNTSELECT?.value}`
+    if(!this.QNTSELECT?.value)
+    this.productDetails.title=`${this.product.title}  -  ${this.KINDSELECT?.value} `
     this.cart.addItemToCart(this.productDetails,this.product_price ,this.ProductCartQuantity);
     this.popUpSuccess();
     var CartItems = this.cart.getCartItems();
