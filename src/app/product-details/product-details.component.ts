@@ -5,8 +5,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ErrorPageNotFoundComponent } from '../error-page-not-found/error-page-not-found.component';
 import { CartService } from '../services/cart.service';
 import { ProductsService } from '../services/products.service';
-const categoryArabicNames: any = ["المطبوعات الورقية", "اللوحات والإستيكرات", "المنتجات الإعلانية"];
-const mainLinks: any = ["paper_printings", "stickers", "advertising"];
+const categoryArabicNames: any = ["المطبوعات الورقية", "اللوحات والإستيكرات", "المنتجات الإعلانية","الهدايا الدعائية"];
+const mainLinks: any = ["paper_printings", "stickers", "advertising","gifts"];
 
 @Component({
   selector: 'app-product-details',
@@ -133,6 +133,9 @@ export class ProductDetailsComponent implements OnInit {
         break;
       case categoryArabicNames[2]:
         return mainLinks[2];
+        break;
+        case categoryArabicNames[3]:
+        return mainLinks[3];
         break;
       default:
         return "";
