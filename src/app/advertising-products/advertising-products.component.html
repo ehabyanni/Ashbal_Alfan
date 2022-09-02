@@ -20,8 +20,10 @@
                     <div class="card-body">
                         <p class="card-category">{{prod.categoryName}}</p>
                         <h5 class="card-title">{{prod.title}}</h5>
-                        <p *ngIf="prod.maxPrice" class="card-price">من {{prod.minPrice}} ر.س إلي {{prod.maxPrice}} ر.س </p>
-                        <h5 class="card-price" *ngIf="!prod.maxPrice">احصل علي تسعيرة حسب طلبك</h5>
+                        <h5 class="card-price" *ngIf="prod.maxPrice&&prod.minPrice">من {{prod.minPrice}} ر.س إلي {{prod.maxPrice}} ر.س </h5>
+                        <h5 class="card-price" *ngIf="prod.maxPrice&&!prod.minPrice"> {{prod.maxPrice}} ر.س </h5>
+                        <h5 class="card-price" *ngIf="!prod.maxPrice&&prod.minPrice"> {{prod.minPrice}} ر.س </h5>
+                        <h5 class="card-price" *ngIf="!prod.maxPrice&&!prod.minPrice">احصل علي تسعيرة حسب طلبك</h5>
                         <p class="card-hint">{{prod.hint}}</p>
                     </div>
                 </div>

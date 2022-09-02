@@ -6,15 +6,13 @@
     <div *ngIf="isEmpty ; then empty; else Items "></div>
 
     <ng-template #empty>
-      <div class="row">
+      <div class="row row1details">
         <div class="col-6 empty w-55"
           style="display: flex; justify-content: center; align-content: center; text-align: center;">
           <div>
             <h1 class="cart-empty woocommerce-info empty-text">سلة مشترياتك فارغة حاليًا.</h1>
             <br>
-            <a class="btn btn-success" routerLink="/home">
-              العودة إلى الرئيسية
-            </a>
+            <a class="btn btn-success btn-sm" routerLink="/home"> العودة إلى الرئيسية </a>
           </div>
         </div>
         <div class="col-6">
@@ -22,8 +20,8 @@
             src="../../assets/images/Cart.png" alt="" srcset="">
         </div>
       </div>
-
     </ng-template>
+
     <ng-template #Items>
       <div class="row mt-5 mb-2 p-3">
         <div class="col-12 col-sm-12 col-md-9 border">
@@ -50,7 +48,7 @@
                   </div>
                 </td>
                 <td>
-                  <a href={{item.product.id}} style="text-decoration: none; " data-bs-toggle="tooltip"
+                  <a routerLink="../products/{{item.product.id}}" style="text-decoration: none; " data-bs-toggle="tooltip"
                     title="إضغط لرؤية المنتج">{{item.product.title}}</a>
                 </td>
                 <!-- <td>{{item.product.maxPrice}} ر.س الأسعار تشمل الضريبة</td> -->

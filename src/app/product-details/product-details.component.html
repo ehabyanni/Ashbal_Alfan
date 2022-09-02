@@ -53,6 +53,10 @@
                                         <h3>{{product.maxPrice}} ر.س </h3>
                                         <h6>{{product.hint}}</h6>
                                     </div>
+                                    <div class="mt-2 pr-3 price" *ngIf="!product.maxPrice&&product.minPrice">
+                                        <h3>{{product.minPrice}} ر.س </h3>
+                                        <h6>{{product.hint}}</h6>
+                                    </div>
                                     <div class="mt-2 pr-3 description">
                                         <h6>{{product.description}}</h6>
                                     </div>

@@ -17,13 +17,9 @@
   margin-left: 3px;
 }
 
-
 td {
   vertical-align: middle !important;
 }
-
-
-
 
 
 /*Delete icon*/
@@ -76,6 +72,9 @@ td {
   padding-top:100px;
   text-align: right;
 }
+.row1details{
+  padding-bottom:50px;
+}
 
 
 
@@ -90,6 +89,28 @@ td {
 @media screen and(max-width:400px){
   .cart-image{
     display: none;
+  }
+}
+
+@media screen and(max-width:400px){
+  .empty {
+    padding-top:10px;
+  }
+  .empty-text{
+    font-size: 18px !important;
+  }
+}
+@media screen and(min-width:400px)and(max-width:767px){
+  .empty {
+    padding-top:10px;
+  }
+  .empty-text{
+    font-size: 24px !important;
+  }
+}
+@media screen and(min-width:767px)and(max-width:1000px){
+  .empty {
+    padding-top:30px;
   }
 }
 
