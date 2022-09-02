@@ -1,34 +1,21 @@
 <div class="container-fluid parentContainer">
   <div class="container">
-    <nav
-      class="navbar navbar-expand-sm bg-dark navbar-dark"
-      style="margin: 0px !important; padding: 0px !important"
-    >
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="margin: 0px !important; padding: 0px !important">
       <div class="container-fluid">
-        <a class="navbar-brand" routerLink="/home"
-          ><img src="../assets/images/logo.svg" style="width: 100px"
-        /></a>
-        <button
-          class="navbar-toggler collapsed"
-          type="button"
-          aria-expanded="false"
-         aria-controls="navbar"
-         (click)="toggle()"
-        >
+        <a class="navbar-brand" routerLink="/home"><img src="../assets/images/logo.svg" style="width: 100px" /></a>
+        <button class="navbar-toggler collapsed" type="button" aria-expanded="false" aria-controls="navbar"
+          (click)="toggle()">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar" >
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <div class="info col-12">
             <div class="info-media col-12">
-              <div
-                class="col-9"
-                style="
+              <div class="col-9" style="
                   float: left;
                   display: flex;
                   justify-content: center;
                   align-content: center;
-                "
-              >
+                ">
                 <!-- <div class="loginRegisterLogout">
                   <div style="padding-right: 40px;">
                     <div *ngIf="isUserLogin; else loginblock">
@@ -51,19 +38,21 @@
                   </div>
                 </div> -->
                 <div class="socialMedia" style="float: left">
-                  <a href="https://www.instagram.com/ashbal.alfan/" target="_blank"> <i class="fa-brands fa-instagram"></i></a>&nbsp;
+                  <a href="https://www.instagram.com/ashbal.alfan/" target="_blank"> <i
+                      class="fa-brands fa-instagram"></i></a>&nbsp;
                   &nbsp;
-                  <a href="mailto:info@ashbalalfan.com" target="_blank"> <i class="fa-regular fa-envelope"></i></a>&nbsp; &nbsp;
-                  <a href="https://api.whatsapp.com/send/?phone=9660534781615" target="_blank"> <i class="fab fa-whatsapp"></i></a>&nbsp; &nbsp;
+                  <a href="mailto:info@ashbalalfan.com" target="_blank"> <i
+                      class="fa-regular fa-envelope"></i></a>&nbsp; &nbsp;
+                  <a href="https://api.whatsapp.com/send/?phone=9660534781615" target="_blank"> <i
+                      class="fab fa-whatsapp"></i></a>&nbsp; &nbsp;
 
                 </div>
                 <div class="email" style="float: left">
-                  <a  href="mailto:info@ashbalalfan.com" target="_blank">
+                  <a href="mailto:info@ashbalalfan.com" target="_blank">
                     <div>
                       <p style="float: left">{{ email }}</p>
                       &nbsp;&nbsp;
-                      <i class="fa-solid fa-envelope"></i
-                      >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </div>
                   </a>
                 </div>
@@ -82,10 +71,7 @@
                   <div class="col-3" style="float: left" id="cart">
                     <a class="nav-link" routerLink="cart">
                       <i class="fa" style="font-size: 18px">&#xf07a;</i>
-                      <span
-                        class="badge badge-primary"
-                        id="lblCartCount"
-                      ></span>
+                      <span class="badge badge-primary" id="lblCartCount"></span>
                     </a>
                   </div>
                   <div class="col-9">
@@ -99,47 +85,42 @@
                 <a class="nav-link" routerLink="/home" (click)="toggle()">الرئيسية</a>
               </li>
               <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  routerLink="paper_printings"
-                  role="button"
-                  >المطبوعات الورقية</a
-                >
+                <a class="nav-link dropdown-toggle" routerLink="paper_printings" role="button">المطبوعات الورقية</a>
                 <ul class="dropdown-menu">
                   <li *ngFor="let product of paperPrintingsProducts">
                     <a class="dropdown-item" href="products/{{ product.id }}">{{
                       product.title
-                    }}</a>
+                      }}</a>
                   </li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  routerLink="/stickers"
-                  role="button"
-                  >اللوحات والإستيكرات</a
-                >
+                <a class="nav-link dropdown-toggle" routerLink="/stickers" role="button">اللوحات والإستيكرات</a>
                 <ul class="dropdown-menu">
                   <li *ngFor="let product of stickerProducts">
                     <a class="dropdown-item" href="products/{{ product.id }}">{{
                       product.title
-                    }}</a>
+                      }}</a>
                   </li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  routerLink="/advertising"
-                  role="button"
-                  >المنتجات الإعلانية</a
-                >
+                <a class="nav-link dropdown-toggle" routerLink="/advertising" role="button">المنتجات الإعلانية</a>
                 <ul class="dropdown-menu">
                   <li *ngFor="let product of advertisingProducts">
                     <a class="dropdown-item" href="products/{{ product.id }}">{{
                       product.title
-                    }}</a>
+                      }}</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" routerLink="/gifts" role="button">الهدايا الدعائية</a>
+                <ul class="dropdown-menu">
+                  <li *ngFor="let product of giftsProducts">
+                    <a class="dropdown-item" href="products/{{ product.id }}">{{
+                      product.title
+                      }}</a>
                   </li>
                 </ul>
               </li>

@@ -1,0 +1,35 @@
+<div class="mainDiv" style="padding-top: 100px;">
+    <!-- <div class="container-fluid" style="background-color: rgba(143, 133, 133, 0);"> -->
+    <div class="container" style="direction: rtl; text-align: right;">
+        <div class="row headTitle"
+            style="border-bottom: 2px solid rgb(216, 216, 216); padding-top: 30px; padding-bottom: 20px;">
+            <div class="titleName">
+                <h4>الهدايا الدعائية</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 productblock">
+                <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let prod of products">
+                    <div class="card col-11" (click)="goToProductDetails(prod.id)">
+                        <div style="width:100%; height:350px">
+                            <img class="card-img-top2" src="http://backend.ashbalalfan.com/Resources/Images/{{prod.image1}}" alt="Card image second">
+                            <img *ngIf="prod.image2" class="card-img-top1" src="http://backend.ashbalalfan.com/Resources/Images/{{prod.image2}}" alt="Card image firts">
+                            <img *ngIf="!prod.image2" class="card-img-top1" src="http://backend.ashbalalfan.com/Resources/Images/{{prod.image1}}" alt="Card image firts">
+
+                        </div>
+                        <div class="card-body">
+                            <p class="card-category">{{prod.categoryName}}</p>
+                            <h5 class="card-title">{{prod.title}}</h5>
+                            <p *ngIf="prod.maxPrice&&prod.minPrice" class="card-price">من {{prod.minPrice}} ر.س إلي {{prod.maxPrice}} ر.س </p>
+                            <p *ngIf="prod.maxPrice&&!prod.minPrice" class="card-price">{{prod.maxPrice}} ر.س </p>
+                            <h5 class="card-price" *ngIf="!prod.maxPrice">احصل علي تسعيرة حسب طلبك</h5>
+                            <p class="card-hint">{{prod.hint}}</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+
+</div>

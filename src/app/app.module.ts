@@ -17,7 +17,6 @@ import { PaperPrintingsComponent } from './paper-printings/paper-printings.compo
 import { BlogDetailsComponent } from './blog-details/blog-details.component';
 import { StickersComponent } from './stickers/stickers.component';
 import { AdvertisingProductsComponent } from './advertising-products/advertising-products.component';
-import { BrochureComponent } from './brochure/brochure.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ErrorPageNotFoundComponent } from './error-page-not-found/error-page-not-found.component';
 import { CategoryProductCarosuelComponent } from './category-product-carosuel/category-product-carosuel.component';
@@ -27,6 +26,7 @@ import { CartComponent } from './cart/cart.component';
 import { CartRequestComponent } from './cart-request/cart-request.component';
 import { RouterModule } from '@angular/router';
 import { AuthInterceptor } from './helpers/auth.interceptor';
+import { GiftsComponent } from './gifts/gifts.component';
 
 
 
@@ -42,7 +42,6 @@ import { AuthInterceptor } from './helpers/auth.interceptor';
     BlogDetailsComponent,
     StickersComponent,
     AdvertisingProductsComponent,
-    BrochureComponent,
     ProductDetailsComponent,
     ErrorPageNotFoundComponent,
     CategoryProductCarosuelComponent,
@@ -50,6 +49,7 @@ import { AuthInterceptor } from './helpers/auth.interceptor';
     FirstSliderComponent,
     CartComponent,
     CartRequestComponent,
+    GiftsComponent,
   ],
   imports: [
     BrowserModule,

@@ -12,19 +12,28 @@
                             <div class=" flex-column justify-content-center">
                                 <div class="main_image">
                                     <!-- <img src={{product.image1}} id="main_product_image" width="370"> -->
-                                    <img src="http://backend.ashbalalfan.com/Resources/Images/{{product.image1}}" id="main_product_image" width="370">
+                                    <img src="http://backend.ashbalalfan.com/Resources/Images/{{product.image1}}"
+                                        id="main_product_image" width="370">
                                 </div>
                                 <div class="thumbnail_images">
                                     <ul id="thumbnail">
                                         <li *ngIf="product.image1">
-                                            
-                                            <img  id="img1" (click)="changeImage1()" src="http://backend.ashbalalfan.com/Resources/Images/{{product.image1}}" width="70">
+
+                                            <img id="img1" (click)="changeImage1()"
+                                                src="http://backend.ashbalalfan.com/Resources/Images/{{product.image1}}"
+                                                width="70">
                                         </li>
-                                        <li *ngIf="product.image2"><img  id="img2" (click)="changeImage2()" src="http://backend.ashbalalfan.com/Resources/Images/{{product.image2}}" width="70">
+                                        <li *ngIf="product.image2"><img id="img2" (click)="changeImage2()"
+                                                src="http://backend.ashbalalfan.com/Resources/Images/{{product.image2}}"
+                                                width="70">
                                         </li>
-                                        <li *ngIf="product.image3"><img  id="img3" (click)="changeImage3()" src="http://backend.ashbalalfan.com/Resources/Images/{{product.image3}}" width="70">
+                                        <li *ngIf="product.image3"><img id="img3" (click)="changeImage3()"
+                                                src="http://backend.ashbalalfan.com/Resources/Images/{{product.image3}}"
+                                                width="70">
                                         </li>
-                                        <li *ngIf="product.image4"><img   id="img4" (click)="changeImage4()" src="http://backend.ashbalalfan.com/Resources/Images/{{product.image4}}" width="70">
+                                        <li *ngIf="product.image4"><img id="img4" (click)="changeImage4()"
+                                                src="http://backend.ashbalalfan.com/Resources/Images/{{product.image4}}"
+                                                width="70">
                                         </li>
                                     </ul>
                                 </div>
@@ -38,6 +47,10 @@
                                     </div>
                                     <div class="mt-2 pr-3 price" *ngIf="product.maxPrice&&product.minPrice">
                                         <h3>من {{product.minPrice}} ر.س إلي {{product.maxPrice}} ر.س </h3>
+                                        <h6>{{product.hint}}</h6>
+                                    </div>
+                                    <div class="mt-2 pr-3 price" *ngIf="product.maxPrice&&!product.minPrice">
+                                        <h3>{{product.maxPrice}} ر.س </h3>
                                         <h6>{{product.hint}}</h6>
                                     </div>
                                     <div class="mt-2 pr-3 description">
@@ -67,9 +80,11 @@
                                                 <form [formGroup]="selectForm" method="post">
                                                     <div class="mt-2 pr-3">
                                                         <div class="col-10">
-                                                            <label for="kind-select" class="form-label" style="font-weight: 600; color: #1c1c1c;">الخامة</label>
-                                                            <select class="form-select" id="kind-select" (change)="showPrice()"
-                                                                style="border-radius: 0px;" formControlName="kindselect"
+                                                            <label for="kind-select" class="form-label"
+                                                                style="font-weight: 600; color: #1c1c1c;">الخامة</label>
+                                                            <select class="form-select" id="kind-select"
+                                                                (change)="showPrice()" style="border-radius: 0px;"
+                                                                formControlName="kindselect"
                                                                 [class.is-invalid]="KINDSELECT?.invalid && KINDSELECT?.touched">
                                                                 <option value="" selected>إختر الخامة</option>
                                                                 <option *ngFor="let kind of product_kind"
@@ -86,8 +101,10 @@
                                                     </div>
                                                     <div class="mt-2 pr-3">
                                                         <div class="col-10">
-                                                            <label for="qnt-value" class="form-label" style="font-weight: 600; color: #1c1c1c;">الكمية</label>
-                                                            <select class="form-select" id="qnt-value"(change)="showPrice()" required
+                                                            <label for="qnt-value" class="form-label"
+                                                                style="font-weight: 600; color: #1c1c1c;">الكمية</label>
+                                                            <select class="form-select" id="qnt-value"
+                                                                (change)="showPrice()" required
                                                                 style="border-radius: 0px;" formControlName="qntselect"
                                                                 [class.is-invalid]="QNTSELECT?.invalid && QNTSELECT?.touched">
                                                                 <option value="" selected>إختر الكمية</option>
@@ -107,12 +124,14 @@
                                                     <div class="row">
                                                         <div class="col-12" style="direction: rtl;">
 
-                                
-                                                            <div *ngIf="isPriceExist" class="col-12" style="float: right;">
+
+                                                            <div *ngIf="isPriceExist" class="col-12"
+                                                                style="float: right;">
                                                                 <p class="btn-secondry"
-                                                                style="float: right; font-weight: 600; border-radius: 0;">الســـعـــر   &nbsp;&nbsp; : &nbsp; &nbsp;   </p>
+                                                                    style="float: right; font-weight: 600; border-radius: 0;">
+                                                                    الســـعـــر &nbsp;&nbsp; : &nbsp; &nbsp; </p>
                                                                 <h4 id="price-value" style="color:#10d479;">
-                                                                    {{this.product_price}}  ر.س  
+                                                                    {{this.product_price}} ر.س
                                                                 </h4>
                                                             </div>
                                                         </div>
@@ -123,7 +142,7 @@
                                                     <!-- <button class="btn1">Buy Now</button>  -->
                                                     <button class="btn" (click)="addToCart()">إضافة إلي السلة</button>
 
-                                                    
+
                                                 </div>
                                             </ng-template>
                                             <ng-template #empty1block>
@@ -136,7 +155,8 @@
                                                                 <div class="col-10">
                                                                     <label for="kind-select"
                                                                         class="form-label">الخامة</label>
-                                                                    <select class="form-select" id="kind-select" (change)="showPrice()"
+                                                                    <select class="form-select" id="kind-select"
+                                                                        (change)="showPrice()"
                                                                         style="border-radius: 0px;"
                                                                         formControlName="kindselect"
                                                                         [class.is-invalid]="KINDSELECT?.invalid && KINDSELECT?.touched">
@@ -158,20 +178,24 @@
                                                             <div class="row">
                                                                 <div class="col-12" style="direction: rtl;">
 
-                                                                    <div *ngIf="isPriceExist" class="col-12" style="float: right;">
+                                                                    <div *ngIf="isPriceExist" class="col-12"
+                                                                        style="float: right;">
                                                                         <p class="btn-secondry"
-                                                                        style="float: right; font-weight: 600; border-radius: 0;">الســـعـــر   &nbsp;&nbsp; : &nbsp; &nbsp;   </p>
+                                                                            style="float: right; font-weight: 600; border-radius: 0;">
+                                                                            الســـعـــر &nbsp;&nbsp; : &nbsp; &nbsp;
+                                                                        </p>
                                                                         <h4 id="price-value" style="color:#10d479;">
-                                                                            {{this.product_price}}  ر.س  
+                                                                            {{this.product_price}} ر.س
                                                                         </h4>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </form>
                                                         <br>
-                                                        <div *ngIf="isPriceExist" class="buttons d-flex flex-row  gap-3">
+                                                        <div *ngIf="isPriceExist"
+                                                            class="buttons d-flex flex-row  gap-3">
                                                             <!-- <button class="btn1">Buy Now</button>  -->
-                                                            <button class="btn"  (click)="addToCart()">إضافة إلي
+                                                            <button class="btn" (click)="addToCart()">إضافة إلي
                                                                 السلة</button>
                                                         </div>
                                                     </ng-template>

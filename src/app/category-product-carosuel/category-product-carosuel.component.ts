@@ -11,11 +11,12 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class CategoryProductCarosuelComponent implements OnInit {
 
   constructor(private productService:ProductsService) { }
-  CategoriesNames:any = ["المطبوعات الورقية" ,  "اللوحات والإستيكرات","المنتجات الإعلانية"];
+  CategoriesNames:any = ["المطبوعات الورقية" ,  "اللوحات والإستيكرات","المنتجات الإعلانية", "الهدايا الدعائية"];
 
   stickerProducts:IProduct[]=[];
   paperPrintingsProducts:IProduct[]=[];
   advertisingProducts:IProduct[]=[];
+  giftsProducts:IProduct[]=[];
   products:IProduct[]=[];
 
    ngOnInit(): void {
@@ -28,6 +29,7 @@ export class CategoryProductCarosuelComponent implements OnInit {
         this.paperPrintingsProducts=this.products.filter(p=>p.category_Name==this.CategoriesNames[0]);
         this.stickerProducts=this.products.filter(p=>p.category_Name==this.CategoriesNames[1]);
         this.advertisingProducts=this.products.filter(p=>p.category_Name==this.CategoriesNames[2]);
+        this.giftsProducts=this.products.filter(p=>p.category_Name==this.CategoriesNames[3]);
       }
      );
   }

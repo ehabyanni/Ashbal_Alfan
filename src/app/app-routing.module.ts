@@ -3,10 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdvertisingProductsComponent } from './advertising-products/advertising-products.component';
 import { BlogDetailsComponent } from './blog-details/blog-details.component';
 import { BlogViewComponent } from './blog-view/blog-view.component';
-import { BrochureComponent } from './brochure/brochure.component';
 import { CartRequestComponent } from './cart-request/cart-request.component';
 import { CartComponent } from './cart/cart.component';
 import { ErrorPageNotFoundComponent } from './error-page-not-found/error-page-not-found.component';
+import { GiftsComponent } from './gifts/gifts.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { PaperPrintingsComponent } from './paper-printings/paper-printings.component';
 import { PricingRequestComponent } from './pricing-request/pricing-request.component';
@@ -24,7 +24,7 @@ const routes: Routes = [
   {path:'paper_printings'     , component:PaperPrintingsComponent     },
   {path:'stickers'            , component:StickersComponent           },
   {path:'advertising'         , component:AdvertisingProductsComponent},
-  {path:'brochure'            , component:BrochureComponent           },
+  {path:'gifts'               , component:GiftsComponent              },
   {path:'products/:id'        , component:ProductDetailsComponent     },
   {path:'page-not-found'      , component:ErrorPageNotFoundComponent  },
   {path:'**'                  , component:ErrorPageNotFoundComponent  }

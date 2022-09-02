@@ -20,8 +20,9 @@ export class HeaderComponent implements OnInit {
   stickerProducts:IProduct[]=[];
   paperPrintingsProducts:IProduct[]=[];
   advertisingProducts:IProduct[]=[];
+  giftsProducts:IProduct[]=[];
   products:IProduct[]=[];
-  mainLinks:any = ["الرئيسية" ,"المطبوعات الورقية" , "اللوحات والإستيكرات"  , "المنتجات الإعلانية"  , "المدونة"];
+  mainLinks:any = ["الرئيسية" ,"المطبوعات الورقية" , "اللوحات والإستيكرات"  , "المنتجات الإعلانية"  , "الهدايا الدعائية"  , "المدونة"];
   
    ngOnInit(): void {
     window.scrollTo(0, 0)
@@ -39,9 +40,10 @@ export class HeaderComponent implements OnInit {
         console.log("Hi");
         this.products=data;
          //Fill Categories With Products
-        this.paperPrintingsProducts=this.products.filter(p=>p.category_Name==this.mainLinks[1]);
-        this.stickerProducts=this.products.filter(p=>p.category_Name==this.mainLinks[2]);
-        this.advertisingProducts=this.products.filter(p=>p.category_Name==this.mainLinks[3]);
+        this.paperPrintingsProducts   =this.products.filter(p=>p.category_Name==this.mainLinks[1]);
+        this.stickerProducts          =this.products.filter(p=>p.category_Name==this.mainLinks[2]);
+        this.advertisingProducts      =this.products.filter(p=>p.category_Name==this.mainLinks[3]);
+        this.giftsProducts            =this.products.filter(p=>p.category_Name==this.mainLinks[4]);
       }
      );
      //Fill Categories With Products

@@ -155,3 +155,66 @@
 </div>
 
 <!-------3-------->
+
+
+
+<!--slider categories and produtcs-->
+
+<div class="container-fluid mb-3">
+  <div class="container">
+    <div class="row" style="display: flex; direction:rtl;">
+      <div class="col-lg-3 col-md-3 col-sm-12">
+        <div class="right ">
+          <h3>الهدايا الدعائية</h3>
+          <h5>أفضل عروض الهدايا الدعائية</h5>
+          <h6><a routerLink="/gifts">إظهار كافة المنتجات</a></h6>
+        </div>
+      </div>
+
+      <div class="col-lg-9 col-md-9 col-sm-12" >
+        <owl-carousel-o [options]="customOptions">
+          <ng-container *ngFor="let prod of giftsProducts ">
+            <ng-template carouselSlide [id]="prod.id">
+              <div class="card col-11" routerLink="../products/{{prod.id}}">
+                <div style="width:100%; height:255px;">
+                  <img class="card-img-top2" src="http://backend.ashbalalfan.com/Resources/Images/{{prod.image1}}" alt="Card image second">
+                  <img *ngIf="prod.image2" class="card-img-top1" src="http://backend.ashbalalfan.com/Resources/Images/{{prod.image2}}" alt="Card image firts">
+                  <img *ngIf="!prod.image2" class="card-img-top1" src="http://backend.ashbalalfan.com/Resources/Images/{{prod.image1}}" alt="Card image firts">
+
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{prod.title}}</h5>
+                  <h5 class="card-price" *ngIf="prod.maxPrice&&prod.minPrice">من {{prod.minPrice}} ر.س إلي {{prod.maxPrice}} ر.س </h5>
+                  <h5 class="card-price" *ngIf="prod.maxPrice&&!prod.minPrice"> {{prod.maxPrice}} ر.س </h5>
+                  <h5 class="card-price" *ngIf="!prod.maxPrice">احصل علي تسعيرة حسب طلبك</h5>
+
+                </div>
+              </div>
+            </ng-template>
+          </ng-container>
+          <ng-container *ngFor="let prod of giftsProducts ">
+            <ng-template carouselSlide [id]="prod.id">
+              <div class="card col-11" routerLink="../products/{{prod.id}}">
+                <div style="width:100%; height:255px;">
+                  <img class="card-img-top2" src="http://backend.ashbalalfan.com/Resources/Images/{{prod.image1}}" alt="Card image second">
+                  <img *ngIf="prod.image2" class="card-img-top1" src="http://backend.ashbalalfan.com/Resources/Images/{{prod.image2}}" alt="Card image firts">
+                  <img *ngIf="!prod.image2" class="card-img-top1" src="http://backend.ashbalalfan.com/Resources/Images/{{prod.image1}}" alt="Card image firts">
+
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{prod.title}}</h5>
+                  <h5 class="card-price" *ngIf="prod.maxPrice&&prod.minPrice">من {{prod.minPrice}} ر.س إلي {{prod.maxPrice}} ر.س </h5>
+                  <h5 class="card-price" *ngIf="prod.maxPrice&&!prod.minPrice"> {{prod.maxPrice}} ر.س </h5>
+                  <h5 class="card-price" *ngIf="!prod.maxPrice">احصل علي تسعيرة حسب طلبك</h5>
+
+                </div>
+              </div>
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-------4-------->
